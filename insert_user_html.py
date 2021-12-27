@@ -1,8 +1,23 @@
 from bs4 import BeautifulSoup
 
-repo_path = "Y:/tmp/cad2021_final"
-group_name = "2ag1"
+repo_path = "Y:/tmp/cp2021_final"
+class_name = "1b"
+group_file = repo_path + "/" + class_name + "_group.txt"
 student_id = "scrum-1"
+
+with open(group_file) as f:
+    # 讀進數列且去除 \n
+    group_data = f.read().splitlines()
+
+for i in group_data:
+    if "1bg" in i:
+        count = 0
+        print(i)
+    else:
+        count += 1
+        print("member " + str(count) + " : " + str(i))
+
+'''
 
 # git pull 拉回各組組長直接在 github web 介面同意直接合併的各學員
 # 位於 downloads 目錄下的 "學號_html.txt"
@@ -32,4 +47,4 @@ for article in soup.find_all('h2'):
     article.insert_after(new_tag)
     
 print(soup)
-
+'''
