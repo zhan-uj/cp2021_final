@@ -179,7 +179,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="紅色">紅點</button><button id="紅色有暫停">紅點按鈕</button><button id="亂數英文版">亂數</button><button id="亂數中文版">亂數中文</button><button id="貪食蛇">蛇一般</button><button id="一加到十">一加到十</button></p>
+<p><button id="紅色">紅點</button><button id="紅色有暫停">紅點按鈕</button><button id="亂數英文版">亂數英文</button><button id="亂數中文版">亂數中文</button><button id="貪食蛇">蛇</button><button id="一加到十">1-10</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -261,34 +261,34 @@ class button2:
         Ace2.editor.gotoLine(0)
         Ace2.run()
 
-紅色_url = "https://gist.githubusercontent.com/41023221/65ddf0100c168a3d81aab5b059001fbf/raw/195d3b9640da8bf59fb0b1a4e1ad495758eb6abb/hw1"
+紅色_url = "https://gist.githubusercontent.com/gu811/8555ac55a8a5c6eb740d0888c75d3199/raw/71a94b3a3c14613a3a6792cfc9511a7d8699756b/hw1"
 紅色 = button2(紅色_url)
 doc["紅色"].bind('click', 紅色.do)
 ################################# 紅色有暫停 start 
-紅色有暫停_url = "https://gist.githubusercontent.com/41023221/30ed54e7883d32ac341a12f6a422ecda/raw/a485de7247c4db0539b2dfdace82a7c9953f2121/red2.py"
+紅色有暫停_url = "https://gist.githubusercontent.com/gu811/05f07cd5160be8fcb65e8dfa5b1ccfb1/raw/d3482ac7cd62b42a4b7eaf44149256423cac7397/hw1.py"
 紅色有暫停 = button2(紅色有暫停_url)
 doc["紅色有暫停"].bind('click', 紅色有暫停.do)
 ################################## 紅色有暫停 end
 ################################## 亂數英文版 start
-亂數英文版_url = "https://gist.githubusercontent.com/41023221/ae31fb6f38e688316151848963d7bf22/raw/a046fc1b64702d1cfd56dee5d2d2721abc13688e/random.py"
+亂數英文版_url = "https://gist.githubusercontent.com/gu811/604b01c013fbc8b2c78142ed08ae4e78/raw/8d30f457b01f81d23937de67cae37f33d21b8f33/w13%25201.py"
 亂數英文版 = button2(亂數英文版_url)
 doc["亂數英文版"].bind("click",亂數英文版.do)
 
 ################################## 亂數英文版 end
 #################################亂數中文版 start
-亂數中文版_url = "https://gist.githubusercontent.com/41023221/55e5100e1fdcdf0b080e75f75f2aff80/raw/9b9c212ebe7ee8b6950404b1c1d1af9f746eaddf/random2.py"
+亂數中文版_url = "https://gist.githubusercontent.com/gu811/93713f34f921664d25bcf3f06583c346/raw/a4b8568664c11e75dea2952ed2895c5ffe10e97a/w13%25202.py"
 亂數中文版 = button2(亂數中文版_url)
 doc["亂數中文版"].bind("click",亂數中文版.do)
 
 ################################## 亂數中文版 end
 #################################貪食蛇 start
-貪食蛇_url = "https://gist.githubusercontent.com/41023221/f20689eac7e3b1a309156f2732b998f7/raw/0f8d40531f54b4786c75a2abac78c27669270f8d/snake.py"
+貪食蛇_url = "https://gist.githubusercontent.com/gu811/283d171ad5837bcbdaa7649a5396d4c2/raw/9bcd8fa8a20c94c7655a6e7d6681cc56d520a957/hw3"
 貪食蛇 = button2(貪食蛇_url)
 doc["貪食蛇"].bind("click",貪食蛇.do)
 
 ################################## 貪食蛇 end
 #################################1加到10 start
-一加到十_url = "https://gist.githubusercontent.com/41023221/006763fa02022c359a039ee940091eaa/raw/2a6e379dfb78d42162225c0f1cd3f14a3faf75f2/1+10.py"
+一加到十_url = "https://gist.githubusercontent.com/gu811/41fb2da27b1847acca3b473658538003/raw/650e982db981852ed1a6539983d8ac79d6148324/one%2520to%2520ten.py"
 一加到十 = button2(一加到十_url)
 doc["一加到十"].bind("click",一加到十.do)
 
