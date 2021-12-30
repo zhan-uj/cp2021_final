@@ -1011,9 +1011,317 @@ doc["一加到十"].bind("click",一加到十.do)
 </script>
 </p>
 <h3>41023222</h3>
-<h3>41023223</h3>
+<p><a href="/downloads/w12demo.txt"></a></p>
+<!-- 導入 brython 程式庫 -->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p>
+<p><button id="紅色">紅點</button><button id="紅色有暫停">紅色按鈕</button><button id="亂數英文版">亂數英文</button><button id="亂數中文版">亂數中文</button><button id="貪食蛇">snake</button><button id="一加到十">1-10</button></p>
+<p><!-- ######################  editor1 開始 ###################### --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<!-- 這裡的畫布 id 為 brython_div -->
+<div id="brython_div"></div>
+<p><!-- ######################  editor1 結束 ###################### --></p>
+<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    # 注意這裡清除的畫布 id 為 brython_div
+    bd = doc["brython_div"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+紅色_url = "https://gist.githubusercontent.com/kolas911205/de1e41fe2e1944e20da1bdcb643de789/raw/a4af64bb0617baa901a8d6fac7fce22b5a4fe34f/hw1"
+紅色 = button2(紅色_url)
+doc["紅色"].bind('click', 紅色.do)
+################################# 紅色有暫停 start 
+紅色有暫停_url = "https://gist.githubusercontent.com/kolas911205/ace8a09116f887e9f7d2f96b5365a829/raw/2151c054a19eb8a3f3d990571f5824828e498903/red.py"
+紅色有暫停 = button2(紅色有暫停_url)
+doc["紅色有暫停"].bind('click', 紅色有暫停.do)
+################################## 紅色有暫停 end
+################################## 亂數英文版 start
+亂數英文版_url = "https://gist.githubusercontent.com/kolas911205/5a388cc3b65b377fec4ceec6e75ff859/raw/fe9946c272550ace3594e013274f8dffcf9fb68e/w13.py"
+亂數英文版 = button2(亂數英文版_url)
+doc["亂數英文版"].bind("click",亂數英文版.do)
+
+################################## 亂數英文版 end
+#################################亂數中文版 start
+亂數中文版_url = "https://gist.githubusercontent.com/kolas911205/d5e0361ab649052019e5fcbf5b2b125e/raw/aa8249f18fbccc8698773bfa2c13ca5367df5935/w13-2.py"
+亂數中文版 = button2(亂數中文版_url)
+doc["亂數中文版"].bind("click",亂數中文版.do)
+
+################################## 亂數中文版 end
+#################################貪食蛇 start
+貪食蛇_url = "https://gist.githubusercontent.com/kolas911205/e40b46920132845f5fbc6808dd9de254/raw/05b260ad0366536bf9ecb5cd4280769e43e0ee8b/snake.py"
+貪食蛇 = button2(貪食蛇_url)
+doc["貪食蛇"].bind("click",貪食蛇.do)
+
+################################## 貪食蛇 end
+#################################1加到10 start
+一加到十_url = "https://gist.githubusercontent.com/kolas911205/36eadc99fc331ca555f7ed4458c3c3d4/raw/1f19f833d6da47818eb2751cbd2157a00e65dccf/one%2520%2520ten"
+一加到十 = button2(一加到十_url)
+doc["一加到十"].bind("click",一加到十.do)
+
+################################## 1加到10end
+</script>
+</p><h3>41023223</h3>
 <h3>41023224</h3>
-<h3>41023228</h3>
+<p><a href="/downloads/w12demo.txt"></a></p>
+<!-- 導入 brython 程式庫 -->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p>
+<p><button id="紅色">紅點</button><button id="紅色有暫停">紅點按鈕</button><button id="亂數英文版">亂數英文</button><button id="亂數中文版">亂數中文</button><button id="貪食蛇">蛇</button><button id="一加到十">1-10</button></p>
+<p><!-- ######################  editor1 開始 ###################### --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<!-- 這裡的畫布 id 為 brython_div -->
+<div id="brython_div"></div>
+<p><!-- ######################  editor1 結束 ###################### --></p>
+<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    # 注意這裡清除的畫布 id 為 brython_div
+    bd = doc["brython_div"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+紅色_url = "https://gist.githubusercontent.com/41023224/9d8881a67b46e5793ab83e49e5d27701/raw/02423e77b78a1cd2f252cb95f55d5a05d8631e72/%25E7%25B4%2585%25E8%2589%25B2%25E6%258C%2589%25E9%2588%2595.py"
+紅色 = button2(紅色_url)
+doc["紅色"].bind('click', 紅色.do)
+################################# 紅色有暫停 start 
+紅色有暫停_url = "https://gist.githubusercontent.com/41023224/5401a35e27d765ce1f5438f397020e17/raw/b398cc1fdc029d5beb1d50885996e97e95ae745c/%25E7%25B4%2585%25E9%25BB%259E.py"
+紅色有暫停 = button2(紅色有暫停_url)
+doc["紅色有暫停"].bind('click', 紅色有暫停.do)
+################################## 紅色有暫停 end
+################################## 亂數英文版 start
+亂數英文版_url = "https://gist.githubusercontent.com/41023224/97e979bd2f2885ba548754acbebddf56/raw/b01f05db406b730b525207f28bdcb50a436744f1/random.py"
+亂數英文版 = button2(亂數英文版_url)
+doc["亂數英文版"].bind("click",亂數英文版.do)
+
+################################## 亂數英文版 end
+#################################亂數中文版 start
+亂數中文版_url = "https://gist.githubusercontent.com/gu811/93713f34f921664d25bcf3f06583c346/raw/3f06ca4ac141ac9ece8eeced3be00d6c3dc71aa7/w13%25202.py"
+亂數中文版 = button2(亂數中文版_url)
+doc["亂數中文版"].bind("click",亂數中文版.do)
+
+################################## 亂數中文版 end
+#################################貪食蛇 start
+貪食蛇_url = "https://gist.githubusercontent.com/41023224/3d0dedcb85e9329cdf2d4f8544faab0b/raw/4262a81b91d9df87320a197de51f4618f1d82800/%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587.py"
+貪食蛇 = button2(貪食蛇_url)
+doc["貪食蛇"].bind("click",貪食蛇.do)
+
+################################## 貪食蛇 end
+#################################1加到10 start
+一加到十_url = "https://gist.githubusercontent.com/41023224/3dc7dabb9ce0020d2589fe3ee63c4210/raw/76b5f1f25d352c6a93feac0fc67b78138c4db8e5/1%25E5%258A%25A0%25E5%2588%25B010.py"
+一加到十 = button2(一加到十_url)
+doc["一加到十"].bind("click",一加到十.do)
+
+################################## 1加到10end
+</script>
+</p><h3>41023228</h3>
 <p><a href="/downloads/w12demo.txt"></a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
