@@ -75,7 +75,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/40823227/0f52a5f63eab8fb8558c0e5d22244f0d/raw/11739a7c3dda35b862a6ad68c1fb022e7b9d532d/W13"
+        url = "https://gist.githubusercontent.com/40823227/2ce33b92331c414455186e4ab358937b/raw/efe5c6a8f0f1dee7416795b096170148c313a367/%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A-1"
     prog = open(url).read()
 
     # 將程式載入編輯區
