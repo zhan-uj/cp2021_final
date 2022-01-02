@@ -3,8 +3,7 @@ from bs4 import BeautifulSoup
 # ref: https://stackoverflow.com/questions/15233340/getting-rid-of-n-when-using-readlines
 # ref: https://stackoverflow.com/questions/3845423/remove-empty-strings-from-a-list-of-strings
 
-'''
-設法讀出各班各組學員學號資料
+'''設法讀出各班各組學員學號資料
 '''
 repo_path = "Y:/tmp/cp2021_final"
 class_name = "1a"
@@ -43,7 +42,8 @@ grp_big.append(grp_mem)
 # 查驗是否正確讀入各班組員名單
 #print(grp_title, grp_big)
 for i in range(len(grp_title)):
-    print(grp_title[i], grp_big[i])
+    # 分別讀出各組組序與排序後的組員學號
+    print(grp_title[i], sorted(grp_big[i]))
 
 '''
 根據學號, 從 downloads 目錄取出該學員的期末報告網頁 
