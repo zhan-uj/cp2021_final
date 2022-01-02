@@ -368,8 +368,7 @@ def get_html(grp_title, student_id):
         output = output.replace("</body></html>", "")
         output = output.replace("// <![CDATA[", "")
         output = output.replace("// ]]>", "")
-        output = output.replace("<p>&gt;</p>", "")
-        output = output.replace("<p></p>", "")
+        output = output.replace("&gt;", "")
         return output
     except:
         #print("no file found for " + str(student_id))
