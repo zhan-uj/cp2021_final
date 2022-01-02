@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 # Global parameters setup
 repo_path = "Y:/tmp/cp2021_final"
-class_name = "1a"
+class_name = "1b"
 group_file = repo_path + "/downloads/" + class_name + "_grouping.txt"
 page_head = "h2"
 
@@ -322,11 +322,14 @@ doc["final"].bind("click", final.do)
 <h2>1bg7</h2>
 <h2>1bg8</h2>
 """
+'''
+# 處理 1b 資料時必須蓋掉
 file_location = repo_path + "/config/content.htm"
 # 將動態網頁檔案內容讀出, 存入 data 變數區
 with open(file_location, "w", encoding="utf-8") as f:
     f.write(origin_html)
-    
+'''
+
 def get_html(grp_title, student_id):
     
     '''根據學號, 從 downloads 目錄取出該學員的期末報告網頁 
