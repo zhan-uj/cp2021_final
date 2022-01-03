@@ -13,3 +13,9 @@ jobs:
     - uses: BSFishy/pip-action@v1
       with:
         requirements: requirements.txt 
+    - run: |
+        python downloads/add_to_content_htm_1a.py
+        python downloads/add_to_content_htm_1b.py
+        python downloads/generate_pages.py
+
+
