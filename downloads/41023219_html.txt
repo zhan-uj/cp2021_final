@@ -146,5 +146,9 @@ snake_url = "https://gist.githubusercontent.com/gu811/283d171ad5837bcbdaa7649a53
 snake = button2(snake_url)
 doc["snake"].bind("click",snake.do)
 ################################## snake end
+15X15_url = "https://gist.githubusercontent.com/gu811/b975ea404f8ab47d9a8e45c0ecbdb62b/raw/38150c5bc60d524c92c6d8d236690b9943b3e6e3/15x15"
+15X15 = button2(15X15_url)
+doc["15X15"].bind("click",15X15.do)
+################################## 15X15 end
 // ]]></script>
 </p>
