@@ -1,22 +1,17 @@
-name: On Push Run
-
-on: push
-
-env:
-  DEVOPS_DIR: devops
+name: Install Python and required modules
+on: [push, pull_request]
 
 jobs:
-  hello-world:
-    name: Hello world
+ # python installtion
+  install-python:
+  # should run on linux based operating system
     runs-on: ubuntu-latest
+  
     steps:
-    - name: Check-out devops repository
-      uses: actions/checkout@v2
-      with:
-        repository: jcdan3/devops
-        token: ${{ secrets.GITHUB_TOKEN }}
-        path: ${{ env.DEVOPS_DIR }}
-
-    - name: Hello World
-      run: python ${{ env.DEVOPS_DIR }}/download/hello.py
-      shell: sh
+      - uses: actions/checkout@v2
+      - name: Install python version
+        with:
+          default: 3.9.5 # pick 3.9.5 verion 
+          command: pip install -U pip  # upgrade pip after installing python
+      - name: Install dependencies
+        run: pip install -r requirements.txt --upgrade pip
