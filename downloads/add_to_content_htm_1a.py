@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 # Global parameters setup
 repo_path = "Y:/tmp/cp2021_final"
-class_name = "1a"
+class_name = "1b"
 group_file = repo_path + "/downloads/" + class_name + "_grouping.txt"
 page_head = "h2"
 
