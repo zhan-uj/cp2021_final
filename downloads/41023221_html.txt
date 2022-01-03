@@ -138,7 +138,7 @@ doc["e"].bind('click', e.do)
 f_url = "https://gist.githubusercontent.com/41023221/006763fa02022c359a039ee940091eaa/raw/2a6e379dfb78d42162225c0f1cd3f14a3faf75f2/1+10.py"
 f = button2(f_url)
 doc["f"].bind('click', f.do)
-g_url = "https://gist.githubusercontent.com/41023221/d9b9267c59443cbf9e37a55dc76da0e3/raw/2f32878a8a011b0fce1e88637e78a148c9db9c89/%25E6%259C%259F%25E6%259C%25AB.py"
+g_url = "https://gist.githubusercontent.com/41023221/d9b9267c59443cbf9e37a55dc76da0e3/raw/31c3a17445aad34d4c19993e5c2f55cad4246d99/%25E6%259C%259F%25E6%259C%25AB.py"
 g = button2(g_url)
 doc["g"].bind('click', g.do)
 // ]]></script>
