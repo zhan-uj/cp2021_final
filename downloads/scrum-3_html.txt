@@ -1,6 +1,6 @@
 <h3>scrum-3</h3>
 <h4>BSnake</h4>
-<p>scrum-3 轉為協同管者</p>
+<p>scrum-3 轉為協同管理者</p>
 <p>BSnake 是從 <a href="https://hawstein.com/2013/04/15/snake-ai/">https://hawstein.com/2013/04/15/snake-ai/</a> (<a href="/downloads/BSnake_ref_blog.pdf">pdf</a>)修改為能夠在 Brython 網際程式環境中執行的版本.</p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
