@@ -369,6 +369,7 @@ def get_html(grp_title, student_id):
         output = output.replace("// <![CDATA[", "")
         output = output.replace("// ]]>", "")
         output = output.replace("&gt;", "")
+        output = output.replace("<p></p>", "")
         return output
     except:
         #print("no file found for " + str(student_id))
@@ -415,6 +416,8 @@ for i in range(len(grp_title)):
     # j is student id for each member
     for j in stud_list:
         content = get_html(grp_title[i], j)
+        content = content.replace("<p></p>", "")
+        content = content.replace("&gt;", "")
         if content != "":
             print(j)
             #print(content)

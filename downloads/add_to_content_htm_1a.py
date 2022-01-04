@@ -416,6 +416,8 @@ for i in range(len(grp_title)):
     # j is student id for each member
     for j in stud_list:
         content = get_html(grp_title[i], j)
+        content = content.replace("<p></p>", "")
+        content = content.replace("&gt;", "")
         if content != "":
             print(j)
             #print(content)
