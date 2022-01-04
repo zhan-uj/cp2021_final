@@ -139,8 +139,11 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">1bg4 << <a href='1bg4.html'>Previous</a> <a href='41023222.html'>Next</a> >> 41023222<br /><h1>41023224</h1>
-<p><a href="./../downloads/w12demo.txt"></a></p>
+    <div id="tipue_search_content">1bg6 << <a href='1bg6.html'>Previous</a> <a href='41023226.html'>Next</a> >> 41023226<br /><h1>41023227</h1>
+<p><a href="./../downloads/w12demo.txt">w12demo.txt</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a>.</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> - 可以根據此規格定義, 新增 <button id="procflas">PROC flag</button> 按鈕.</p>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a> - 可以根據此規格定義, 新增 <button id="usaflag">USA flag</button> 按鈕.</p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -179,7 +182,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">紅點</button><button id="p261">紅點按鈕</button><button id="rocflag">1加到10</button><button id="rocflag1">亂數中</button><button id="rocflag2">亂數英</button><button id="rocflag3">貪食蛇</button></p>
+<p><button id="cube">cube</button><button id="bottoncube">cube-b</button><button id="add1to100">add 1 to 100</button><button id="W13">W13</button><button id="p261">2.6-1</button><button id="rocflag">ROC flag</button><button id="final1">final1</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -215,7 +218,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+        url = "https://gist.githubusercontent.com/ken6003/14c705e65b281c43f710fbbfccec6c68/raw/05fb1157fbc87e52739a88eb8bf74bda2d1deb77/41023227"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -261,37 +264,42 @@ class button2:
         Ace2.editor.gotoLine(0)
         Ace2.run()
 
-add1to100_url = "https://gist.githubusercontent.com/41023224/9d8881a67b46e5793ab83e49e5d27701/raw/555808ae42c4ca3c16cec09f92f2f088bb7f4e8e/%25E7%25B4%2585%25E9%25BB%259E.py"
+add1to100_url = "https://gist.githubusercontent.com/ken6003/298da91267db285a5590036baad268d7/raw/a33b481ad4665ef5548a63d99c4c5619f9ff2ed8/41023227"
 add1to100 = button2(add1to100_url)
 doc["add1to100"].bind('click', add1to100.do)
 ################################# p261 start 
-p261_url = "https://gist.githubusercontent.com/41023224/84096bd119a06eff740c3b9af8eef4a0/raw/a7eabc980bf800327a6377e652fec405ea42c6ee/%25E7%25B4%2585%25E9%25BB%259E%25E6%258C%2589%25E9%2588%2595.py"
+p261_url = "https://gist.githubusercontent.com/41023226/6b0a9c922c0dbc66903fa0d9518959df/raw/b6b88bcfda9ec5075000705a27f6c48b5e338310/2.6-1"
 p261 = button2(p261_url)
 doc["p261"].bind('click', p261.do)
 ################################## p261 end
+################################# W13 start 
+W13_url = "https://gist.githubusercontent.com/41023226/aa88b6d2f3b16a3026b132cb6835652e/raw/4183b09d5c8e5bcb5753501ec9dba52b6e3b30a6/W13"
+W13 = button2(W13_url)
+doc["W13"].bind('click', W13.do)
+################################## W13 end
 ################################## rocflag start
-rocflag_url = "https://gist.githubusercontent.com/41023224/3dc7dabb9ce0020d2589fe3ee63c4210/raw/76b5f1f25d352c6a93feac0fc67b78138c4db8e5/1%25E5%258A%25A0%25E5%2588%25B010.py"
+rocflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/0e2ca81d5c2539c4b6c86071c8cf9de0b1251b9c/roc_flag.py"
 rocflag = button2(rocflag_url)
 doc["rocflag"].bind("click", rocflag.do)
 ################################## rocflag end
-################################## rocflag start
-rocflag1_url = "https://gist.githubusercontent.com/41023224/112e429348785c682af9ed7db199968b/raw/64db55a096ad24011b407104457e8c86544e2d1f/random2.py"
-rocflag1 = button2(rocflag1_url)
-doc["rocflag1"].bind("click", rocflag1.do)
-################################## rocflag end
-################################## rocflag start
-rocflag2_url = "https://gist.githubusercontent.com/41023224/97e979bd2f2885ba548754acbebddf56/raw/b01f05db406b730b525207f28bdcb50a436744f1/random.py"
-rocflag2 = button2(rocflag2_url)
-doc["rocflag2"].bind("click", rocflag2.do)
-################################## rocflag end
-################################## rocflag start
-rocflag3_url = "https://gist.githubusercontent.com/41023224/3d0dedcb85e9329cdf2d4f8544faab0b/raw/4262a81b91d9df87320a197de51f4618f1d82800/%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587.py"
-rocflag3 = button2(rocflag3_url)
-doc["rocflag3"].bind("click", rocflag3.do)
-################################## rocflag end
+################################# cube start 
+cube_url = "https://gist.githubusercontent.com/ken6003/12155700b72b65ab78361f55a4737703/raw/4a0123adf037ef75a22fd927a18e8be6e2cbf535/41023227"
+cube = button2(cube_url)
+doc["cube"].bind('click', cube.do)
+################################## cube end
+################################# bottoncube start 
+bottoncube_url = "https://gist.githubusercontent.com/ken6003/efa5958f6425e2e2c8118231f26554a8/raw/f036e9cfa3cda383198db948c87b59a670612035/41023227"
+bottoncube = button2(bottoncube_url)
+doc["bottoncube"].bind('click', bottoncube.do)
+################################## bottoncube end
+################################# final1 start 
+final1_url = "https://gist.githubusercontent.com/41023226/b3d3e11c3092fc7419232091c87dd60d/raw/55adf21455adabd7bed185c908e030e070c8c81c/final1"
+final1 = button2(final1_url)
+doc["final1"].bind('click', final1.do)
+################################## final1 end
 </script>
 </p>
-<br />1bg4 << <a href='1bg4.html'>Previous</a> <a href='41023222.html'>Next</a> >> 41023222</div>
+<br />1bg6 << <a href='1bg6.html'>Previous</a> <a href='41023226.html'>Next</a> >> 41023226</div>
         
     <!-- footer -->
       <div class="container">
