@@ -1,4 +1,4 @@
-&gt;<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><h1>About</h1>
+&gt;<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><h1>About</h1>
 <p>Repository: <a href="https://github.com/mdecourse/cp2021_final">https://github.com/mdecourse/cp2021_final</a></p>
 <p>Github Pages: <a href="https://mde.tw/cp2021_final">https://mde.tw/cp2021_final</a></p>
 <p>Discussion: <a href="https://github.com/mdecourse/cp2021_final/discussions">https://github.com/mdecourse/cp2021_final/discussions</a></p>
@@ -112,7 +112,6 @@ grp_big.append(grp_mem)
 for i in range(len(grp_title)):
     # 分別讀出各組組序與排序後的組員學號
     print(grp_title[i], sorted(grp_big[i]))</pre>
-<p></p>
 <h2>Final</h2>
 <p>假如希望利用 Brython 讀取 <a href="http://mde.tw/cp2021_final/downloads/1a_grouping.txt">http://mde.tw/cp2021_final/downloads/1a_grouping.txt</a>, 初步讀取各班的程式編寫為: <a href="https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/41df2412bfd277c5b8e1fe52b0fe47d4fc0fbacb/cp2021_final.py">https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/41df2412bfd277c5b8e1fe52b0fe47d4fc0fbacb/cp2021_final.py</a></p>
 <p>BSnake 是從 <a href="https://hawstein.com/2013/04/15/snake-ai/">https://hawstein.com/2013/04/15/snake-ai/</a> (<a href="/downloads/BSnake_ref_blog.pdf">pdf</a>)修改為能夠在 Brython 網際程式環境中執行的版本.</p>
@@ -162,11 +161,9 @@ function doSave(storage_id, filename){
 <p><!-- 存擋表單開始 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
 <p><!-- 存擋表單結束 --></p>
-<p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
-<p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
@@ -340,11 +337,9 @@ function doSave(storage_id, filename){
 <p><!-- 存擋表單開始 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
 <p><!-- 存擋表單結束 --></p>
-<p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
-<p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
@@ -489,11 +484,9 @@ function doSave(storage_id, filename){
 <p><!-- 存擋表單開始 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
 <p><!-- 存擋表單結束 --></p>
-<p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
-<p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
@@ -698,16 +691,11 @@ doc['clear_bd'].bind('click', clear_bd)
 <div style="width: 100%; height: 100%;"></div>
 <div id="brython_div"> </div>
 <div>================================================================= </div>
-<p></p>
 <div>1.關於hw1的紅色方塊,是我第一次接觸python,一開始什麼都看不懂,到後來才發現是用browser.timer</div>
 <div>個模組配合if迴圈使函式隔一段時間執行一次產生移動的效果,還有將方塊著做成有啟動和暫停按鈕,我一開始因為不熟悉課程網站沒找到Cango裡的fourbar按鈕,所以我在網上查了很多python的資料,雖然那些資料沒讓我做出按鈕,但也讓我學到很多(最後還是找到fourbar按鈕才學會的)。</div>
-<p></p>
 <div>2.在w13的測驗中我學會了random的用法並完成延伸,我發現如果延伸中的數字改成方塊是不是可以做成貪食蛇中那個隨機生成的莓果,然後我就再延伸了兩個按鈕出來。</div>
-<p></p>
 <div>3.在第十二周的時候用cmd啟動python來熟悉python的基本運算,並在之後完成了pthon教科書2_6的習題並做成按鈕。</div>
-<p></p>
 <div>4.作業三一開始我不知道是要從頭做一隻貪食蛇還是改編老師的貪食蛇,所以我就從頭開始做,一開始是從作業一的方塊開始改,第一個完成的是sanke_t1這隻只有頭且只能吃一次方塊的蛇,然後我用w13延伸做出了貪食蛇的莓果snake_berry,最後將這兩個融合成snake_t2,然後我看到學長交的作業是改編老師的貪食蛇,所以我又做了ai_sanke,最後我看到同學在貪食蛇上加按鈕,然後我就結合老師snake和Bsnake的按鈕做了一個Bsnake。</div>
-<p></p>
 <div>5.簡易計算機和猜數字遊戲是我和<a href="https://github.com/41023121/cp2021_hw">41023121</a>同學一起完成的,在製作的過程中第一次用到input這個東西,發現它可以用來輸入東西去與程式裡的東西氣比較和判斷。</div>
 <div></div>
 <div><span>================================================================= </span></div>
@@ -958,11 +946,9 @@ run()
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
-<p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <!-- 執行與清除按鈕結束 -->
-<p></p>
 <!-- 程式執行 ouput 區 -->
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
@@ -1024,11 +1010,9 @@ function doSave(storage_id, filename){
 <p><!-- 存擋表單開始 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
 <p><!-- 存擋表單結束 --></p>
-<p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
-<p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
