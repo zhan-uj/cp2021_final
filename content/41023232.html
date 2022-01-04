@@ -139,7 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">41023248 << <a href='41023248.html'>Previous</a> <a href='W13_CH.html'>Next</a> >> W13_CH<br /><h1>41023243</h1>
+    <div id="tipue_search_content">1bg6 << <a href='1bg6.html'>Previous</a> <a href='41023227.html'>Next</a> >> 41023227<br /><h1>41023232</h1>
 <p><a href="./../downloads/w12demo.txt">w12demo.txt</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a>.</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> - 可以根據此規格定義, 新增 <button id="procflas">PROC flag</button> 按鈕.</p>
@@ -182,7 +182,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="a">紅點</button><button id="b">紅點暫停</button><button id="c">1~10</button><button id="d">隨機</button><button id="e">隨機國字</button><button id="f">貪食蛇</button></p>
+<p><button id="cube">cube</button><button id="bottoncube">cube-b</button><button id="add1to100">add 1 to 100</button><button id="rocflag">ROC flag</button><button id="final1">final1</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -218,7 +218,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+        url = "https://gist.githubusercontent.com/41023226/3eecdaab63826f23fc59577b61f05a1e/raw/9025db3d3f46fbad66ca7964626a6559cd04ac79/1%2520add%2520to%252010"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -264,27 +264,32 @@ class button2:
         Ace2.editor.gotoLine(0)
         Ace2.run()
 
-a_url = "https://gist.githubusercontent.com/kenneth0812/383245923f349932b9cfc8f44ca105da/raw/ff358755cf4a18989adfed645406959a2d0dc315/41023243.py"
-a = button2(a_url)
-doc["a"].bind('click', a.do)
-b_url = "https://gist.githubusercontent.com/kenneth0812/e48be854f6b7f0b45c5fe4351ecfb1af/raw/efb996527345c0690904c95f3d3f437ad04705ad/reddotstop.py"
-b = button2(b_url)
-doc["b"].bind('click', b.do)
-c_url = "https://gist.githubusercontent.com/kenneth0812/4976552d84389830fa26dbe0057130ee/raw/e7ea3ea750b0a758506ce04559ebea58969c776a/1~10.py"
-c = button2(c_url)
-doc["c"].bind('click', c.do)
-d_url = "https://gist.githubusercontent.com/kenneth0812/cc78dfb2d67ea6ea62bee96df9ecf169/raw/557922ff4bb5bb35d13310a567f1b1d54e8eef9f/W13%2520%25E6%25B8%25AC%25E9%25A9%2597.py"
-d = button2(d_url)
-doc["d"].bind('click', d.do)
-e_url = "https://gist.githubusercontent.com/kenneth0812/cc78dfb2d67ea6ea62bee96df9ecf169/raw/557922ff4bb5bb35d13310a567f1b1d54e8eef9f/W13%2520%25E6%25B8%25AC%25E9%25A9%2597%2520%25E5%259C%258B%25E5%25AD%2597.py"
-e = button2(e_url)
-doc["e"].bind('click', e.do)
-f_url = "https://gist.githubusercontent.com/kenneth0812/70008d04984bb875f25cdfe82c3e457b/raw/6c10fdac59087b90390985e6f5f8598102209798/snake.py"
-f = button2(f_url)
-doc["f"].bind('click', f.do)
+add1to100_url = "https://gist.githubusercontent.com/YUN4/1aa2a5c48df0c74d35ded61aef778725/raw/9a84a51fccfd09010c3221818408e600113e3c8f/41023232_1%2520add%2520to100"
+add1to100 = button2(add1to100_url)
+doc["add1to100"].bind('click', add1to100.do)
+################################## rocflag start
+rocflag_url = "https://gist.githubusercontent.com/YUN4/3542de4729c3efceca18410e45e27eff/raw/5741d5f8110e22d01d913cef98025c71e9b5c48d/flag"
+rocflag = button2(rocflag_url)
+doc["rocflag"].bind("click", rocflag.do)
+################################## rocflag end
+################################# cube start 
+cube_url = "https://gist.githubusercontent.com/YUN4/d7b7e5b3af4637f33dea81c24b9bbfbb/raw/a7b3ee3fdfac6f403696d93e327750027c901e01/cube"
+cube = button2(cube_url)
+doc["cube"].bind('click', cube.do)
+################################## cube end
+################################# bottoncube start 
+bottoncube_url = "https://gist.githubusercontent.com/YUN4/77b07398965793686ec2ea82c27a52c4/raw/093fd133e08a750a713b5401d87cbb48ccb900b6/buttomcube"
+bottoncube = button2(bottoncube_url)
+doc["bottoncube"].bind('click', bottoncube.do)
+################################## bottoncube end
+################################# final1 start 
+final1_url = "https://gist.githubusercontent.com/YUN4/621e5aaeca6b9c67bf8f213dd9eb582b/raw/78c88d57a68264b5533b9221a1c94bd8f6c0ed89/fin"
+final1 = button2(final1_url)
+doc["final1"].bind('click', final1.do)
+################################## final1 end
 </script>
 </p>
-<br />41023248 << <a href='41023248.html'>Previous</a> <a href='W13_CH.html'>Next</a> >> W13_CH</div>
+<br />1bg6 << <a href='1bg6.html'>Previous</a> <a href='41023227.html'>Next</a> >> 41023227</div>
         
     <!-- footer -->
       <div class="container">
