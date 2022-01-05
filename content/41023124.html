@@ -217,8 +217,11 @@ doc['clear_bd'].bind('click', clear_bd)
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="w13">HW1-1</button> <button id="keyword">HW1-2</button> <button id="asd">manual_snake</button> <button id="zxc">auto snake</button></p>
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button> <button id="clear_bd">清除繪圖區</button> <button onclick="window.location.reload()">Reload</button></p>
+<p><button id="w13">HW1-1</button> <button id="keyword">HW1-2</button></p>
+<p><button id="asd">manual_snake</button> <button id="zxc">auto snake</button> <button id="qwe">ai snake</button></p>
+<p><button id="qaz">exam-1</button> <button id="wsx">exam-2</button> <button id="edc">exam-3</button></p>
+<p><button id="qqq">小遊戲</button></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <div id="brython_div"></div>
 <div class="col-md-0" height="1" id="graphics-column" width="1"></div>
@@ -308,6 +311,56 @@ url = "https://gist.githubusercontent.com/41023124/1f9731b7e87aa6ce14561d9a5f4be
 src = open(url).read()
 zxc = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["zxc"].bind("click", zxc.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023124/5f4c4c0098635c2e7c43722636893537/raw/dc20cadf1665952b0fda21af25f5a4184886b5b7/my%2520ai%2520snake"
+src = open(url).read()
+qwe = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["qwe"].bind("click", qwe.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023124/c1ad0e2e3fea8f8b9040261abd74739b/raw/1be65b25dc95161f1077725dc234aafa409945c9/exam"
+src = open(url).read()
+qaz = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["qaz"].bind("click", qaz.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023124/86214f53b8658b3a3964b8f69d37c479/raw/ab5e15d878eb74bda491f7ebc81f066298372173/exam-2"
+src = open(url).read()
+wsx = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["wsx"].bind("click", wsx.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023124/f2064f8f36f587550eab382e07091040/raw/211ce95f5122cdf86f0b4a6c6e226a11fec1cf0a/exam-3"
+src = open(url).read()
+edc = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["edc"].bind("click", edc.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023124/ddef8c5fb3f6d1672fdc12d32a1c53e6/raw/821a3ee83b84efd429111bed2ce2f3f7fea71ac5/%25E5%25B0%258F%25E9%2581%258A%25E6%2588%25B2"
+src = open(url).read()
+qqq= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["qqq"].bind("click", qqq.prog)
 </script>
 </p>
 <br />1ag3 << <a href='1ag3.html'>Previous</a> <a href='41023120.html'>Next</a> >> 41023120</div>
