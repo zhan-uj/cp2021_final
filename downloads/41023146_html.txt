@@ -1,4 +1,4 @@
-<h2>41023146</h2>
+<h3>41023146</h3>
 <script>// <![CDATA[
 ###############################################
 // ]]></script>
@@ -13,7 +13,7 @@
 <p>5.其他及小遊戲</p>
 <p><button id="w14">簡易計算機</button><button id="w14_1">猜數字遊戲</button></p>
 <p>6.期末測驗</p>
-<p><button id="final_1">finai_1</button><button id="final_2">finai_2</button></p>
+<p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
 <p>
 <script>// <![CDATA[
 ###############################################
