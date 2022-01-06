@@ -1,4 +1,4 @@
-<h3>41023146</h3>
+<h2>41023146</h2>
 <script>// <![CDATA[
 ###############################################
 // ]]></script>
@@ -12,6 +12,8 @@
 <p><button id="貪食蛇">snake</button><button id="snake_t1">snake_t1</button><button id="snake_t2">snake_t2</button><button id="snake_berry">snake_berry</button><button id="ai_snake">ai_snake</button><button id="Bsnake">Bsnake</button></p>
 <p>5.其他及小遊戲</p>
 <p><button id="w14">簡易計算機</button><button id="w14_1">猜數字遊戲</button></p>
+<p>6.期末測驗</p>
+<p><button id="final_1">finai_1</button><button id="final_2">finai_2</button></p>
 <p>
 <script>// <![CDATA[
 ###############################################
@@ -279,6 +281,22 @@ url = "https://gist.githubusercontent.com/41023146/ddee835b78f036d99e9eadbb428f7
 src = open(url).read()
 Bsnake = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["Bsnake"].bind("click", Bsnake.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023146/3dc023cad05e30aa461242646217abac/raw/ed39b01ec04e260fd0f37bd075f9d484248c4181/final_1"
+src = open(url).read()
+final_1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_1"].bind("click", final_1.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023146/d0eb71ebe0f3447a08904d826a491688/raw/3c015c08226b8c8ea4616040e665f87b257cb0f2/final_2"
+src = open(url).read()
+final_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_2"].bind("click", final_2.prog)
 // ]]></script>
 <script>// <![CDATA[
 ############################################### // ]]&gt;</p>
