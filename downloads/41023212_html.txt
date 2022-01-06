@@ -1,4 +1,5 @@
-<h3>41023212</h3>
+<h3>41023222</h3>
+<p></p>
 <p><a href="/downloads/w12demo.txt"></a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
@@ -38,7 +39,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="red">red</button><button id="redwait">redwait</button><button id="one">one~ten</button><button id="English">English</button><button id="Chinese">Chinese</button><button id="snake">snake</button></p>
+<p><button id="add1to10">add 1 to 10</button><button id="red">red</button><button id="red2">red2</button><button id="snake">snake</button><button id="randomC">randomC</button><button id="randomE">randomE</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -96,7 +97,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 run1()
 // ]]></script>
 <!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
-<p><!-- red 開始 -->
+<p><!-- add 1 to 100 開始 -->
 <script type="text/python3">// <![CDATA[
 from browser import document as doc
 import ace
@@ -120,33 +121,29 @@ class button2:
         Ace2.editor.gotoLine(0)
         Ace2.run()
 
-red= "https://gist.githubusercontent.com/yonqui0411/b5e6a1e24cccc0ea72490b131733cbff/raw/9d1eaebf6911ec36463b77457512099fd2c5afba/red"
-red= button2(red)
+add1to10_url = "https://gist.githubusercontent.com/yonqui0411/c42b3515bf53203b16a110bd77470062/raw/3872f69d32ed294ec11f972289f7c91b20f4e1ea/one~ten"
+add1to10 = button2(add1to10_url)
+doc["add1to10"].bind('click', add1to10.do)
+################################# red start 
+red_url = "https://gist.githubusercontent.com/yonqui0411/00e80ee29c29d12c02ee221f75d510a4/raw/f5e2dd34a6b6d110c72895bf8014042600653e48/hw1.py"
+red = button2(red_url)
 doc["red"].bind('click', red.do)
-################################# redwait start 
-redwait= "https://gist.githubusercontent.com/yonqui0411/323db8adab4261733df66cb30e0d5286/raw/77ba4687377f63f3704c8da6675e691f6a30c522/hw1-2.py"
-redwait= button2(redwait)
-doc["redwait"].bind('click', redwait.do)
-################################## redwait end
-################################## one start
-one= "https://gist.githubusercontent.com/yonqui0411/c42b3515bf53203b16a110bd77470062/raw/3872f69d32ed294ec11f972289f7c91b20f4e1ea/one~ten"
-one= button2(one)
-doc["one"].bind("click", one.do)
-################################## one end
-################################## English strat
-English= "https://gist.githubusercontent.com/yonqui0411/a5022e6ab4dfd0ac31f3881e96e05728/raw/937b49c9362a76ec87caa09f92e21a1ace9cfe7b/W13.py"
-English= button2(English)
-doc["English"].bind('click', English.do)
-################################## English end
-################################## Chinese start
-Chinese= "https://gist.githubusercontent.com/yonqui0411/c3c829b9d4ddcb2db203913b9ce9888a/raw/8c537fc2bd63074a2ff3fdde6473f8676f922e30/W13%25E4%25B8%25AD.py"
-Chinese= button2(Chinese)
-doc["Chinese"].bind("click", Chinese.do)
-################################## Chinese end
+################################## red end
+################################## red2 start
+red2_url = "https://gist.githubusercontent.com/yonqui0411/323db8adab4261733df66cb30e0d5286/raw/77ba4687377f63f3704c8da6675e691f6a30c522/hw1-2.py"
+red2 = button2(red2_url)
+doc["red2"].bind("click", red2.do)
+################################## red2 end
 ################################## snake start
-snake= "https://gist.githubusercontent.com/yonqui0411/808efb0af8082935eea583cdda7f87b9/raw/f4ed6e3c4328ae735ea82ff5f6d48e310ad454c0/snake"
-snake= button2(snake)
+snake_url = "https://gist.githubusercontent.com/yonqui0411/808efb0af8082935eea583cdda7f87b9/raw/f4ed6e3c4328ae735ea82ff5f6d48e310ad454c0/snake"
+snake = button2(snake_url)
 doc["snake"].bind("click", snake.do)
 ################################## snake end
+randomC_url = "https://gist.githubusercontent.com/yonqui0411/c3c829b9d4ddcb2db203913b9ce9888a/raw/8c537fc2bd63074a2ff3fdde6473f8676f922e30/W13%25E4%25B8%25AD.py"
+randomC = button2(randomC_url)
+doc["randomC"].bind('click', randomC.do)
+randomE_url = "https://gist.githubusercontent.com/yonqui0411/a5022e6ab4dfd0ac31f3881e96e05728/raw/937b49c9362a76ec87caa09f92e21a1ace9cfe7b/W13.py"
+randomE = button2(randomE_url)
+doc["randomE"].bind('click', randomE.do)
 // ]]></script>
 </p>
