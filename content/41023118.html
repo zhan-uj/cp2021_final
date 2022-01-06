@@ -227,7 +227,44 @@ def hw12_inp(ev):
 # id 為 "hw1-2" 的按鈕點按時, 執行 hw1-2_inp 方法
 doc["hw1-2"].bind('click', hw12_inp)
 
+w13_qwe_url = "https://gist.githubusercontent.com/41023118/96eb543b04066ebd7b48de3940676db6/raw/96e2daad99fdc53de71142a5014d07e4afc70218/w13"
+# 從 gist 取得程式碼
+w13_wq = open(w13_qwe_url).read()
 
+def w13_inp(ev):
+     Ace.editor.setValue(w13_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "w13" 的按鈕點按時, 執行 w13_inp 方法
+doc["w13"].bind('click', w13_inp)
+
+final1_qwe_url = "https://gist.githubusercontent.com/41023118/d2fe8f3fd445b69af08ff0781673a246/raw/8b55554d772d99dc63718d21d3da645c79228757/final1"
+ # 從 gist 取得程式碼
+final1_wq = open(final1_qwe_url).read()
+
+def final1_inp(ev):
+     Ace.editor.setValue(final1_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "final1" 的按鈕點按時, 執行 final1_inp 方法
+doc["final1"].bind('click', final1_inp)
+
+final2_qwe_url = "https://gist.githubusercontent.com/41023118/1a1b0fad8fdc05a257e3c4c46fd61dde/raw/30c64c73c8dcb2608dc3655a30d60b0c4a3d391c/final2"
+ # 從 gist 取得程式碼
+final2_wq = open(final2_qwe_url).read()
+
+def final2_inp(ev):
+     Ace.editor.setValue(final2_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "final2" 的按鈕點按時, 執行 final2_inp 方法
+doc["final2"].bind('click', final2_inp)
 
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
@@ -244,18 +281,19 @@ run()
 <!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="hw1-1">hw1-1</button> <button id="hw1-2">hw1-2</button></p>
-<!-- 執行與清除按鈕結束 -->
-<!-- 程式執行 ouput 區 -->
+<p><button id="hw1-1">hw1-1</button> <button id="hw1-2">hw1-2</button> <button id="w13">w13</button> <button id="final1">final1</button> <button id="final2">final2</button></p>
+<p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
-<!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <div id="brython_div"></div>
-<!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<div>我覺得第一題的程式並沒有很難，難的是要怎們利用簡單的語法來完成它。第二題的話我有努力去寫，但是還是沒辦法獨自完成，所以有問了一些同學請他們教我，我才能完成這個程式。</div>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
 <script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p>
 <br />41023119 << <a href='41023119.html'>Previous</a> <a href='1ag4.html'>Next</a> >> 1ag4</div>
         
     <!-- footer -->
