@@ -139,7 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">41023126 << <a href='41023126.html'>Previous</a> <a href='40823214.html'>Next</a> >> 40823214<br /><h1>41023114</h1>
+    <div id="tipue_search_content">1ag5 << <a href='1ag5.html'>Previous</a> <a href='41023114.html'>Next</a> >> 41023114<br /><h1>41023126</h1>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -188,7 +188,7 @@ def run():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/41023114/c32742a21add581dfde1a5930c078f42/raw/3d9a0f64610f124aa43f3263b01cac64590c0710/%25E5%25B0%2587%25E5%25B7%25A6%25E5%258F%25B3%25E7%25A2%25B0%25E6%2592%259E%25E7%25A7%25BB%25E5%258B%2595%25E7%259A%2584%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A,%2520%25E6%2594%25B9%25E7%2582%25BA%25E5%2585%2588%25E7%25A7%25BB%25E5%258B%2595%25E5%2588%25B0%25E6%25B0%25B4%25E5%25B9%25B3%25E7%2595%25AB%25E9%259D%25A2%25E4%25B8%25AD%25E5%25BF%2583%25E9%25BB%259E%25E4%25BD%258D%25E7%25BD%25AE%25E5%25BE%258C,%2520%25E6%258E%25A5%25E8%2591%2597%25E4%25B8%258A%25E4%25B8%258B%25E7%25A2%25B0%25E6%2592%259E%25E7%25A7%25BB%25E5%258B%2595 "
+        url = "https://gist.github.com/41023126/d488026b5dae3c83752d8cb9752ac3fc "
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -201,7 +201,7 @@ def run():
     # 按下 run 按鈕
     Ace.run()
 
-chec_qwe_url = "https://gist.githubusercontent.com/41023114/a5e567c1d3f9617f42da28d9738ff054/raw/dbb18633bebf796fa3b006db4c15027f93449db8/EXAM"
+chec_qwe_url = "https://gist.githubusercontent.com/41023126/6d7cdae2b8bcf87ebc702aa809e729a9/raw/8288d63d8211651f4ff1fef627a0685ba806582d/EXAM"
  # 從 gist 取得程式碼
 chec_wq = open(chec_qwe_url).read()
 
@@ -219,7 +219,7 @@ doc['kw_show_console'].bind('click', Ace.show_console)
 doc['kw_clear_console'].bind('click', Ace.clear_console)
 doc['clear_bd'].bind('click', clear_bd)
 
-snake_qwe_url = "https://gist.githubusercontent.com/41023114/f780677e874a9934046662593ae066e7/raw/47ab280d5ceece22bf096aa9b28c9ab96fc50f14/snake"
+snake_qwe_url = "https://gist.githubusercontent.com/41023126/ad8ea9f783335ad994aa2113cb33f658/raw/f1d8dc9b3af63adc94f0a8416675a957329ee3b7/%25E8%2587%25AA%25E5%258B%2595%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587"
  # 從 gist 取得程式碼
 snake_wq = open(snake_qwe_url).read()
 
@@ -231,7 +231,7 @@ def snake_inp(ev):
 
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
 doc["snake"].bind('click', snake_inp)
-final_qwe_url = "https://gist.githubusercontent.com/41023114/52f9fee4b504a07c0fc15d628f0e0f5d/raw/297e505cd9c925892aedd7d3cbba3906b84a651d/U"
+final_qwe_url = "https://gist.githubusercontent.com/41023126/37cb47c01b85a9ec3f7f37266985d52a/raw/b204da0cd2292955046f9ee2f6a4e6a76f812e43/final2"
  # 從 gist 取得程式碼
 final_wq = open(final_qwe_url).read()
 
@@ -240,9 +240,19 @@ def final_inp(ev):
      Ace.editor.scrollToRow(0)
      Ace.editor.gotoLine(0)
      Ace.run()
-
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
 doc["final"].bind('click', final_inp)
+final3_qwe_url = "https://gist.githubusercontent.com/41023126/abc9ff33278e574f12a01968051e8f56/raw/fb5124685951150447ff7776f42c2716e66cc751/final1"
+ # 從 gist 取得程式碼
+final3_wq = open(final3_qwe_url).read()
+
+def final3_inp(ev):
+     Ace.editor.setValue(final3_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+# id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
+doc["final3"].bind('click', final3_inp)
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -258,8 +268,7 @@ run()
 <!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="輸入文件名" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="asd">列出10個座標</button><button id="snake">snake</button></p>
-<p><button id="final">final2</button></p>
+<p><button id="asd">列出10個座標</button><button id="snake">snake</button> <button id="final">final2</button> <button id="final3">final1</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
@@ -272,7 +281,7 @@ run()
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<br />41023126 << <a href='41023126.html'>Previous</a> <a href='40823214.html'>Next</a> >> 40823214</div>
+<br />1ag5 << <a href='1ag5.html'>Previous</a> <a href='41023114.html'>Next</a> >> 41023114</div>
         
     <!-- footer -->
       <div class="container">
