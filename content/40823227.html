@@ -141,7 +141,7 @@ img.add_border {
         </header>
     <div id="tipue_search_content">41023154 << <a href='41023154.html'>Previous</a> <a href='1b.html'>Next</a> >> 1b<br /><h1>40823227</h1>
 <h4>final project</h4>
-<p>1.<a href="https://gist.github.com/40823227/0f52a5f63eab8fb8558c0e5d22244f0d#file-w13">https://gist.github.com/40823227/0f52a5f63eab8fb8558c0e5d22244f0d#file-w13</a></p>
+<p><span>期末心得:在編寫程式的過程中,偶爾發現有些程式碼有一定的規則,沒注意到就導致網頁跑不出來,好在問了老師和同學之後,就明白其中需要注意的事項(像是有些code前面不能是數字)</span></p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -180,7 +180,18 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
+<p>HW1</p>
+<p><button id="red1">紅點1</button><button id="red2">紅點2</button></p>
+<p>HW2</p>
+<p><button id="ms">手動蛇</button><button id="ats">自動蛇</button></p>
+<p>HW3</p>
+<p><button id="atsb">自動蛇(優化)</button></p>
+<p>Exam</p>
 <p><button id="tenpositions">列出 10 個座標</button></p>
+<p>小遊戲</p>
+<p><button id="ng">數字海裡尋覓你</button></p>
+<p>期末測驗</p>
+<p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -194,10 +205,10 @@ function doSave(storage_id, filename){
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
-<!-- 這裡的畫布 id 為 brython_div -->
+<p><!-- 這裡的畫布 id 為 brython_div --></p>
 <div id="brython_div"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
-<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
 <script type="text/python3">
 from browser import document as doc
 import ace
@@ -235,7 +246,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
 </script>
-<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
 <p><!-- add 1 to 100 開始 -->
 <script type="text/python3">
 from browser import document as doc
@@ -261,13 +272,59 @@ class button2:
         Ace2.run()
 
 
+################################## 紅點1 start
+red1_url = "https://gist.githubusercontent.com/40823227/2ce33b92331c414455186e4ab358937b/raw/efe5c6a8f0f1dee7416795b096170148c313a367/%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A-1"
+red1 = button2(red1_url)
+doc["red1"].bind('click', red1.do)
+################################## 紅點1 end
+################################## 紅點2 start
+red2_url = "https://gist.githubusercontent.com/40823227/c61935fe2bd9bb583ffd9d1214f2823c/raw/5af869167d009fd19ac564dd772d6e6ec2c6808f/%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A-2"
+red2 = button2(red2_url)
+doc["red2"].bind('click', red2.do)
+################################## 紅點2 end
+################################## 手動蛇 start
+ms_url = "https://gist.githubusercontent.com/40823227/5c03f0e063a43c6ebb1aaffd1e75e210/raw/38ad940f9ab76e8e806011245d464de84e8860f6/%25E6%2589%258B%25E5%258B%2595%25E5%259F%25B7%25E8%25A1%258C%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587"
+ms = button2(ms_url)
+doc["ms"].bind('click', ms.do)
+################################## 手動蛇 end
+################################## 自動蛇 start
+ats_url = "https://gist.githubusercontent.com/40823227/5da84c82db11272a154e8ec65a5e4b08/raw/3c485d3e580d6292db61d15a747c1e15fc6f7b90/%25E8%2587%25AA%25E5%258B%2595%25E5%259F%25B7%25E8%25A1%258C%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587"
+ats = button2(ats_url)
+doc["ats"].bind('click', ats.do)
+################################## 自動蛇 end
+################################## 自動蛇(優化) start
+atsb_url = "https://gist.githubusercontent.com/40823227/7a7f997e826e894f57af46dfc2b2e8ab/raw/59f7e71fb6121722450721ceffd680ed16b200f0/%25E8%2587%25AA%25E5%258B%2595%25E5%259F%25B7%25E8%25A1%258C%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587(%25E5%2584%25AA%25E5%258C%2596%25E7%2589%2588)"
+atsb = button2(atsb_url)
+doc["atsb"].bind('click', atsb.do)
+################################## 自動蛇(優化) end
 ################################## 列出 10 個座標 start
 tenpositions_url = "https://gist.githubusercontent.com/40823227/0f52a5f63eab8fb8558c0e5d22244f0d/raw/11739a7c3dda35b862a6ad68c1fb022e7b9d532d/W13"
 tenpositions = button2(tenpositions_url)
 doc["tenpositions"].bind('click', tenpositions.do)
 ################################## 列出 10 個座標 end
+################################## 數字海裡尋覓你 start
+ng_url = "https://gist.githubusercontent.com/40823227/2cd1bcd810235c54d1272a5d4de45753/raw/14c284f022129fc22737c4d29391d1be5200437d/%25E5%259C%25A8%25E8%258C%25AB%25E8%258C%25AB%25E6%2595%25B8%25E5%25AD%2597%25E6%25B5%25B7%25E8%25A3%25A1%25E5%25B0%258B%25E8%25A6%2593%25E5%2594%25AF%25E4%25B8%2580%25E7%259A%2584%25E4%25BD%25A0"
+ng = button2(ng_url)
+doc["ng"].bind('click', ng.do)
+################################## 數字海裡尋覓你 end
+################################## final_1 start
+final_1_url = "https://gist.githubusercontent.com/40823227/be8bee9a5aabd8f10c7c990eda5df3d5/raw/bdce906464d5dbe7214eca91bebcd323235603d0/final_1"
+final_1 = button2(final_1_url)
+doc["final_1"].bind('click', final_1.do)
+################################## final_1 end
+################################## final_2 start
+final_2_url = "https://gist.githubusercontent.com/40823227/a8baa1baa6dc91fd8d055c8b3b00aca6/raw/cefc9c6486bc5a34fa4ad97b8eefcc158f861282/final_2"
+final_2 = button2(final_2_url)
+doc["final_2"].bind('click', final_2.do)
+################################## final_2 end
 </script>
 </p>
+<p>final_1</p>
+<p><img alt="" height="279" src="./../images/螢幕擷取畫面 2022-01-06 154422.jpg" width="600"/></p>
+<p><iframe allowfullscreen="allowfullscreen" height="336" src="//www.youtube.com/embed/AmbRu8x6BbM" width="600"></iframe></p>
+<p>final_2</p>
+<p><img alt="" height="278" src="./../images/螢幕擷取畫面 2022-01-06 163238.jpg" width="600"/></p>
+<p><iframe allowfullscreen="allowfullscreen" height="336" src="//www.youtube.com/embed/tslQzuySDJc" width="600"></iframe></p>
 <br />41023154 << <a href='41023154.html'>Previous</a> <a href='1b.html'>Next</a> >> 1b</div>
         
     <!-- footer -->
