@@ -1,5 +1,5 @@
 <h3>41023120</h3>
-<p><button id="asd">列出十個座標</button><button id="snake">snake</button><button id="rad">HW1-1</button><button id="autosnake">autosnake</button> <button id="HW">HW1-2</button> <!-- 導入 brython 程式庫 --></p>
+<p><button id="asd">列出十個座標</button><button id="snake">snake</button><button id="rad">HW1-1</button><button id="autosnake">autosnake</button> <button id="HW">HW1-2</button> <button id="test">Final1</button> <button id="test2">Final2</button> <!-- 導入 brython 程式庫 --></p>
 <p>
 <script src="/static/brython.js">// <![CDATA[
 
@@ -125,7 +125,27 @@ def HW_inp(ev):
      #Ace.run()
 # id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
 doc["HW"].bind('click', HW_inp)
+test_qwe_url = "https://gist.githubusercontent.com/41023120/0b193042c198425797bcb8f059812d5a/raw/1d3e02a4fad032a6d3e85412544718c79a8adb95/%25E8%2580%2583%25E8%25A9%25A61"
+# 從 gist 取得程式碼
+test_wq = open(test_qwe_url).read()
+def test_inp(ev):
+     Ace.editor.setValue(test_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+# id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
+doc["test"].bind('click', test_inp)
 
+test2_qwe_url = "https://gist.githubusercontent.com/41023120/8b239d26614ef6faa6d54d3b33bb21b9/raw/64188db27e58406861a7c0d6318ad4a7adc602bb/test2"
+# 從 gist 取得程式碼
+test2_wq = open(test2_qwe_url).read()
+def test2_inp(ev):
+     Ace.editor.setValue(test2_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+# id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
+doc["test2"].bind('click', test2_inp)
 
 
 # 呼叫函式執行
@@ -147,6 +167,12 @@ run()
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <div id="brython_div"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div>Final1:<span>https://stream.new/v/02oKn8RG1UttpJCSjFDAnjr3tm9ca5fLC5dpeL89KCjA</span></div>
 <p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 --></p>
 <p>
 <script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
