@@ -121,10 +121,14 @@ doc['clear_bd'].bind('click', clear_bd)
 <p></p>
 <div>5.簡易計算機和猜數字遊戲是我和<a href="https://github.com/41023121/cp2021_hw">41023121</a>同學一起完成的,在製作的過程中第一次用到input這個東西,發現它可以用來輸入東西去與程式裡的東西氣比較和判斷。</div>
 <div></div>
+<div>6.<a href="https://youtu.be/1cE-mAhPq6o">final_1影片</a>、<a href="https://youtu.be/Tljmk3ZRmrc">final_影片</a></div>
+<div></div>
 <div><span>=================================================================&nbsp;</span></div>
 <div class="col-md-0" height="1" id="graphics-column" width="1"><strong>期末心得</strong></div>
 <div class="col-md-0" height="1" width="1"><strong></strong>在本學期計算機程式的課程我學習到了很多,像是 github倉儲管理、python程式、網站動態編輯還有很多東西,我覺得我學習到最重要的技能有兩個:</div>
+<p></p>
 <div class="col-md-0" height="1" width="1">1.一個是github倉儲管理,讓我們不用擔心資料不見,並且如果有新組員不需要再去教他,他可以看著我們倉儲之前的版本跟上我們進度。</div>
+<p></p>
 <div class="col-md-0" height="1" width="1">2.第二個是可以查到自己需要的資料的能力,因為我發現程式的東西不可能全部都學會並背起來,一定是有需要在去查,所以查資料的能力很重要。</div>
 <p><!-- ****************************** keyword start -->
 <script>// <![CDATA[
