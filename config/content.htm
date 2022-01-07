@@ -2803,8 +2803,20 @@ def snake_inp(ev):
      Ace.editor.gotoLine(0)
      Ace.run()
 
-# id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
+# id 為 "final1" 的按鈕點按時, 執行 chec_inp 方法
 doc["snake"].bind('click', snake_inp)
+final6_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/0372aba1a5956467b6ae63a093383b5eb2e9cfb0/%25E6%25A0%25BC%25E5%25AD%2590"
+ # 從 gist 取得程式碼
+final6_wq = open(final6_qwe_url).read()
+
+def final6_inp(ev):
+     Ace.editor.setValue(final6_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final6" 的按鈕點按時, 執行 final6_inp 方法
+doc["final6"].bind('click', final6_inp)
 final_qwe_url = "https://gist.githubusercontent.com/41023114/52f9fee4b504a07c0fc15d628f0e0f5d/raw/297e505cd9c925892aedd7d3cbba3906b84a651d/U"
  # 從 gist 取得程式碼
 final_wq = open(final_qwe_url).read()
@@ -2834,6 +2846,7 @@ run()
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="asd">列出10個座標</button><button id="snake">snake</button></p>
 <p><button id="final">final2</button></p>
+<p><button id="final6">final1</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
