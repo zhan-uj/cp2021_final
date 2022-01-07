@@ -139,7 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">1ag2 << <a href='1ag2.html'>Previous</a> <a href='41023103.html'>Next</a> >> 41023103<br /><h1>41023104</h1>
+    <div id="tipue_search_content">1ag6 << <a href='1ag6.html'>Previous</a> <a href='41023140.html'>Next</a> >> 41023140<br /><h1>41023153</h1>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -178,7 +178,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="w13">w13</button><button id="BSnake">BSnake</button><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="snake">snake</button><button id="w13">w13</button><button id="final1">final1</button><button id="final2">final2</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -212,7 +212,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+        url = "https://gist.githubusercontent.com/yutang327/24bda1ec1ef878d2d2e497b5edb76307/raw/e406048aad3e5bdae6832066dce78bbeffe5daf7/w12"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -258,42 +258,42 @@ class button2:
         Ace2.editor.gotoLine(0)
         Ace2.run()
 
-add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
+add1to100_url = "https://gist.githubusercontent.com/yutang327/389186cc8e59eedc21ff6b502eeaa301/raw/2c1b6a6557011901e73d0614268280261763132f/w12%2520add%25201%2520to%2520100"
 add1to100 = button2(add1to100_url)
 doc["add1to100"].bind('click', add1to100.do)
 ################################# p261 start 
-p261_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/980606effcd29635307d6474718cd4a7ef016747/p261.py"
+p261_url = "https://gist.githubusercontent.com/yutang327/fc32562b40a4f43e1a2944ee6223b161/raw/1d2ec2afa2d771077ccc05f7f6b6c290618c46aa/w12%2520p261"
 p261 = button2(p261_url)
 doc["p261"].bind('click', p261.do)
 ################################## p261 end
 ################################## rocflag start
-rocflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/0e2ca81d5c2539c4b6c86071c8cf9de0b1251b9c/roc_flag.py"
+rocflag_url = "https://gist.githubusercontent.com/yutang327/027d45623287f22757ad56716c1643fe/raw/ddfa253c98af8cec231571f9f6833b781be928eb/w12%2520roc%2520flag"
 rocflag = button2(rocflag_url)
 doc["rocflag"].bind("click", rocflag.do)
 ################################## rocflag end
-################################# w13 start
-w13_url = "https://gist.githubusercontent.com/CHIA-ROU/11b2ba032bd450c7e65104c1e04407b1/raw/778fbe96ede5a3c7300ffda23d03664891d10d1d/gistfile2.txt"
+################################## snake start
+snake_url = "https://gist.githubusercontent.com/yutang327/514db5ec7fec69f8ba550298ee1b0243/raw/5381958b982947e73b2fd114ebd2cd44049ea21a/snake"
+snake = button2(snake_url)
+doc["snake"].bind("click", snake.do)
+################################## snake end
+################################## w13 start
+w13_url = "https://gist.githubusercontent.com/yutang327/a86b60d537f691e1183c0607ca56daf7/raw/ce17f9e1a8d53aecbb5803b9ce8bbc3955c6d768/w13_5"
 w13 = button2(w13_url)
-doc["w13"].bind('click', w13.do)
+doc["w13"].bind("click", w13.do)
 ################################## w13 end
-################################# BSnake start
-BSnake_url = "https://gist.githubusercontent.com/CHIA-ROU/11b2ba032bd450c7e65104c1e04407b1/raw/be29db08f8143a8289dc28bad92a19450421ec70/BSnake"
-BSnake = button2(BSnake_url)
-doc["BSnake"].bind('click', BSnake.do)
-################################## BSnake end
-################################# final1 start
-final1_url = "https://gist.githubusercontent.com/CHIA-ROU/093b4172d86b22a6c0e6e93cd7950cb2/raw/615d004f659647d76ea902bd75933405c888aa62/Final_1"
+################################## final1 start
+final1_url = "https://gist.githubusercontent.com/yutang327/e5f130cdd6c652f888b118e72154f9c6/raw/560b5c9f545647cf67533212911d7028e89f29cd/final1"
 final1 = button2(final1_url)
-doc["final1"].bind('click', final1.do)
+doc["final1"].bind("click", final1.do)
 ################################## final1 end
-################################# final2 start
-final2_url = "https://gist.githubusercontent.com/CHIA-ROU/feaac6bfc0b5cb645ff5cd1cd95348cd/raw/c19898eda0f20b403f34faca76e8fab0e1a9965f/Final_2"
+################################## final2 start
+final2_url = "https://gist.githubusercontent.com/yutang327/ddeb0c6d2c984d3b1886f142721aa392/raw/5eb5c9275da74405bccc9d7d6d331b7b57c86970/final2"
 final2 = button2(final2_url)
-doc["final2"].bind('click', final2.do)
+doc["final2"].bind("click", final2.do)
 ################################## final2 end
 </script>
 </p>
-<br />1ag2 << <a href='1ag2.html'>Previous</a> <a href='41023103.html'>Next</a> >> 41023103</div>
+<br />1ag6 << <a href='1ag6.html'>Previous</a> <a href='41023140.html'>Next</a> >> 41023140</div>
         
     <!-- footer -->
       <div class="container">
