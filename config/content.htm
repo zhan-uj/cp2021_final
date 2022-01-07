@@ -1477,6 +1477,16 @@ final23 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py
 document["final23"].bind("click",final23.prog)
 </script>
 </p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023125/12fe7955fa849898f566434e1ab09917/raw/f3538a55a4f27443ff0ba99f4273d4ab2d90dfe4/final2-4"
+src = open(url).read()
+final24 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final24"].bind("click",final24.prog)
+</script>
+</p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -1485,13 +1495,13 @@ document["final23"].bind("click",final23.prog)
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="add1to10">列出10個座標</button> <button id="asd">在方格上標出10個座標</button> <button id="zxc">方塊隨機出現</button> <button id="w13">snake</button></p>
 <p><button id="selfgame">戰機遊戲</button></p>
-<p><button id="final1">final1</button> <button id="final2">final2</button> <button id="final22">final2-2</button> <button id="final23">final2-3</button></p>
+<p><button id="final1">final1</button> <button id="final2">final2</button> <button id="final22">final2-2</button> <button id="final23">final2-3</button> <button id="final24">final2-4</button></p>
 <!-- 執行與清除按鈕結束 -->
 <!-- 程式執行 ouput 區 -->
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
 <div id="brython_div"></div>
-<p><a href="https://www.youtube.com/playlist?list=PLgrxSD1DX5E3HRzkN55oyZVaTvB36EbZV">final製作全過程 - YouTube</a></p>
+<p><span style="color: #000000;"><a href="https://www.youtube.com/playlist?list=PLgrxSD1DX5E3HRzkN55oyZVaTvB36EbZV" style="color: #000000;">final製作全過程 - YouTube</a></span></p>
 <h3>41023124</h3>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
