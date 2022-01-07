@@ -174,7 +174,7 @@ document["final23"].bind("click",final23.prog)
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023125/12fe7955fa849898f566434e1ab09917/raw/f3538a55a4f27443ff0ba99f4273d4ab2d90dfe4/final2-4"
+url = "https://gist.githubusercontent.com/41023125/12fe7955fa849898f566434e1ab09917/raw/3fb1f285d60fa55e8a946fda857fcab59d19353e/final2-4"
 src = open(url).read()
 final24 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final24"].bind("click",final24.prog)
