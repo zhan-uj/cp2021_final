@@ -73,20 +73,40 @@ run()
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023130/d9f4a7951c4f9141761eefc915ff1cc1/raw/eda4f62850908a11bdd6c26dd3767e0b725436ef/final1"
+url = "https://gist.githubusercontent.com/41023130/a9167d068e53f626da00e60718e7cf7f/raw/025a5d3ff9bb344d510795d284e929f5405beb8b/final2"
 src = open(url).read()
-w13 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["w13"].bind("click", w13.prog)
+final2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final2"].bind("click", final2.prog)
 // ]]></script>
 </p>
 <p>
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023130/a9167d068e53f626da00e60718e7cf7f/raw/92b878c179d1e1f11aeed0b9e5ceb266d9c26acd/final2"
+url = "https://gist.githubusercontent.com/41023130/d9f4a7951c4f9141761eefc915ff1cc1/raw/eda4f62850908a11bdd6c26dd3767e0b725436ef/final1"
 src = open(url).read()
-final2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["final2"].bind("click", final2.prog)
+final1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final1"].bind("click", final1.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023130/3043debca95780dcac1ff30178269448/raw/da14ec12cb7dd8ca5267891b792c48f39dd121ef/%25E8%2587%25AA%25E5%258B%2595%25E8%25B2%25AA%25E5%2590%2583%25E8%259B%2587"
+src = open(url).read()
+自動貪食蛇= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["自動貪食蛇"].bind("click", 自動貪食蛇.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023130/37824cfa849b2475d4f02ee3b72037ca/raw/96d4310055bec2dc184cbf499eace0f170c15a76/w13%25E6%258C%2589%25E9%2588%2595"
+src = open(url).read()
+w13按鈕= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w13按鈕"].bind("click", w13按鈕.prog)
 // ]]></script>
 </p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
@@ -96,7 +116,9 @@ document["final2"].bind("click", final2.prog)
 <p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="w13">final1</button> <button id="final2">final2</button></p>
+<p><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="自動貪食蛇">自動貪食蛇</button></p>
+<p><button id="w13按鈕">w13按鈕</button></p>
 <!-- 執行與清除按鈕結束 -->
 <p></p>
 <!-- 程式執行 ouput 區 -->
