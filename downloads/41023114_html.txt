@@ -1,4 +1,4 @@
-<h3>41023114</h3>
+<h3>41023114</h3> 
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -90,7 +90,7 @@ def snake_inp(ev):
 
 # id 為 "final1" 的按鈕點按時, 執行 chec_inp 方法
 doc["snake"].bind('click', snake_inp)
-final6_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/0372aba1a5956467b6ae63a093383b5eb2e9cfb0/%25E6%25A0%25BC%25E5%25AD%2590"
+final6_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/145481220e3d3c705c79e9d8508083e5b70c2d32/%25E6%25A0%25BC%25E5%25AD%2590"
  # 從 gist 取得程式碼
 final6_wq = open(final6_qwe_url).read()
 
