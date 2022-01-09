@@ -2,7 +2,7 @@
         <head>
         <title>Final Project</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -139,113 +139,36 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='Final.html'>Next</a> >> Final<br /><h1>Programming</h1>
-<p>以下為各組長所提供的學員名單格式，其中以各組組序標題開頭，然後逐一列出各組員學號:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">1ag1
-41023146
-41023143
-41023147
-41023113
-41023116
-41023111
-41023145
-1ag2
-41023104
-41023103
-41023105
-41023106
-41023107
-41023109
-1ag3
-41023125
-41023119
-41023120
-41023124
-41023118
-41023122
-41023130
-1ag4
-40923129
-41023135
-41023150
-41023151
-41023152
-40923115
-41023132
-1ag5
-41023114
-41023126
-41023101
-41023110
-41023108
-40823214
-1ag6
-41023121
-41023140
-41023133
-41023112
-41023153
-41023134
-41023138
-40832244
-1ag7
-41023142
-41023137
-41023129
-41023131
-41023127
-41023141
-1ag8
-40823227
-41023154
-41023128
-41023136
-41023144
-41023149</pre>
-<p>接著希望能夠透過 Python 程式讀出各組組序標題與組員名單，之後將要利用此一資料從 downloads 目錄取出各組員的動態網頁內容，並將資料按照組序放入 config/content.htm 檔案中。</p>
-<p>以下為初步完成的程式編寫:</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''設法讀出各班各組學員學號資料
-'''
-repo_path = "Y:/tmp/cp2021_final"
-class_name = "1a"
-group_file = repo_path + "/downloads/" + class_name + "_grouping.txt"
-
-with open(group_file, encoding="utf-8") as f:
-    data = f.read().splitlines()
-data = list(filter(None, data))
-#print(data)
-grp_count = 0
-grp_title = []
-grp_mem = []
-grp_big = []
-for i in data:
-    if class_name in i:
-        mem_count = 0
-        grp_count += 1
-        grp = i
-        # 納入各組組序標題
-        grp_title.append(i)
-        # 若 grp_mem 有值, 表示已經讀完各組學員名單
-        # 就可以將該組全員名單納入 grp_big 數列中
-        # 然後 grp_mem 重新設為空數列, 準備納入下一組員名單
-        if len(grp_mem)  1:
-            grp_big.append(grp_mem)
-            grp_mem = []
-        #print("組別:", grp_count, grp)
-    else:
-        # 讀完各組組序標題後, 將逐一將組員名單納入 grp_mem 數列中
-        grp_mem.append(i)
-        mem_count += 1
-        student_id = i
-        #print("學員:", mem_count, student_id)
-# 離開組序標題後, 必須納入最後一組學員名單
-grp_big.append(grp_mem)
-# 查驗是否正確讀入各班組員名單
-#print(grp_title, grp_big)
-for i in range(len(grp_title)):
-    # 分別讀出各組組序與排序後的組員學號
-    print(grp_title[i], sorted(grp_big[i]))</pre>
-<br />About << <a href='About.html'>Previous</a> <a href='Final.html'>Next</a> >> Final</div>
+    <div id="tipue_search_content">1bg2 << <a href='1bg2.html'>Previous</a> <a href='1bg3.html'>Next</a> >> 1bg3<br /><h1>41023206</h1>
+<p>HW3 - AI 貪食蛇佔學期成績 30%.</p>
+<p><span style="background-color: #ffff99;">HW3 必須在 2021.12.22 22:00 之前完成.</span></p>
+<p><a href="https://github.com/mdecourse/cp2021/discussions/10">HW3 具體項目成果回報區</a>將於 2021.11.09 開啟, 於 <span style="background-color: #ff99cc;">2021.12.22 22:00 關閉</span></p>
+<p>網際貪食蛇的逆襲, 誰的<a href="https://mde.tw/cp2021/content/run.html?src=https://gist.githubusercontent.com/mdecourse/d306a1f57e53bfd6466eaae20bcb9439/raw/2160a12b9fec9707a120a383ed5d38b9b78a02cf/snake.py">自動執行貪食蛇</a>能夠破紀錄? 目前直覺貪食蛇紀錄為 45 節 (除了蛇身節數外, 應該還要置入出現紅色標的物後的總完食時間).</p>
+<p><a href="https://mde.tw/cp2021/content/run.html?src=https://gist.githubusercontent.com/mdecourse/d306a1f57e53bfd6466eaae20bcb9439/raw/f188098281ecaeedeea484c074ab34a05c3086eb/manual_snake.py">手動執行貪食蛇</a>程式說明與整理.</p>
+<p><a href="https://mde.tw/cp2021/content/run.html?src=https://gist.githubusercontent.com/mdecourse/d306a1f57e53bfd6466eaae20bcb9439/raw/2160a12b9fec9707a120a383ed5d38b9b78a02cf/snake.py">自動執行貪食蛇</a>程式說明與整理.</p>
+<p><a href="https://mde.tw/cp2021/content/run.html?src=https://gist.githubusercontent.com/mdecourse/d306a1f57e53bfd6466eaae20bcb9439/raw/2160a12b9fec9707a120a383ed5d38b9b78a02cf/snake.py">自動執行貪食蛇</a>程式的改進.</p>
+<h4>參考資料:</h4>
+<p style="padding-left: 30px;"><a href="https://mde.tw/cp2021/content/Task3.html">https://mde.tw/cp2021/content/Task3.html</a></p>
+<p style="padding-left: 30px;">Brython snake 原始來源: <a href="https://medium.com/swlh/sick-of-javascript-just-use-browser-python-4b9679efe08b">https://medium.com/swlh/sick-of-javascript-just-use-browser-python-4b9679efe08b</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/snake-Q-Learning">https://github.com/mdecourse/snake-Q-Learning</a></p>
+<p style="padding-left: 30px;"><a href="https://towardsdatascience.com/teaching-a-computer-how-to-play-snake-with-q-learning-93d0a316ddc0">https://towardsdatascience.com/teaching-a-computer-how-to-play-snake-with-q-learning-93d0a316ddc0</a></p>
+<p style="padding-left: 60px;"><a href="https://github.com/mdecourse/SnakeQlearning">https://github.com/mdecourse/SnakeQlearning</a></p>
+<p style="padding-left: 30px;"><a href="https://medium.com/@italohdc/learnsnake-teaching-an-ai-to-play-snake-using-reinforcement-learning-q-learning-b63ac23dfdd1">https://medium.com/@italohdc/learnsnake-teaching-an-ai-to-play-snake-using-reinforcement-learning-q-learning-b63ac23dfdd1</a></p>
+<p style="padding-left: 30px;"><a href="https://towardsdatascience.com/snake-played-by-a-deep-reinforcement-learning-agent-53f2c4331d36">https://towardsdatascience.com/snake-played-by-a-deep-reinforcement-learning-agent-53f2c4331d36</a></p>
+<p style="padding-left: 30px;"><a href="https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/">https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/</a></p>
+<p style="padding-left: 30px;"><a href="https://www3.hs-albsig.de/wordpress/point2pointmotion/2020/10/09/deep-reinforcement-learning-with-the-snake-game/">https://www3.hs-albsig.de/wordpress/point2pointmotion/2020/10/09/deep-reinforcement-learning-with-the-snake-game/</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/2016_Exploration of Reinforcement Learning to SNAKE.pdf">2016_Exploration of Reinforcement Learning to SNAKE.pdf</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/train_a_snake_with_reinforceme.pdf">train_a_snake_with_reinforceme.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://medium.com/@hugo.sjoberg88/using-reinforcement-learning-and-q-learning-to-play-snake-28423dd49e9b">https://medium.com/@hugo.sjoberg88/using-reinforcement-learning-and-q-learning-to-play-snake-28423dd49e9b</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/Snake-Reinforcement-Learning">https://github.com/mdecourse/Snake-Reinforcement-Learning</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/Autonomous-Agents-in-Snake-Game-via-Deep-Reinforcement-Learning.pdf">Autonomous-Agents-in-Snake-Game-via-Deep-Reinforcement-Learning.pdf</a></p>
+<h4>延伸應用:</h4>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/PJl4iabBEz0" title="YouTube video player" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/5Vy5Dxu7vDs" title="YouTube video player" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/6pJBPPrDO40" title="YouTube video player" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/VGkcmBaeAGM" title="YouTube video player" width="560"></iframe></p>
+<p><a href="https://github.com/mdecourse/snake-ai-pytorch">https://github.com/mdecourse/snake-ai-pytorch</a></p>
+<br />1bg2 << <a href='1bg2.html'>Previous</a> <a href='1bg3.html'>Next</a> >> 1bg3</div>
         
     <!-- footer -->
       <div class="container">
