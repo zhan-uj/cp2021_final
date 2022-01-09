@@ -37,7 +37,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="final1">final1</button><button id="final2">final2</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="add1to100">add1to100</button><button id="exam">exam</button><button id="延伸作業1">延伸作業1</button><button id="延伸作業2">延伸作業2</button><button id="延伸作業3">延伸作業3</button><button id="red">red</button><button id="redbutton">redbutton</button><button id="GAME">GAME</button><button id="GAME正式版">GAME正式版</button><button id="AISNAKE">AISNAKE</button><button id="SNAKE1">SNAKE1</button><button id="SNAKE2">SNAKE2</button><button id="RUNSNAKE">RUNSNAKE</button></p>
+<p><button id="final1">final1</button><button id="final2">final2</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="add1to100">add1to100</button><button id="exam">exam</button><button id="延伸作業1">延伸作業1</button><button id="延伸作業2">延伸作業2</button><button id="延伸作業3">延伸作業3</button><button id="red">red</button><button id="redbutton">redbutton</button><button id="GAME">GAME</button><button id="GAME正式版">GAME正式版</button><button id="AISNAKE">AISNAKE</button><button id="RUNSNAKE">RUNSNAKE</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -55,6 +55,40 @@ function doSave(storage_id, filename){
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <p><!-- 這裡的畫布 id 為 brython_div --></p>
 <div id="brython_div"></div>
+<div>=============================================================================</div>
+<div>影片網址:</div>
+<div></div>
+<div></div>
+<div><a href="https://youtu.be/cJxHC0z8Kd0">Final1方格</a></div>
+<div><a href="https://youtu.be/m5bxQrbt2so">Final2U移動方塊</a></div>
+<div>=============================================================================</div>
+<div>照片:</div>
+<div></div>
+<div>Final1</div>
+<div><img alt="" height="279" src="/images/作業2.png" width="518"></div>
+<div></div>
+<div>Final2</div>
+<div><img alt="" height="269" src="/images/6.png" width="450"></div>
+<div></div>
+<div>==============================================================================</div>
+<div>心得:</div>
+<div>
+<p>W4 HW1 HW2</p>
+<p>這是第一次接觸到計算機程式以及Python，很多地方都還不太懂，剛開始學遇到很多困難，不知道做作作業要從何下手，但後來上課把老師有講的跟自己不會的都記下來，作業有不懂的也都有去問同學，現在有比較了解一些了。</p>
+<p></p>
+<p></p>
+<p>建立倉儲</p>
+<p>一開始在創立倉儲的時候遇到很多阻礙，解壓縮解錯地方，把該打自己的網址的地方打成老師的網址，所以一直跑不出來，其實剛開始還挫折的但後來經過自己的摸索以及同學的協助之下，我順利的完成了這項作業，真的感覺到前所未有的成就感，所以也開始慢慢喜歡上了這門課了，現在常常會在課後活動的時間，繼續鑽研這個科目.</p>
+<p></p>
+<p>SNAKE心得</p>
+<p><span>這個作業對我來講有點困難，我做的蛇都只能從最底下慢慢爬，經過每一個格子直到碰到格子才又從最底下開始重跑，然後後來看到同學的作品覺得很特別，他的貪食蛇可以直接追蹤到梅果，所以決定拿他的當作樣本，看著他的重新打過一遍，才能順利完成這項作業，很感謝老師和同學的幫忙。</span></p>
+<p></p>
+<p>W13心得</p>
+<p><span>上課測驗的時候花了一些時間才改出座標，然後按按鈕出現程式這個部份真的不太會，後來有去前面問老師，也已經學會怎麼做了，延伸作業的部分是回來家裡才做的，過程也遇到一些困難，程式跑不出來，後來有請教同學，問題也都順利解決了。</span></p>
+<p><span></span></p>
+<p>GAME心得</p>
+<p><span>一開始搜尋了很多種遊戲，想說能不能做點不太一樣的遊戲，剛好看到網路上有在教人如何做出猜數字遊戲，我就照著做看看了，做完之後發現它只能在網路版的python編譯器才能使用，所以就自己稍微做了一些調整讓他可以在自己的run使用，做完之後發現洪偉陞同學也做了猜數字遊戲，而且比我的方式更聰明，所以也將他的版本借來參考然後做成自己的，他真的很厲害，很多作業上遇到的瓶頸我也很常會請教他。</span></p>
+</div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
 <p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
 <script type="text/python3">// <![CDATA[
@@ -149,17 +183,17 @@ exam = button2(exam_url)
 doc["exam"].bind('click', exam.do)
 ################################## exam end
 ################################## 延伸作業1 start
-延伸作業1_url = "https://gist.githubusercontent.com/JIAN3-LIN/b382d479715381c087c84b3fc5c53078/raw/51bbf805d00e6243bd3826925a185692d32ffedd/w13-2"
+延伸作業1_url = "https://gist.githubusercontent.com/JIAN3-LIN/b382d479715381c087c84b3fc5c53078/raw/b755715cf41aa8825155ba857855cbe4a6700e88/w13-2"
 延伸作業1 = button2(延伸作業1_url)
 doc["延伸作業1"].bind('click', 延伸作業1.do)
 ################################## 延伸作業1 end
 ################################## 延伸作業2 start
-延伸作業2_url = "https://gist.githubusercontent.com/JIAN3-LIN/3eed94f1330f9a77659dd3f0c57cdcb2/raw/58b991338a200db63ee4ba1e0a6d24b660278d6e/w13-3"
+延伸作業2_url = "https://gist.githubusercontent.com/JIAN3-LIN/3eed94f1330f9a77659dd3f0c57cdcb2/raw/b3009d871864573cf424992c72519cf7ca160d69/w13-3"
 延伸作業2 = button2(延伸作業2_url)
 doc["延伸作業2"].bind('click', 延伸作業2.do)
 ################################## 延伸作業2 end
 ################################## 延伸作業3 start
-延伸作業3_url = "https://gist.githubusercontent.com/JIAN3-LIN/e6a4f149b40bef72fc80c334b37da717/raw/a48b9b4e14dd43ca0ea03903bf9c38936fde5cb0/w13-4"
+延伸作業3_url = "https://gist.githubusercontent.com/JIAN3-LIN/e6a4f149b40bef72fc80c334b37da717/raw/f9dde83dfc258d61a301d7a902a569264ad56ca7/w13-4"
 延伸作業3 = button2(延伸作業3_url)
 doc["延伸作業3"].bind('click', 延伸作業3.do)
 ################################## 延伸作業3 end
@@ -188,16 +222,6 @@ AISNAKE_url = "https://gist.githubusercontent.com/JIAN3-LIN/35cedd548e0a83b96c72
 AISNAKE = button2(AISNAKE_url)
 doc["AISNAKE"].bind("click", AISNAKE.do)
 ################################## AISNAKE end
-################################## SNAKE1 start
-SNAKE1_url = "https://gist.githubusercontent.com/JIAN3-LIN/0ebb2d25e2e46545b3593af1a490a437/raw/97a667a60f5b2b83b291b3cc7edda8f8dbea4ecf/snake(1)"
-SNAKE1 = button2(SNAKE1_url)
-doc["SNAKE1"].bind("click", SNAKE1.do)
-################################## SNAKE1 end
-################################## SNAKE2 start
-SNAKE2_url = "https://gist.githubusercontent.com/JIAN3-LIN/4e167be27be7461db1ebdeb13e87abc2/raw/ceed7b34ad56019b7c435ea748412045022e5665/snake(2)"
-SNAKE2 = button2(SNAKE2_url)
-doc["SNAKE2"].bind("click", SNAKE2.do)
-################################## SNAKE2 end
 ################################## RUNSNAKE start
 RUNSNAKE_url = "https://gist.githubusercontent.com/JIAN3-LIN/0e8bcab206f4a3e402a148b947588d00/raw/8a3f8ffce0324ab88d5f8647fc3eae041f7def79/run%2520snake"
 RUNSNAKE = button2(RUNSNAKE_url)
