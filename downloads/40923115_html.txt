@@ -1,101 +1,32 @@
 <h3>40923115</h3>
-<p>final</p>
-<!-- 導入 brython 程式庫 -->
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-<!-- 啟動 Brython -->
-<script>// <![CDATA[
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
-}
-// ]]></script>
-<p><!-- 導入 FileSaver 與 filereader --></p>
-<p>
-<script type="text/javascript" src="/static/ace/FileSaver.min.js"></script>
-<script type="text/javascript" src="/static/ace/filereader.js"></script>
-</p>
-<p><!-- 導入 ace --></p>
-<p>
-<script type="text/javascript" src="/static/ace/ace.js"></script>
-<script type="text/javascript" src="/static/ace/ext-language_tools.js"></script>
-<script type="text/javascript" src="/static/ace/mode-python3.js"></script>
-<script type="text/javascript" src="/static/ace/snippets/python.js"></script>
-</p>
-<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
-<p>
-<script type="text/javascript">// <![CDATA[
-function doSave(storage_id, filename){
-    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
-    filename = document.getElementById(filename).value
-    saveAs(blob, filename+".py");
-}
-// ]]></script>
-</p>
-<p><!-- 印出版次與關鍵字程式 --></p>
-<p>
-<script type="text/python3">// <![CDATA[
-from browser import document as doc
-import ace
-# 清除畫布
-def clear_bd(ev):
-    bd = doc["brython_div"]
-    bd.clear()
-# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
-Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
-# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
-def run():
-    # 利用 get 取下 src 變數值
-    try:
-        url = doc.query["src"]
-    except:
-        url = "https://gist.githubusercontent.com/jason60714/cbe9220a02b265113a6b75cd60310246/raw/18413b6a430c85ecc67ee8999669c2ccc223d7d7/final2"
-    prog = open(url).read()
-
-    # 將程式載入編輯區
-    Ace.editor.setValue(prog)
-    Ace.editor.scrollToRow(0)
-    Ace.editor.gotoLine(0)
-    # 直接執行程式
-    #ns = {'_name_':'_main_'}
-    #exec(prog, ns)
-    # 按下 run 按鈕
-    Ace.run()
-
-# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
-doc['kw_run'].bind('click', Ace.run)
-doc['kw_show_console'].bind('click', Ace.show_console)
-doc['kw_clear_console'].bind('click', Ace.clear_console)
-doc['clear_bd'].bind('click', clear_bd)
-# 呼叫函式執行
-run()
-// ]]></script>
-</p>
-<div id="brython_div"></div>
-<p><!-- 用來顯示程式碼的 editor 區域 --></p>
-<div id="kw_editor" style="width: 600px; height: 300px;"></div>
-<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
-<p>!-- 存擋表單開始 --&gt;</p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form><!-- 存擋表單結束 -->
+<p>心得:這學期學了多工具跟程式，有錄影製作小影片的wink，截圖的sharex，轉出程式的coppeliasim，還學習了兩套繪圖軟體，過程中有遇到一些困難像是無法轉出，組件亂跑，有向老師在會報去討論或是請教同學來排除困難，這兩個繪圖軟體也還沒到都很專精，還是要繼續練習，這學期學到的一些工具，在以後的課程上都可以加以利用，感謝老師這學期的教導。</p>
+<p>HW1</p>
+<p>分配程式 :<a href="https://jason60714.github.io/cad2021_hw/content/W13.html">https://jason60714.github.io/cad2021_hw/content/W13.html</a></p>
+<p>solidwork</p>
+<p><span>下載安裝與配置</span></p>
+<p><span>影片:<a href="https://youtu.be/WVKSCnWfUKw">https://youtu.be/WVKSCnWfUKw</a></span></p>
+<p><span>零組件繪圖教學</span></p>
+<p><span>影片:<a href="https://youtu.be/q3EOuHbsMe0">https://youtu.be/q3EOuHbsMe0</a></span></p>
+<p><span>Solvespace</span></p>
+<p><span>下載安裝與配置</span></p>
+<p><span>影片:<a href="https://youtu.be/0kYaazaYey8">https://youtu.be/0kYaazaYey8</a></span></p>
+<p><span>零組件繪圖教學</span></p>
+<p><span>影片:<a href="https://youtu.be/QxKUKXTLBfQ">https://youtu.be/QxKUKXTLBfQ</a></span></p>
+<p><span>W11</span></p>
+<p><span>繪圖wink</span></p>
+<p><span><a href="https://jason60714.github.io/cad2021_hw/content/%E7%B9%AA%E5%9C%96wink.html">https://jason60714.github.io/cad2021_hw/content/%E7%B9%AA%E5%9C%96wink.html</a></span></p>
+<p>轉出wink</p>
+<p><a href="https://jason60714.github.io/cad2021_hw/content/%E8%BD%89%E5%87%BAwink.html">https://jason60714.github.io/cad2021_hw/content/%E8%BD%89%E5%87%BAwink.html</a></p>
+<p><span>Hw3-1</span></p>
+<p><span><a href="https://jason60714.github.io/cad2021_hw/content/Hw3-1.html">https://jason60714.github.io/cad2021_hw/content/Hw3-1.html</a></span></p>
+<p><span>Hw3-2</span></p>
+<p><span><a href="https://jason60714.github.io/cad2021_hw/content/Hw3-2.html">https://jason60714.github.io/cad2021_hw/content/Hw3-2.html</a></span></p>
 <p></p>
-<!-- 執行與清除按鈕開始 -->
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<!-- 執行與清除按鈕結束 -->
-<p></p>
-<!-- 程式執行 ouput 區 -->
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 485px; height: 195px;"></textarea></div>
-<div style="width: 100%; height: 100%;"></div>
-<div style="width: 100%; height: 100%;">1.HW1-1自動方塊<a href="https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html">https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html</a></div>
-<div style="width: 100%; height: 100%;">2.HW1-2手動方塊</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html">https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html</a></div>
-<div style="width: 100%; height: 100%;">3.HW2倉儲</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/HW2.html">https://jason60714.github.io/cp2021_hw/content/HW2.html</a></div>
-<div style="width: 100%; height: 100%;">4.HW3-1手動貪食蛇</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/%E6%89%8B%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html">https://jason60714.github.io/cp2021_hw/content/%E6%89%8B%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html</a></div>
-<div style="width: 100%; height: 100%;">5.HW3-2自動貪食蛇</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html">https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html</a></div>
-<div style="width: 100%; height: 100%;"></div>
-<div style="width: 100%; height: 100%;">心得:這學期學了多工具跟程式，有錄影製作小影片的wink，截圖的share，程式學習了製作h1.2.3
-<p>&nbsp; &nbsp; &nbsp; &nbsp;分別是自動手動方塊跟手動自動貪食蛇，程式雖然不好懂，了解之後，會發現其實蠻有趣，完成</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;時也都有成就感，感謝老師這學期的教導。&nbsp;</p>
-</div>
-<div style="width: 100%; height: 100%;"></div>
+<p>1.這學期學習了兩套新的cad軟體，分別是sw、solvespace，在畫圖上已經大致清楚，但solvespace的組合零件的功能要再多多練習。</p>
+<p><img alt="" height="346" src="/images/chrome_UwaKALn870.png" width="906"></p>
+<p>2.學習新的工具wink可以把自己做事的內容截成小短片，方便紀錄也比較有動態感。</p>
+<p><img alt="" height="665" src="/images/hAWZbdW9nJ.png" width="1241"></p>
+<p>3.coppeliasim學了coppeliasim，如何使用這個軟體來模擬畫出來的四連桿之運動過程。</p>
+<p><img alt="" height="424" src="/images/chrome_ZCzLNeoBnC.png" width="665"></p>
+<div class="winkVideoControlBarClass"><br><span></span></div>
+<div class="winkVideoControlBarClass"></div>
