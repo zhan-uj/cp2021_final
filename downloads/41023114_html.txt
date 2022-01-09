@@ -1,0 +1,148 @@
+<h3>41023114</h3> 
+<!-- 導入 brython 程式庫 -->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<script>// <![CDATA[
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+// ]]></script>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script type="text/javascript" src="/static/ace/FileSaver.min.js"></script>
+<script type="text/javascript" src="/static/ace/filereader.js"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script type="text/javascript" src="/static/ace/ace.js"></script>
+<script type="text/javascript" src="/static/ace/ext-language_tools.js"></script>
+<script type="text/javascript" src="/static/ace/mode-python3.js"></script>
+<script type="text/javascript" src="/static/ace/snippets/python.js"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">// <![CDATA[
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+// ]]></script>
+</p>
+<p><!-- 印出版次與關鍵字程式 --></p>
+<p>
+<script type="text/python3">// <![CDATA[
+from browser import document as doc
+import ace
+# 清除畫布
+def clear_bd(ev):
+    bd = doc["brython_div"]
+    bd.clear()
+# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/41023114/c32742a21add581dfde1a5930c078f42/raw/3d9a0f64610f124aa43f3263b01cac64590c0710/%25E5%25B0%2587%25E5%25B7%25A6%25E5%258F%25B3%25E7%25A2%25B0%25E6%2592%259E%25E7%25A7%25BB%25E5%258B%2595%25E7%259A%2584%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A,%2520%25E6%2594%25B9%25E7%2582%25BA%25E5%2585%2588%25E7%25A7%25BB%25E5%258B%2595%25E5%2588%25B0%25E6%25B0%25B4%25E5%25B9%25B3%25E7%2595%25AB%25E9%259D%25A2%25E4%25B8%25AD%25E5%25BF%2583%25E9%25BB%259E%25E4%25BD%258D%25E7%25BD%25AE%25E5%25BE%258C,%2520%25E6%258E%25A5%25E8%2591%2597%25E4%25B8%258A%25E4%25B8%258B%25E7%25A2%25B0%25E6%2592%259E%25E7%25A7%25BB%25E5%258B%2595 "
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace.editor.setValue(prog)
+    Ace.editor.scrollToRow(0)
+    Ace.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace.run()
+
+chec_qwe_url = "https://gist.githubusercontent.com/41023114/a5e567c1d3f9617f42da28d9738ff054/raw/dbb18633bebf796fa3b006db4c15027f93449db8/EXAM"
+ # 從 gist 取得程式碼
+chec_wq = open(chec_qwe_url).read()
+
+def chec_inp(ev):
+     Ace.editor.setValue(chec_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
+doc["asd"].bind('click', chec_inp)
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run'].bind('click', Ace.run)
+doc['kw_show_console'].bind('click', Ace.show_console)
+doc['kw_clear_console'].bind('click', Ace.clear_console)
+doc['clear_bd'].bind('click', clear_bd)
+
+snake_qwe_url = "https://gist.githubusercontent.com/41023114/f780677e874a9934046662593ae066e7/raw/47ab280d5ceece22bf096aa9b28c9ab96fc50f14/snake"
+ # 從 gist 取得程式碼
+snake_wq = open(snake_qwe_url).read()
+
+def snake_inp(ev):
+     Ace.editor.setValue(snake_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final1" 的按鈕點按時, 執行 chec_inp 方法
+doc["snake"].bind('click', snake_inp)
+final6_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/145481220e3d3c705c79e9d8508083e5b70c2d32/%25E6%25A0%25BC%25E5%25AD%2590"
+ # 從 gist 取得程式碼
+final6_wq = open(final6_qwe_url).read()
+
+def final6_inp(ev):
+     Ace.editor.setValue(final6_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final6" 的按鈕點按時, 執行 final6_inp 方法
+doc["final6"].bind('click', final6_inp)
+final_qwe_url = "https://gist.githubusercontent.com/41023114/52f9fee4b504a07c0fc15d628f0e0f5d/raw/297e505cd9c925892aedd7d3cbba3906b84a651d/U"
+ # 從 gist 取得程式碼
+final_wq = open(final_qwe_url).read()
+
+def final_inp(ev):
+     Ace.editor.setValue(final_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
+doc["final"].bind('click', final_inp)
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run'].bind('click', Ace.run)
+doc['kw_show_console'].bind('click', Ace.show_console)
+doc['kw_clear_console'].bind('click', Ace.clear_console)
+doc['clear_bd'].bind('click', clear_bd)
+# 呼叫函式執行
+run()
+// ]]></script>
+</p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="輸入文件名" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form><!-- 存擋表單結束 -->
+<p></p>
+<!-- 執行與清除按鈕開始 -->
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><button id="asd">列出10個座標</button><button id="snake">snake</button></p>
+<p><button id="final">final2</button></p>
+<p><button id="final6">final1</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<div id="brython_div"></div>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p>
