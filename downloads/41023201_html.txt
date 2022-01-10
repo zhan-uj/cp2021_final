@@ -41,7 +41,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="w13_1">w13_1</button><button id="w13_2">w13_2</button><button id="final_1">final1</button></p>
+<p><button id="red">red</button><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="w13_1">w13_1</button><button id="w13_2">w13_2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -126,6 +126,11 @@ class button2:
 add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
 add1to100 = button2(add1to100_url)
 doc["add1to100"].bind('click', add1to100.do)
+################################# red start 
+red_url = "https://gist.githubusercontent.com/ruoqinz0421/0fd21197b5d5b6a0cbea15c50c307ba7/raw/d69ceb8aa222d3a2196e1dcb44916cb67ff80c8b/red"
+red = button2(red_url)
+doc["red"].bind('click', red.do)
+################################## red end
 ################################# p261 start 
 p261_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/980606effcd29635307d6474718cd4a7ef016747/p261.py"
 p261 = button2(p261_url)
@@ -146,10 +151,20 @@ w13_2_url = "https://gist.githubusercontent.com/ruoqinz0421/a516958ce07175529730
 w13_2 = button2(w13_2_url)
 doc["w13_2"].bind('click', w13_2.do)
 ################################## w13_2 end
-################################# final_1start 
-final_1_url = "https://gist.githubusercontent.com/ruoqinz0421/eaeb155eb47cb6a78963e114f47a42d6/raw/459be5733d5931928db643c15dacb3f1b9e355ee/final_1.py"
-final_1 = button2(final_1_url)
-doc["final_1"].bind('click', final_1.do)
-################################## final_1 end
+################################# final1start 
+final1_url = "https://gist.githubusercontent.com/ruoqinz0421/4cab850354e8ee3cfcb265d18f7d20d7/raw/bcc16d152d8ff72d466849840eb06a4afc1e85c6/final1.py"
+final1 = button2(final1_url)
+doc["final1"].bind('click', final1.do)
+################################## final1 end
+################################# final2start 
+final2_url = "https://gist.githubusercontent.com/ruoqinz0421/fd51086d8fd170544eae7f2c54c88716/raw/edfbbbd9d83bba9252df2cb2673c796d45c01d28/final2.py"
+final2 = button2(final2_url)
+doc["final2"].bind('click', final2.do)
+################################## final2 end
+################################# final3start 
+final3_url = "https://gist.githubusercontent.com/ruoqinz0421/3363540f43c7e5b2d61af33c9558a511/raw/f0a6e8ce9a5f073cd96dd8a5e581630b6192e012/final3"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 // ]]></script>
 </p>
