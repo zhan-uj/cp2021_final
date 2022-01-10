@@ -1,16 +1,8 @@
 <h3>41023204</h3>
-<p></p>
-<p>這是計算機程式課程 2021 Fall 的作業倉儲與網站 template</p>
-<hr>
-<p>demo 學號與帳號:&nbsp;41023204</p>
 <p>網站倉儲:<span>&nbsp;</span><a href="https://github.com/04yxuan/cp2021-hw">https://github.com/04yxuan/cp2021-hw</a></p>
 <p>網站連結:&nbsp;<a href="https://04yxuan.github.io/cp2021-hw/">https://04yxuan.github.io/cp2021-hw/</a></p>
 <p><span>其他與個人或作業相關資料說明或介紹</span></p>
-<h1>w13</h1>
-<p><a href="/downloads/w12.txt">w12.txt</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a>.</p>
-<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> - 可以根據此規格定義, 新增 <button id="procflas">PROC flag</button> 按鈕.</p>
-<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_United_States#Specifications">USA 國旗規格</a> - 可以根據此規格定義, 新增 <button id="usaflag">USA flag</button> 按鈕.</p>
+<p><a href="/downloads/w12.txt"></a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -145,12 +137,12 @@ rocflag = button2(rocflag_url)
 doc["rocflag"].bind("click", rocflag.do)
 ################################## rocflag end
 ################################# w13_1start 
-w13_1_url = "https://gist.githubusercontent.com/ziyi8/a1b4939d8137eab6e153a5f95e500fe4/raw/4e280636a515089c1c834821e2d0164f38d160e2/w13_1.py"
+w13_1_url = "https://gist.githubusercontent.com/04yxuan/f49fa52f65bf052cd7fc09c7ab82b3e3/raw/8b1100dbed694a8d2b0cb1f34e27ac68eadc491b/w13_1"
 w13_1 = button2(w13_1_url)
 doc["w13_1"].bind('click', w13_1.do)
 ################################## w13_1 end
 ################################# w13_2start 
-w13_2_url = "https://gist.githubusercontent.com/ziyi8/a1b4939d8137eab6e153a5f95e500fe4/raw/4e280636a515089c1c834821e2d0164f38d160e2/w13_2.py"
+w13_2_url = "https://gist.githubusercontent.com/04yxuan/49457d3d5d766667249de9be59be9e9e/raw/1d85acf416accd92c2d9efd7488088167aed6ba6/w13_2"
 w13_2 = button2(w13_2_url)
 doc["w13_2"].bind('click', w13_2.do)
 ################################## w13_2 end
