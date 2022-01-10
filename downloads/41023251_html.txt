@@ -169,7 +169,7 @@ doc["final2"].bind("click", final2.do)
 
 
 ################################## final3 start
-final3_url = "https://gist.githubusercontent.com/sdegbsvrtg/019836ec669de454bb1307bebea8367e/raw/92daef0b171d49f04a0222cc754bfaf9a6f4e75d/%25E8%258B%25B1%25E6%2589%2593.py"
+final3_url = "https://gist.githubusercontent.com/sdegbsvrtg/81571a2aef5a4ee48dfc736415c3365f/raw/b93db02a244f702c78b2df3b599fa35074a21422/final3"
 final3 = button2(final3_url)
 doc["final3"].bind("click", final3.do)
 ################################## final3 end
