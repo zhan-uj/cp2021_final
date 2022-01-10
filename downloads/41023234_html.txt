@@ -42,9 +42,9 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
 <p><button id="add1to100"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">加 1 到 100</span></span></span></span></button><button id="p261"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">p261</span></span></span></span></button><button id="rocflag"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">中華民國耳朵</span></span></span></span></button><button id="hw1"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">hw1</span></span></span></span></button><button id="dummy_snake"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">假蛇</span></span></span></span></button></p>
-<p><button id="fimal1">fimal1</button></p>
-<p><button id="fimal2">fimal2</button></p>
-<p><button id="fimal3">fimal3</button></p>
+<p><button id="fimal1">final1</button></p>
+<p><button id="fimal2">final2</button></p>
+<p><button id="fimal3">final3</button></p>
 <p><button id="Bsnake">Bsnake</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
@@ -161,7 +161,7 @@ fimal2 = button2(fimal2_url)
 doc["fimal2"].bind("click", fimal2.do)
 ################################## rocflag end
 ################################## rocflag start
-fimal3_url = "https://gist.githubusercontent.com/Maskie-Razzio/f26defcfbbd473b82afde0894706ba79/raw/477c3fada378c4a0b547a428ef229db2453581bb/gg"
+fimal3_url = "https://gist.githubusercontent.com/Maskie-Razzio/f26defcfbbd473b82afde0894706ba79/raw/a484cb9624f523616ba4dd886ea260e11702f00c/gg"
 fimal3 = button2(fimal3_url)
 doc["fimal3"].bind("click",fimal3.do)
 ################################## rocflag end
