@@ -41,7 +41,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13_1">W13_1</button><button id="W13_2">W13_2</button><button id="final1">final1</button></p>
+<p><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13_1">W13_1</button><button id="W13_2">W13_2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -146,9 +146,29 @@ W13_2= button2(W13_2_url)
 doc["W13_2"].bind('click',W13_2.do)
 ################################## W13_2 end
 ################################# final1 start 
-final1_url = "https://gist.githubusercontent.com/junpig10/ca1df62af028f9caff5cc4206be77629/raw/a9a5495a77019dbdd2c467887a5d48fb361b9a63/final1"
+final1_url = "https://gist.githubusercontent.com/junpig10/ca1df62af028f9caff5cc4206be77629/raw/e09d8552e04be1b87dfd9d0e1e89ec9118c70fb5/final1"
 final1= button2(final1_url)
 doc["final1"].bind('click',final1.do)
 ################################## final1 end
+################################# hw1_1 start 
+hw1_1_url = "https://gist.githubusercontent.com/junpig10/9342bb20599bd84a36ce3ccc7794fe69/raw/5df31dc0be0cc8b1f6ab7a2021cabd7797c8550a/gistfile1.txt"
+hw1_1 = button2(hw1_1_url)
+doc["hw1_1"].bind('click', hw1_1.do)
+################################## hw1_1 end
+################################# hw1_2 start 
+hw1_2_url = "https://gist.githubusercontent.com/junpig10/2b46db5073fb5898fd3b37d3d8f200ff/raw/34978005808c88fd0192ad9e1778db4f3964b3dc/gistfile1.txt"
+hw1_2 = button2(hw1_2_url)
+doc["hw1_2"].bind('click', hw1_2.do)
+################################## hw1_2 end
+################################# final2 start 
+final2_url = "https://gist.githubusercontent.com/junpig10/cff1c47e21a4a60116b23062421feabf/raw/370ad341ab2a2b7732ac47c7d57cadf040b640a9/final2"
+final2 = button2(final2_url)
+doc["final2"].bind('click', final2.do)
+################################## final2 end
+################################# final3 start 
+final3_url = "https://gist.githubusercontent.com/junpig10/c4bcbed0427d8f0725e4c1df83c7cb39/raw/5251c08d46a1692cde9478d48345e2cb0b6b0683/final3"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 // ]]></script>
 </p>
