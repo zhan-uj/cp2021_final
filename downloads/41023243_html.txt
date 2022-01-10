@@ -41,7 +41,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="a">紅點</button><button id="b">紅點暫停</button><button id="c">1~10</button><button id="d">隨機</button><button id="e">隨機國字</button><button id="f">貪食蛇</button></p>
+<p><button id="a">紅點</button><button id="b">紅點暫停</button><button id="c">1~10</button><button id="d">隨機</button><button id="e">隨機國字</button><button id="f">貪食蛇</button><button id="g">final 1</button><button id="h">final 2</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -141,5 +141,11 @@ doc["e"].bind('click', e.do)
 f_url = "https://gist.githubusercontent.com/kenneth0812/70008d04984bb875f25cdfe82c3e457b/raw/6c10fdac59087b90390985e6f5f8598102209798/snake.py"
 f = button2(f_url)
 doc["f"].bind('click', f.do)
+g_url = "https://gist.githubusercontent.com/kenneth0812/76449cf3bacd7d027920f96d9471fd2a/raw/5657d844b8e9f170519b1c66e4d99013c6ee5e3b/final%25201.py"
+g = button2(g_url)
+doc["g"].bind('click', g.do)
+h_url = "https://gist.githubusercontent.com/kenneth0812/76449cf3bacd7d027920f96d9471fd2a/raw/5657d844b8e9f170519b1c66e4d99013c6ee5e3b/final%25202.py"
+h = button2(h_url)
+doc["h"].bind('click', h.do)
 // ]]></script>
 </p>
