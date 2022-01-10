@@ -41,7 +41,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="w13_1">w13_1</button><button id="w13_2">w13_2</button><button id="final1">final1</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="w13_1">w13_1</button><button id="w13_2">w13_2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -151,5 +151,15 @@ final1_url = "https://gist.githubusercontent.com/04yxuan/1aea6b1a117d7183f8ff112
 final1 = button2(final1_url)
 doc["final1"].bind('click', final1.do)
 ################################## final1 end
+################################# final2 start 
+final2_url = "https://gist.githubusercontent.com/04yxuan/99f50a6416525317f933bc58906c3179/raw/f24d84044df5b545d988feb3e5f984baa807b815/final2"
+final2 = button2(final2_url)
+doc["final2"].bind('click', final2.do)
+################################## final2 end
+################################# final3 start 
+final3_url = "https://gist.githubusercontent.com/04yxuan/b31944681c10110eda4e75a3e594deef/raw/68923ef6f1b98e9de0d2b1b0843d91d05caa15c9/final3"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 // ]]></script>
 </p>
