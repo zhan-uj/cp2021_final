@@ -38,7 +38,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">紅點</button><button id="p261">紅點按鈕</button><button id="rocflag">snake AI</button><button id="rocflag1">snake</button><button id="rocflag2">random</button><button id="rocflag3">random2</button><button id="rocflag4">1to 10</button></p>
+<p><button id="add1to100">紅點</button><button id="p261">紅點按鈕</button><button id="rocflag">snake AI</button><button id="rocflag1">snake</button><button id="rocflag2">random</button><button id="rocflag3">random2</button><button id="rocflag4">1to 10</button><button id="rocflag5">final</button><button id="rocflag6">final2</button><button id="rocflag7">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -153,6 +153,20 @@ rocflag4_url = "https://gist.githubusercontent.com/RWE1116/a199dd8ad3c2b5cbc6c1a
 rocflag4 = button2(rocflag4_url)
 doc["rocflag4"].bind("click", rocflag4.do)
 ################################## rocflag end
-#123
+################################## rocflag start
+rocflag5_url = "https://gist.githubusercontent.com/RWE1116/ea31352ca083e34ea10ede7de9ba5bf0/raw/23574a46752d889109d2f14fe520f2372d173ed5/%25E6%25A0%25BC%25E5%25AD%2590.py"
+rocflag5 = button2(rocflag5_url)
+doc["rocflag5"].bind("click", rocflag5.do)
+################################## rocflag end
+################################## rocflag start
+rocflag6_url = "https://gist.githubusercontent.com/RWE1116/dccf002614a76c8b7712539c60c2f778/raw/fb7a570089c827f9ec5ea41e1d9448ac697c693f/final.py"
+rocflag6 = button2(rocflag6_url)
+doc["rocflag6"].bind("click", rocflag6.do)
+################################## rocflag end
+################################## rocflag start
+rocflag7_url = "https://gist.githubusercontent.com/RWE1116/a199dd8ad3c2b5cbc6c1af2cb48e783e/raw/7586872fe6f838fd221612186318a4ea4d68f0df/1to%252010.py"
+rocflag7 = button2(rocflag7_url)
+doc["rocflag7"].bind("click", rocflag7.do)
+################################## rocflag end
 // ]]></script>
 </p>
