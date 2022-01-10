@@ -6,6 +6,7 @@
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
+
 <!-- 啟動 Brython -->
 <script>// <![CDATA[
 window.onload=function(){
