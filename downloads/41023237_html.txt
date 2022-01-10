@@ -143,7 +143,7 @@ frial2 = button2(frial2_url)
 doc["frial2"].bind("click", frial2.do)
 ################################## frial2 end
 ################################## end start
-end_url = "https://gist.githubusercontent.com/www000123/ce66351f3ce9c9571bb0117d62710ca5/raw/d8d7c5d3f6dc71ac10d36ded612ed4ac71110835/%25E6%259C%259F%25E7%25B5%2582%25E8%2580%2583%25E8%25A9%25A6%2520%25E7%25AC%25AC%25E4%25BA%258C%25E6%25AC%25A1"
+end_url = "https://gist.githubusercontent.com/www000123/0124ec7b7bb9f3861e2cc727f33a67c3/raw/dd6b5751ffd4fae4e1ae639d97b269336919664d/%25E5%258F%2583%25E8%2580%258326"
 end = button2(end_url)
 doc["end"].bind("click", end.do)
 ################################## end end
