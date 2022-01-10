@@ -1,0 +1,232 @@
+<h3>41023147</h3>
+<p>1.作業一的紅色方塊</p>
+<p><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button></p>
+<p>2.第十三週考試及延伸</p>
+<p><button id="列出10個座標">列出10個座標</button><button id="表格">表格</button></p>
+<p>3.python教科書習題</p>
+<p><button id="w13">1~100</button><button id="w11">2.6_1</button><button id="w11_0">2.6_2</button><button id="w11_2">2.6_3</button></p>
+<p>4.作業三貪食蛇</p>
+<p><button id="snake">勤勞蛇</button><button id="snake2">蛇2</button></p>
+<p>5.第十二週習題</p>
+<p><button id="w12">台灣國旗</button><button id="w12_2">日本國旗</button></p>
+<p>6.期末小測試</p>
+<p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- for ggame -->
+<p>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/jquery-ui.1.12.1.min.js"></script>
+<script src="/static/pixi-3.0.5.min.js"></script>
+<script src="/static/buzz-1.2.1.js"></script>
+<script src="/static/bs.js"></script>
+<script src="/downloads/brython_modules.js"></script>
+</p>
+<p><!-- Cango 程式庫 --></p>
+<p>
+<script src="/static/Cango-24v03-min.js"></script>
+<script src="/static/CangoAxes-6v01-min.js"></script>
+<script src="/static/gearUtils-09.js"></script>
+<script src="/static/SVGpathUtils-6v03-min.js"></script>
+</p>
+<p><!-- for Konva 程式庫 --></p>
+<p>
+<script src="/static/konva.min.js"></script>
+<script>// <![CDATA[
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+// ]]></script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script type="text/javascript" src="/static/ace/FileSaver.min.js"></script>
+<script type="text/javascript" src="/static/ace/filereader.js"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script type="text/javascript" src="/static/ace/ace.js"></script>
+<script type="text/javascript" src="/static/ace/ext-language_tools.js"></script>
+<script type="text/javascript" src="/static/ace/mode-python3.js"></script>
+<script type="text/javascript" src="/static/ace/snippets/python.js"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">// <![CDATA[
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+// ]]></script>
+</p>
+<p><!-- 印出版次與關鍵字程式 --></p>
+<p>
+<script type="text/python3">// <![CDATA[
+from browser import document as doc
+from browser import html
+import ace
+# 清除畫布
+def clear_bd(ev):
+    bd = doc["brython_div"]
+    bd.clear()
+# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
+Ace.editor.setValue("""# 導入 sys 模組
+import sys
+# 導入 keyword 模組
+import keyword
+def helloWorld():
+    print("Hello World!")
+helloWorld()
+# 利用 sys 模組中的 version_info 印出 Python 版次
+print("Python version: ", sys.version_info)
+# 利用 keyword 模組中的 kwlist 印出關鍵字
+print("Python keywords: ", keyword.kwlist)
+""")
+Ace.editor.scrollToRow(0)
+Ace.editor.gotoLine(0)
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run'].bind('click', Ace.run)
+doc['kw_show_console'].bind('click', Ace.show_console)
+doc['kw_clear_console'].bind('click', Ace.clear_console)
+doc['clear_bd'].bind('click', clear_bd)
+// ]]></script>
+</p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor" style="width: 600px; height: 300px;"><a href="https://youtu.be/vNYhVI9YJMQ">final_1影片</a>、<a href="https://youtu.be/5lODbwLdRi8">final_2影片</a></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form>
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<div id="brython_div"></div>
+<div>======================================</div>
+<div>在這學期的計算機課程中,我學到了很多以前國高中接觸不到的課程,一開始甚至有點無法適應,後來在同學的仔細說明以及努力理解後,才終於有稍微知道自己在做甚麼的感覺,甚至還有了一絲成就感,特別是在找出自己的程式哪裡有問題的時候。</div>
+<div class="col-md-0" height="1" id="graphics-column" width="1"></div>
+<p><!-- ****************************** keyword start -->
+<script type="text/python3">// <![CDATA[
+from browser import document as doc
+# 導入位於 static 目錄下的 beditor.py 
+import beditor
+# 利用 beditor.py 中的 editor 類別建立案例, 對應到 kw1
+kw1 = beditor.editor("""# 導入 sys 模組
+import sys
+# 導入 keyword 模組
+import keyword
+# 利用 sys 模組中的 version_info 印出 Python 版次
+print("Python version: ", sys.version_info)
+# 利用 keyword 模組中的 kwlist 印出關鍵字
+print("Python keywords: ", keyword.kwlist)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "keyword" 的按鈕點按時, 執行 kw1 物件中的 prog 方法
+// ]]></script>
+</p>
+<p></p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/036455fcae57069f09ae62d03d7dfa9d/raw/855e34261668016b93b01fbe40f8b5f9eb5cc3a8/HW1"
+src = open(url).read()
+hw1_1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw1_1"].bind("click", hw1_1.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/c80dfacf8f58db727603e1773d182ddb/raw/131da06b7f3e574d96c1e03631fcdfd3f3a90b66/HW1-2"
+src = open(url).read()
+hw1_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw1_2"].bind("click", hw1_2.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/5dc82b4e7555ede334730d407408f7e3/raw/7351ea03dffebd8fd8bb34b51397e024936201c8/W13"
+src = open(url).read()
+列出10個座標 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["列出10個座標"].bind("click", 列出10個座標.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/aab6911980e8ef22b4e9c9b4a12da3b2/raw/d1f55a4e804bb0e5fc2a430c0a2e3cadac45e492/w13-2"
+src = open(url).read()
+表格 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["表格"].bind("click", 表格.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/d8ac084b54738c01c0ac3b9e35ae102f/raw/6f13e6bd90334ba608115ef0a6655e4f29713988/1%2520add%2520to%2520100"
+src = open(url).read()
+w13 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w13"].bind("click", w13.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/e8988a6853fcd134d6d0cec35e6f4372/raw/853317a4298eac26cb5c44f3ea25cfe2f84a5cde/py261"
+src = open(url).read()
+w11 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w11"].bind("click", w11.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/2c8fec7b17b4e219d93acb126b5097ad/raw/daaa5409dda92415147c49de8d6a1645c0cf5a21/py262"
+src = open(url).read()
+w11_0 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w11_0"].bind("click", w11_0.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/e5ec864d525b2c69d63f177f7de1bdc7/raw/e80ef4ab170e79f4b611c3effd1632121402eedb/py263"
+src = open(url).read()
+w11_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w11_2"].bind("click", w11_2.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/1abebba846ee7d82a9758123b59d186f/raw/30c1f6a5b8a9b3696716659e2d76f559ce352cb0/ai%2520snake"
+src = open(url).read()
+snake = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["snake"].bind("click", snake.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/b3ae219723752c8398e7e7a881ffbae0/raw/e8876a7172004c350ac10262e412901a07bcf38a/w12"
+src = open(url).read()
+w12 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w12"].bind("click", w12.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/570a32544ee6f179de4cc8fed5fd527e/raw/687f2182a071a049f334fa282bf0b04feb79a49a/w12%25E5%25BB%25B6%25E4%25BC%25B8"
+src = open(url).read()
+w12_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w12_2"].bind("click", w12_2.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/ecfdb47d2d49314c77365243f36ca595/raw/bfc29324250054bf4b2ec2bd7715954bf45f283c/final_1"
+src = open(url).read()
+final_1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_1"].bind("click", final_1.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/8b87eb5b998291a29c44305918605e11/raw/90abdb0ae4e11dc9eeabd9e6d7d7cc3e70644fde/final_2"
+src = open(url).read()
+final_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_2"].bind("click", final_2.prog)
+// ]]></script>
+</p>

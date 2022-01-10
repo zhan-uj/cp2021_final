@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # ref: https://stackoverflow.com/questions/3845423/remove-empty-strings-from-a-list-of-strings
 
 # Global parameters setup
-repo_path = "Y:/tmp/cp2021_final"
+repo_path = "./"
 class_name = "1b"
 group_file = repo_path + "/downloads/" + class_name + "_grouping.txt"
 page_head = "h2"
@@ -364,11 +364,12 @@ def get_html(grp_title, student_id):
                     i.insert_after(j)
         output = str(soup)
         #print(output)
-        output = output.replace("<html><body", "")
+        output = output.replace("<html><body>", "")
         output = output.replace("</body></html>", "")
         output = output.replace("// <![CDATA[", "")
         output = output.replace("// ]]>", "")
-        output = output.replace("&gt;", "")
+        #output = output.replace("&gt;", "")
+        output = output.replace("<p></p>", "")
         return output
     except:
         #print("no file found for " + str(student_id))
@@ -415,6 +416,8 @@ for i in range(len(grp_title)):
     # j is student id for each member
     for j in stud_list:
         content = get_html(grp_title[i], j)
+        content = content.replace("<p></p>", "")
+        content = content.replace("&gt;", "")
         if content != "":
             print(j)
             #print(content)

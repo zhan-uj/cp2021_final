@@ -1,4 +1,4 @@
-<h3>41023237</h3>
+<h3>41023237 </h3>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -37,7 +37,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">1+2+...+10</button><button id="sk">貪吃蛇</button><button id="red">紅點</button></p>
+<p><button id="add1to100">1+2+...+10</button><button id="sk">貪吃蛇</button><button id="red">紅點</button><button id="frial1">frial1</button><button id="frial2">frial2</button><button id="end">期終考試</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -132,5 +132,20 @@ red_url = "https://gist.githubusercontent.com/www000123/34ca70159a333bf01d965893
 red = button2(red_url)
 doc["red"].bind("click", red.do)
 ################################## red end
+################################## frial1 start
+frial1_url = "https://gist.githubusercontent.com/www000123/d4c1e394f2ff8c638a1f8d5e0656157d/raw/4e8b5e8331566d19bddaa9e7dc092ce339f11f3d/%25E8%25AA%25B2%25E5%25A0%2582%25E8%2580%2583%25E8%25A9%25A6"
+frial1 = button2(frial1_url)
+doc["frial1"].bind("click", frial1.do)
+################################## frial1 end
+################################## frial2 start
+frial2_url = "https://gist.githubusercontent.com/www000123/e5b0cf65b4b6dc4b247fca6a9265a43a/raw/2177450d8ecdef3ada0095e47f3040678faf07a9/%25E8%25AA%25B2%25E5%25A0%2582%25E8%2580%2583%25E8%25A9%25A62%2520%25E6%2594%25B9%25E8%2589%25AF"
+frial2 = button2(frial2_url)
+doc["frial2"].bind("click", frial2.do)
+################################## frial2 end
+################################## end start
+end_url = "https://gist.githubusercontent.com/www000123/ce66351f3ce9c9571bb0117d62710ca5/raw/d8d7c5d3f6dc71ac10d36ded612ed4ac71110835/%25E6%259C%259F%25E7%25B5%2582%25E8%2580%2583%25E8%25A9%25A6%2520%25E7%25AC%25AC%25E4%25BA%258C%25E6%25AC%25A1"
+end = button2(end_url)
+doc["end"].bind("click", end.do)
+################################## end end
 // ]]></script>
 </p>

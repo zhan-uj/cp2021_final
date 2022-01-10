@@ -364,11 +364,12 @@ def get_html(grp_title, student_id):
                     i.insert_after(j)
         output = str(soup)
         #print(output)
-        output = output.replace("<html><body", "")
+        output = output.replace("<html><body>", "")
         output = output.replace("</body></html>", "")
         output = output.replace("// <![CDATA[", "")
         output = output.replace("// ]]>", "")
-        output = output.replace("&gt;", "")
+        #output = output.replace("&gt;", "")
+        output = output.replace("<p></p>", "")
         return output
     except:
         #print("no file found for " + str(student_id))
