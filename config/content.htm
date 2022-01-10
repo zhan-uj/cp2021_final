@@ -6049,7 +6049,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="紅點">紅點</button> <button id="藍點_按鍵啟動">藍點_按鍵啟動</button> <button id="貪食蛇">貪食蛇</button> <button id="AI貪食蛇">AI貪食蛇</button> <button id="隨機序號_英">隨機序號_英</button> <button id="隨機序號_中">隨機序號_中</button> <button id="final1">final1</button> <button id="final2">final2</button></p>
+<p><button id="紅點">紅點</button><button id="藍點_按鍵啟動">藍點_按鍵啟動</button><button id="貪食蛇">貪食蛇</button><button id="AI貪食蛇">AI貪食蛇</button><button id="隨機序號_英">隨機序號_英</button><button id="隨機序號_中">隨機序號_中</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -6057,11 +6057,9 @@ function doSave(storage_id, filename){
 <p><!-- 存擋表單開始 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
 <p><!-- 存擋表單結束 --></p>
-<p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
-<p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
@@ -6162,26 +6160,12 @@ doc["隨機序號_英"].bind("click", 隨機序號_英.do)
 隨機序號_中 = button2(隨機序號_中_url)
 doc["隨機序號_中"].bind("click", 隨機序號_中.do)
 ################################## 隨機序號_中 end
-
-
-
-################################## final1 start
-final1_url = "https://gist.githubusercontent.com/sdegbsvrtg/821850859f261df5593917e80051d263/raw/0a69b0021286e2d68af30440965925153b89c93a/final1"
-final1 = button2(final1_url)
-doc["final1"].bind("click", final1.do)
-################################## final1 end
-
-
-################################## final2 start
-final2_url = "https://gist.githubusercontent.com/sdegbsvrtg/d91f338417fa5b2cedec9630906ba81d/raw/0273009feea2c22439b28ddb01f755e93a10311d/final2"
-final2 = button2(final2_url)
-doc["final2"].bind("click", final2.do)
-################################## final2 end
 </script>
 </p>
 <div id="gtx-trans" style="position: absolute; left: -7px; top: 39.125px;">
 <div class="gtx-trans-icon"></div>
-</div><h3>41023248</h3>
+</div>
+<h3>41023248</h3>
 <p><a href="/downloads/w12demo.txt">w12demo.txt</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a>.</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> - 可以根據此規格定義, 新增 <button id="procflas">PROC flag</button> 按鈕.</p>
@@ -9126,7 +9110,7 @@ doc["final2"].bind('click', final2.do)
 ################################## final2 end
 </script>
 </p>
-<h3>41023237</h3>
+<h3>41023237 </h3>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
