@@ -38,7 +38,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">紅點</button><button id="p261">紅點按鈕</button><button id="rocflag">1加到10</button><button id="rocflag1">亂數中</button><button id="rocflag2">亂數英</button><button id="rocflag3">貪食蛇</button><button id="rocflag4">final1</button><button id="rocflag5">final2</button></p>
+<p><button id="add1to100">紅點</button><button id="p261">紅點按鈕</button><button id="rocflag">1加到10</button><button id="rocflag1">亂數中</button><button id="rocflag2">亂數英</button><button id="rocflag3">貪食蛇</button><button id="rocflag4">final1</button><button id="rocflag5">final2</button><button id="rocflag6">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -157,6 +157,11 @@ doc["rocflag4"].bind("click", rocflag4.do)
 rocflag5_url = "https://gist.githubusercontent.com/41023224/f642f3993835bba910520eb7c6e69183/raw/7de8774f55a07ff4cabdfb6798aa7010fa995b3b/final2.py"
 rocflag5 = button2(rocflag5_url)
 doc["rocflag5"].bind("click", rocflag5.do)
+################################## rocflag end
+################################## rocflag start
+rocflag6_url = "https://gist.githubusercontent.com/41023224/317b1c4aa916bbcd8ca6548c20a2bc93/raw/aa324986acb9e83939383113bea74a6ee9c8604e/final3.py"
+rocflag6 = button2(rocflag6_url)
+doc["rocflag6"].bind("click", rocflag6.do)
 ################################## rocflag end
 // ]]></script>
 </p>
