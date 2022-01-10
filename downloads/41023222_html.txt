@@ -39,7 +39,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to10">add 1 to 10</button><button id="red">red</button><button id="red2">red2</button><button id="snake">snake</button><button id="random">random</button><button id="random2">random2</button></p>
+<p><button id="add1to10">add 1 to 10</button><button id="red">red</button><button id="red2">red2</button><button id="snake">snake</button><button id="random">random</button><button id="random2">random2</button><button id="final1">final1</button><button id="final2">final2</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -145,5 +145,11 @@ doc["random"].bind('click', random.do)
 random2_url = "https://gist.githubusercontent.com/kolas911205/d5e0361ab649052019e5fcbf5b2b125e/raw/aa8249f18fbccc8698773bfa2c13ca5367df5935/w13-2.py"
 random2 = button2(random2_url)
 doc["random2"].bind('click', random2.do)
+final1_url = "https://gist.githubusercontent.com/kolas911205/a2219f2dce8f9ab58101635ef93e7a5f/raw/aa7fb9a38e0913e71e110905be27cd1762009a24/15x15"
+final1 = button2(final1_url)
+doc["final1"].bind('click', final1.do)
+final2_url = "https://gist.githubusercontent.com/kolas911205/c3a3a82d76f8fd13c80f404869da733a/raw/4be68ddefdf2a965e9a1a86c91873bbff31ac380/15x15%2520%25202"
+final2 = button2(final2_url)
+doc["final2"].bind('click', final2.do)
 // ]]></script>
 </p>
