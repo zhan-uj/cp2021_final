@@ -65,6 +65,7 @@ function doSave(storage_id, filename){
 from browser import document as doc
 import ace
 
+
 # 清除畫布
 def clear_bd1(ev):
     # 注意這裡清除的畫布 id 為 brython_div
