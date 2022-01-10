@@ -6,7 +6,6 @@
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
-
 <!-- 啟動 Brython -->
 <script>// <![CDATA[
 window.onload=function(){
@@ -42,7 +41,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="a">紅點</button><button id="b">紅點暫停</button><button id="c">1加到10</button><button id="d">數字隨機</button><button id="e">國字數字隨機</button><button id="f">貪食蛇</button><button id="g">final 1</button><button id="h">final 2</button><button id="i">final 3</button></p>
+<p><button id="a">紅點</button><button id="b">紅點暫停</button><button id="c">1加到10</button><button id="d">數字隨機</button><button id="e">國字數字隨機</button><button id="f">貪食蛇</button><button id="g">final 1</button><button id="h">final 2</button><button id="i">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
