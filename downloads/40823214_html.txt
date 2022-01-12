@@ -1,4 +1,5 @@
 <h3>40823214</h3>
+<p><a href="https://40823214.github.io/cp2021_hw/content/run.html?src=https://gist.githubusercontent.com/40823214/c7d2af4586f1e685c2da8e5aa7ff86e3/raw/e3472bf636d49ec9f0406d1076b5b53de0338274/auto_snake.py">自動貪吃蛇</a>&nbsp; &nbsp;<a href="https://40823214.github.io/cp2021_hw/content/run.html?src=https://gist.githubusercontent.com/40823214/559c9ba90bc4a3e5bc430a61a8fbd0e5/raw/82811a447664cdcd249e6d6a13251943593011af/double__snake.py">雙人貪吃蛇</a>&nbsp;&nbsp;<a href="https://40823214.github.io/cp2021_hw/content/run.html?src=https://gist.githubusercontent.com/40823214/c629732430be0d571b2507142635fd05/raw/d3b46d1885d7d2ca143a612ecabe9af9c35ee8f2/final_1.py">final_1</a>&nbsp;&nbsp;&nbsp;<a href="https://40823214.github.io/cp2021_hw/content/run.html?src=https://gist.githubusercontent.com/40823214/496c7f27fae7b8674bdf820c186a84c3/raw/f347a152bc94a756945cbe89c13b2128c0d41529/final_2.py">final_2</a>&nbsp; &nbsp;<a href="https://40823214.github.io/cp2021_hw/content/run.html?src=https://gist.githubusercontent.com/40823214/33270c22eb2c50e137bc69171d9809d1/raw/bbcb6aad819bdea6d9da18f0a8a552282e50668b/final_3.py">final_3</a></p>
 <p>雙人貪吃蛇</p>
 <p>綠色 :wsad 上下左右</p>
 <p>青色 : ikjl 上下左右</p>
@@ -42,7 +43,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="sk">自動貪吃蛇</button><button id="dowsk">雙人貪吃蛇</button><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
+<p><button id="sk">自動貪吃蛇</button><button id="dowsk">雙人貪吃蛇</button><button id="final_1">final_1</button><button id="final_2">final_2</button><button id="final_3">final_3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -76,7 +77,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/40823214/496c7f27fae7b8674bdf820c186a84c3/raw/797a20001dd80814f112ccced3db7f7315695452/final_2.py"
+        url = "https://gist.githubusercontent.com/40823214/33270c22eb2c50e137bc69171d9809d1/raw/bbcb6aad819bdea6d9da18f0a8a552282e50668b/final_3.py"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -137,9 +138,14 @@ final_1 = button2(final_1_url)
 doc["final_1"].bind("click", final_1.do)
 ################################## final_1 end
 ################################## final_2 start
-final_2url = "https://gist.githubusercontent.com/40823214/496c7f27fae7b8674bdf820c186a84c3/raw/797a20001dd80814f112ccced3db7f7315695452/final_2.py"
+final_2url = "https://gist.githubusercontent.com/40823214/496c7f27fae7b8674bdf820c186a84c3/raw/f347a152bc94a756945cbe89c13b2128c0d41529/final_2.py"
 final_2 = button2(final_2_url)
 doc["final_2"].bind("click", final_2.do)
 ################################## final_2 end
+################################## final_3 start
+final_3url = "https://gist.githubusercontent.com/40823214/33270c22eb2c50e137bc69171d9809d1/raw/bbcb6aad819bdea6d9da18f0a8a552282e50668b/final_3.py"
+final_3 = button2(final_3_url)
+doc["final_3"].bind("click", final_3.do)
+################################## final_3 end
 // ]]></script>
 </p>
