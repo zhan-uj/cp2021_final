@@ -1,4 +1,4 @@
-<h3>41023210</h3>
+<h2>41023210</h2>
 <p><a href="/downloads/w12.txt">w12.txt</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a>.</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> - 可以根據此規格定義, 新增 <button id="procflas">PROC flag</button> 按鈕.</p>
@@ -41,7 +41,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13_1">W13_1</button><button id="W13_2">W13_2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
+<p><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13_1">W13_1</button><button id="W13_2">W13_2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button><button id="貪吃蛇">貪吃蛇</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -170,5 +170,10 @@ final3_url = "https://gist.githubusercontent.com/junpig10/c4bcbed0427d8f0725e4c1
 final3 = button2(final3_url)
 doc["final3"].bind('click', final3.do)
 ################################## final3 end
+################################# p261 start 
+貪吃蛇_url = "https://gist.githubusercontent.com/junpig10/86d5f722c5e469878b278d70ff849df0/raw/9ba9315a83cc9f7f6c080320ff50bfd6d86d73d7/%25E8%25B2%25AA%25E5%2590%2583%25E8%259B%2587"
+貪吃蛇 = button2(貪吃蛇_url)
+doc["貪吃蛇"].bind('click', 貪吃蛇.do)
+################################## 貪吃蛇 end
 // ]]></script>
 </p>
