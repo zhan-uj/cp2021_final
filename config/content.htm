@@ -3501,7 +3501,8 @@ document["final"].bind("click",final.prog)
 <p>心得 : 這學期學了多工具跟程式，有錄影製作小影片的wink，截圖的share，程式學習了製作h1.2.3</p>
 <p>         分別是自動手動方塊跟手動自動貪食蛇，程式雖然不好懂，了解之後，會發現其實蠻有趣，完成</p>
 <p>         時也都有成就感，感謝老師這學期的教導。  </p>
-<p>程式練習影片:<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/lc6rctAdatc" width="560"></iframe></p>
+<p>程式練習影片:</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/lc6rctAdatc" width="560"></iframe></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -3593,6 +3594,16 @@ hw1_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_s
 document["hw1_2"].bind("click", hw1_2.prog)
 </script>
 </p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/jason60714/3140695e30bc08f7180898169f9ded4b/raw/6c5b2e5b73b5c19987472a871d1ed0e187164c2b/W13"
+src = open(url).read()
+列出十個座標 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["列出十個座標"].bind("click", 列出十個座標.prog)
+</script>
+</p>
 <script type="text/python3">
 import beditor
 from browser import document
@@ -3628,7 +3639,7 @@ document["final1and2"].bind("click", final1and2.prog)
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="hw1_1">HW1-1</button><button id="hw1_2">HW1-2</button><button id="hw3_1">HW3-1</button><button id="hw3_2">HW3-2</button><button id="final1and2">final1and2</button></p>
+<p><button id="hw1_1">HW1-1</button><button id="hw1_2">HW1-2</button><button id="列出十個座標">列出十個座標</button><button id="hw3_1">HW3-1</button><button id="hw3_2">HW3-2</button><button id="final1and2">final1and2</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 485px; height: 195px;"></textarea></div>
@@ -5351,7 +5362,7 @@ function doSave(storage_id, filename){
 <p><button id="hw1_1">hw1_1</button><button id="hw1_2">hw1_2</button></p>
 <p><button id="add1to100">add 1 to 100</button><button id="rocflag">ROC flag</button><button id="列出十個座標">列出十個座標</button></p>
 <p><button id="snake">Snake</button></p>
-<p><button id="final1">final1</button></p>
+<p><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -5464,6 +5475,16 @@ final1_url = "https://gist.githubusercontent.com/zeromarurei/2a69e9deb4b146415f9
 final1 = button2(final1_url)
 doc["final1"].bind("click", final1.do)
 ################################## final1 end
+################################## final2 start
+final2_url = "https://gist.githubusercontent.com/zeromarurei/e7203f689fd0d476567ae0b5fdaac1dc/raw/7e9d2a4c91ba3e6d3e1edd68a47c539e3d6698f3/final2"
+final2 = button2(final2_url)
+doc["final2"].bind("click", final2.do)
+##################################final2end
+################################## final3 start
+final3_url = "https://gist.githubusercontent.com/zeromarurei/ae58a634be5a4b5e1e227f0aad8df05e/raw/e1b8c62664e110f92441f0d19ab22669a784e7d5/%25E9%25A0%2586%25E6%2599%2582%25E9%2590%2598"
+final3 = button2(final3_url)
+doc["final3"].bind("click", final3.do)
+################################## final3 end
 </script>
 </p>
 <h3>41023136</h3>
