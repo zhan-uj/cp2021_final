@@ -15,7 +15,7 @@
 <p>6.期末測驗</p>
 <p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
 <p>7.期末考試</p>
-<p><button id="final_3">final_3</button></p>
+<p><button id="final_3">final3</button><button id="w17_5">final3_2</button><button id="w17_6">final3_3</button></p>
 <script>// <![CDATA[
 ###############################################
 // ]]></script>
@@ -318,10 +318,26 @@ document["final_2"].bind("click", final_2.prog)
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023146/4814bb3856a31f5ad0d303f21cd93744/raw/894fa2805306ac51f9f0051255a915c1ca639a27/Python"
+url = "https://gist.githubusercontent.com/41023146/4814bb3856a31f5ad0d303f21cd93744/raw/cb5eaf44d1faf2a389808d39ad593e0c6cad4a6b/Python"
 src = open(url).read()
 final_3 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final_3"].bind("click", final_3.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023146/7c6cc702a1534f01a909e2c3e06d1cca/raw/32f3bbbe5eaf3c867c45d12e38358b45dcaedb8d/Python"
+src = open(url).read()
+w17_5 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w17_5"].bind("click", w17_5.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023146/cfe0baa11fee1ffd8789273702f4da8c/raw/e2ee05bfaf4ba5d81a9f00f0712da507676fa7a4/Python"
+src = open(url).read()
+w17_6 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w17_6"].bind("click", w17_6.prog)
 // ]]></script>
 <script>// <![CDATA[
 ############################################### // ]]&gt;</p>
