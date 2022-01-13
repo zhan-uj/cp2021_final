@@ -1,5 +1,5 @@
 <h3>41023119</h3>
-<p><button id="w13">列出 10 個座標</button><button id="asd">方格中列出 10 個座標</button><button id="qwe">隨機方格</button><button id="zxc">真隨機方格</button><button id="final">final 1</button><button id="final2">final2</button><button id="snake">snake</button><button id="bsnake">bsnake</button><button id="hw1_1">hw1-1</button><button id="hw1_2">hw1-2</button></p>
+<p><button id="w13">列出 10 個座標</button><button id="asd">方格中列出 10 個座標</button><button id="qwe">隨機方格</button><button id="zxc">真隨機方格</button><button id="final">final 1</button><button id="final2">final2</button><button id="snake">snake</button><button id="bsnake">bsnake</button><button id="hw1_1">hw1-1</button><button id="hw1_2">hw1-2</button><button id="mora">猜拳</button><button id="exam">Final3</button></p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 <!-- for ggame -->
@@ -92,10 +92,17 @@ doc['clear_bd'].bind('click', clear_bd)
 <div class="col-md-0" height="1" id="graphics-column" width="1">============================================</div>
 <div class="col-md-0" height="1" width="1">1.倉儲的建立要透過老師的影片看好幾次跟詢問許多同學才會建立。</div>
 <div class="col-md-0" height="1" width="1">2.HW1因為<span>第一次接觸到python，一開始完全看不懂，後來詢問同學及參考資料才做出來。</span></div>
-<div class="col-md-0" height="1" width="1"><span>3.W13學會了random的用法，並參考老師的畫格子把第二部分做出來，而第三部分的隨機格子透過函式的運用也做來了。</span></div>
+<div class="col-md-0" height="1" width="1"><span>3.W13學會了random的用法，並參考老師的畫格子把第二部分做出來，而第三部分的隨機格子透過函式的運用也完成了。</span></div>
 <div class="col-md-0" height="1" width="1"><span>4.HW3的snake改編老師的貪食蛇做出來的，目前最高紀錄111分，蛇身到一定程度會把自己截斷，程式還須改進，而老師後來給的Bsnale還在研究中。</span></div>
+<div class="col-md-0" height="1" width="1"><span>============================================</span></div>
+<div class="col-md-0" height="1" width="1">期末心得</div>
+<div class="col-md-0" height="1" width="1">
+<div class="col-md-0" height="1" width="1">在計算機程式的課程我學到了github的倉儲管理、python程式以及網路管理維護，。</div>
+<div class="col-md-0" height="1" width="1">期末考試比前幾次測驗的還要難，本題的關鍵在於如何寫出<span>綠色方塊吃果實的路徑，</span>按鈕、計分板及<span>隨機亂數方式產生 5 個紅色方塊有做出來，但卡在最後關鍵的地方，後來參考並詢問同學，才得知他是利用C++中陣列的泡沫排序法寫出來的，感謝同學的指導，讓我學會更多程式。</span></div>
+<div class="col-md-0" height="1" width="1"><span></span></div>
 <div class="col-md-0" height="1" width="1"><span></span></div>
 <div class="col-md-0" height="1" width="1"></div>
+</div>
 <div class="col-md-0" height="1" width="1"></div>
 <p><!-- ****************************** keyword start -->
 <script type="text/python3">// <![CDATA[
@@ -150,7 +157,7 @@ document["final"].bind("click", final.prog)
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/Lujay030/da77abb1c172fce177ad5d3d068345bc/raw/72aa06f9e615476a209b4b410d627bd2f9bcd60b/final%25202"
+url = "https://gist.githubusercontent.com/Lujay030/da77abb1c172fce177ad5d3d068345bc/raw/befd0381f8c46690d23198d9e57090b2f1cbb5de/final%25202"
 src = open(url).read()
 final2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final2"].bind("click", final2.prog)
@@ -214,5 +221,25 @@ url = "https://gist.githubusercontent.com/Lujay030/8049df72e24ee68e8f3090660eca1
 src = open(url).read()
 zxc = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["zxc"].bind("click", zxc.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Lujay030/d9f8414fa01d3497278044efb5c8becb/raw/fe2debb4aad912b0c9c052aa1f5370e23741fb86/game"
+src = open(url).read()
+mora = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["mora"].bind("click", mora.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Lujay030/d190651a4ae57789f0193b564a5ccd3e/raw/0347aeeb81ea29d85cade3aa65f8fa3886765859/final_work_1-3"
+src = open(url).read()
+exam = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["exam"].bind("click", exam.prog)
 // ]]></script>
 </p>
