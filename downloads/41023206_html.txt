@@ -165,5 +165,10 @@ final2_url = "https://gist.githubusercontent.com/tseYU000/f31c9ce8eb65d03155ce80
 final2 = button2(final2_url)
 doc["final2"].bind("click",final2.do)
 ################################## final2 end
+################################## final3 start
+final3_url = "https://gist.githubusercontent.com/tseYU000/3cbd332263960e891f284c4c95b3e02f/raw/b8c12a7bd970cf1c84cea3a1e8d682342cb8b4ad/final3.py"
+final3 = button2(final3_url)
+doc["final3"].bind("click",final3.do)
+################################## final3 end
 // ]]></script>
 </p>
