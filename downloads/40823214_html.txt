@@ -77,7 +77,7 @@ def run1():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/40823214/33270c22eb2c50e137bc69171d9809d1/raw/bbcb6aad819bdea6d9da18f0a8a552282e50668b/final_3.py"
+        url = "https://gist.githubusercontent.com/40823214/33270c22eb2c50e137bc69171d9809d1/raw/5affb84629202fc5aae69f30ea01c8f61ec7384b/final_3.py"
     prog = open(url).read()
 
     # 將程式載入編輯區
@@ -143,7 +143,7 @@ final_2 = button2(final_2_url)
 doc["final_2"].bind("click", final_2.do)
 ################################## final_2 end
 ################################## final_3 start
-final_3url = "https://gist.githubusercontent.com/40823214/33270c22eb2c50e137bc69171d9809d1/raw/bbcb6aad819bdea6d9da18f0a8a552282e50668b/final_3.py"
+final_3url = "https://gist.githubusercontent.com/40823214/33270c22eb2c50e137bc69171d9809d1/raw/5affb84629202fc5aae69f30ea01c8f61ec7384b/final_3.py"
 final_3 = button2(final_3_url)
 doc["final_3"].bind("click", final_3.do)
 ################################## final_3 end
