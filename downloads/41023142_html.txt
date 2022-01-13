@@ -73,10 +73,30 @@ run()
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023142/7cfe37efee75d9e08b9e22b342bace00/raw/5df05bdc623b17c585b15102ff2768ee9b95583a/w13-1"
+url = "https://gist.githubusercontent.com/41023142/a3ad113d5f943da0d166f960c53fc09f/raw/92e6b3376d717fde91dcf1dc1086523af02d3614/final3-1"
+src = open(url).read()
+DE = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["DE"].bind("click", DE.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023142/a957a3c363f46c723f6a82320a093781/raw/8beb32afe75db8af48de5dced39d4a75f716e6be/final"
 src = open(url).read()
 w13 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["w13"].bind("click", w13.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023142/7de798c2c29d314afeaf1d0985798675/raw/aa0a934cdef6dda70c4c125dbc6e4bc5968fcb44/final2"
+src = open(url).read()
+FN = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["FN"].bind("click", FN.prog)
 // ]]></script>
 </p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
@@ -85,8 +105,8 @@ document["w13"].bind("click", w13.prog)
 <!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form><!-- 存擋表單結束 -->
 <p></p>
 <!-- 執行與清除按鈕開始 -->
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="w13">列出 10 個座標</button></p>
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button> <button id="clear_bd">清除繪圖區</button> <button onclick="window.location.reload()">Reload</button></p>
+<p><button id="w13">final1</button> <button id="FN">final2</button> <button id="DE">final3</button></p>
 <!-- 執行與清除按鈕結束 -->
 <p></p>
 <!-- 程式執行 ouput 區 -->
