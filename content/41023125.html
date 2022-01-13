@@ -140,6 +140,8 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">41023130 << <a href='41023130.html'>Previous</a> <a href='41023124.html'>Next</a> >> 41023124<br /><h1>41023125</h1>
+<p></p>
+<p></p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -339,23 +341,44 @@ final24 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py
 document["final24"].bind("click",final24.prog)
 </script>
 </p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023125/f4da7999c3e65c67b905ef4f3b0c01d9/raw/c7cc8910878120682ae7f8d85d6eb9021d09b4ef/final3-3"
+src = open(url).read()
+final33 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final33"].bind("click",final33.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023125/f4da7999c3e65c67b905ef4f3b0c01d9/raw/c7cc8910878120682ae7f8d85d6eb9021d09b4ef/final3-4"
+src = open(url).read()
+final34 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final34"].bind("click",final34.prog)
+</script>
+</p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
+<p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="add1to10">列出10個座標</button> <button id="asd">在方格上標出10個座標</button> <button id="zxc">方塊隨機出現</button> <button id="w13">snake</button></p>
 <p><button id="selfgame">戰機遊戲</button></p>
 <p><button id="final1">final1</button> <button id="final2">final2</button> <button id="final22">final2-2</button> <button id="final23">final2-3</button> <button id="final24">final2-4</button></p>
-<p><button id="final3">final3</button> <button id="final32">final3-2</button></p>
+<p><button id="final3">final3</button> <button id="final32">final3-2</button> <button id="final33">final3-3</button> <button id="final34">final3-4</button></p>
 <!-- 執行與清除按鈕結束 -->
+<p></p>
 <!-- 程式執行 ouput 區 -->
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
 <div id="brython_div"></div>
-<p><span style="color: #000000;"><a href="https://www.youtube.com/playlist?list=PLgrxSD1DX5E3HRzkN55oyZVaTvB36EbZV" style="color: #000000;">final製作全過程 - YouTube</a></span></p>
-<br />41023130 << <a href='41023130.html'>Previous</a> <a href='41023124.html'>Next</a> >> 41023124</div>
+<p><span style="color: #000000;"><a href="https://www.youtube.com/playlist?list=PLgrxSD1DX5E3HRzkN55oyZVaTvB36EbZV" style="color: #000000;">final製作全過程 - YouTube</a></span></p><br />41023130 << <a href='41023130.html'>Previous</a> <a href='41023124.html'>Next</a> >> 41023124</div>
         
     <!-- footer -->
       <div class="container">
