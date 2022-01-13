@@ -161,7 +161,7 @@ final2 = button2(final2_url)
 doc["final2"].bind("click", final2.do)
 ##################################final2end
 ################################## final3 start
-final3_url = "https://gist.githubusercontent.com/zeromarurei/ae58a634be5a4b5e1e227f0aad8df05e/raw/e1b8c62664e110f92441f0d19ab22669a784e7d5/%25E9%25A0%2586%25E6%2599%2582%25E9%2590%2598"
+final3_url = "https://gist.githubusercontent.com/zeromarurei/ae58a634be5a4b5e1e227f0aad8df05e/raw/6b626fd385737079da5004be4ddd5742de10fcd0/%25E9%25A0%2586%25E6%2599%2582%25E9%2590%2598"
 final3 = button2(final3_url)
 doc["final3"].bind("click", final3.do)
 ################################## final3 end
