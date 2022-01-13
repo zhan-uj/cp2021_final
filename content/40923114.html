@@ -139,11 +139,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">40923146 << <a href='40923146.html'>Previous</a> <a href='40923115.html'>Next</a> >> 40923115<br /><h1>final</h1>
-<p>期末心得:這學期重修這堂課,前期在架設網站的速度比較快,但到後期程式的部分還是需要加強,也發現自己與學弟的差距.</p>
-<p>期末製作過程影片:</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/IqjQYzUssII" width="560"></iframe></p>
-<p><span></span></p>
+    <div id="tipue_search_content">40923115 << <a href='40923115.html'>Previous</a> <a href='1ag5.html'>Next</a> >> 1ag5<br /><h1>40923114</h1>
+<p>yt final video <a href="https://www.youtube.com/watch?v=8zrI9pglv38&amp;ab_channel=%E4%BA%A6%E5%BE%B7%E6%B1%9F">https://www.youtube.com/watch?v=8zrI9pglv38&amp;ab_channel=%E4%BA%A6%E5%BE%B7%E6%B1%9F</a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -192,10 +189,10 @@ def run():
     try:
         url = doc.query["src"]
     except:
-        url = "https://gist.githubusercontent.com/40923129/aef55d094ec6558c419fd25482fa4a1d/raw/6221acc73db854537f8c1fcd50ecbd1a9e155071/final"
+        url = "https://gist.githubusercontent.com/40923114/5de9606edad7a4112443952cf0b941cc/raw/57cb3be5f006f8d50f177c9e97eb8ac4f1078872/final%25201"
     prog = open(url).read()
 
-    # 將程式載入在最剛開始的編輯區
+    # 將程式載入編輯區
     Ace.editor.setValue(prog)
     Ace.editor.scrollToRow(0)
     Ace.editor.gotoLine(0)
@@ -211,72 +208,19 @@ doc['kw_show_console'].bind('click', Ace.show_console)
 doc['kw_clear_console'].bind('click', Ace.clear_console)
 doc['clear_bd'].bind('click', clear_bd)
 # 呼叫函式執行
-
 run()
 </script>
 </p>
-<p>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/a40923146/f8b41744f92667da5ca8d16d75dc3431/raw/cbbb5443f2e3c5f1f86290f858b8be0724d42061/cp2021_hw1"
-src = open(url).read()
-hw1_1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["hw1_1"].bind("click", hw1_1.prog)
-</script>
-</p>
-<p>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/40923129/df69d2f88ec8a712d89286f83a9d8a31/raw/c8fb940d3267ef9c97b9471a2c684969cbc3c097/hw-1-2"
-src = open(url).read()
-hw1_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["hw1_2"].bind("click", hw1_2.prog)
-</script>
-</p>
-<p>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/40923129/5c5483c0812d64de82fb29373616a265/raw/0b8e78608ae86a6c8ce6ae8d3a2986d847d648e0/snake2"
-src = open(url).read()
-snake = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake"].bind("click", snake.prog)
-</script>
-</p>
-<p>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/40923129/972f510bce12c851c841a67d54e921e3/raw/af34bcd0b621c80bd3eec6d432e7c812e0b101cd/exam"
-src = open(url).read()
-exam = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["exam"].bind("click",exam.prog)
-</script>
-</p>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/40923129/aef55d094ec6558c419fd25482fa4a1d/raw/de8a9108fe62d9d34ac689b312bf3d9396253a76/final"
-src = open(url).read()
-final = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["final"].bind("click",final.prog)
-</script>
+<div id="brython_div"></div>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
-<p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
-<p><!-- 存擋表單結束 --></p>
-<p><!-- 執行與清除按鈕開始 --></p>
+<p>!-- 存擋表單開始 --</p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="hw1_1">hw1-1</button><button id="hw1_2">hw1-2</button><button id="exam">1add10</button><button id="snake">snake</button> <button id="final">final1and2</button></p>
-<p><!-- 執行與清除按鈕結束 --></p>
-<p><!-- 程式執行 ouput 區 --></p>
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
-<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
-<div id="brython_div"></div><br />40923146 << <a href='40923146.html'>Previous</a> <a href='40923115.html'>Next</a> >> 40923115</div>
+<!-- 程式執行 ouput 區 -->
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 485px; height: 195px;"></textarea></div>
+<br />40923115 << <a href='40923115.html'>Previous</a> <a href='1ag5.html'>Next</a> >> 1ag5</div>
         
     <!-- footer -->
       <div class="container">
