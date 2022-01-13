@@ -50,7 +50,7 @@ function doSave(storage_id, filename){
 <p>小遊戲</p>
 <p><button id="ng">數字海裡尋覓你</button></p>
 <p>期末測驗</p>
-<p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
+<p><button id="final_1">final_1</button><button id="final_2">final_2</button><button id="final_3">final_3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -178,6 +178,11 @@ final_2_url = "https://gist.githubusercontent.com/40823227/a8baa1baa6dc91fd8d055
 final_2 = button2(final_2_url)
 doc["final_2"].bind('click', final_2.do)
 ################################## final_2 end
+################################## final_3 start
+final_3_url = "https://gist.githubusercontent.com/40823227/31f49684ba1891c4d1deda5a8b17c700/raw/f53eaa8428b3eb9e6683f73380aab5a4dbe63200/final_3"
+final_3 = button2(final_3_url)
+doc["final_3"].bind('click', final_3.do)
+################################## final_3 end
 // ]]></script>
 </p>
 <p>final_1</p>
