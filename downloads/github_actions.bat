@@ -1,0 +1,3 @@
+python add_to_content_htm_1a.py
+python add_to_content_htm_1b.py
+python generate_pages.py

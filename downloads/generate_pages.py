@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from html import escape as html_escape
 from flask import request
 
-repo_path = "C:/123/cp2021_final"
+repo_path = "./../"
 config_dir = repo_path + "/config/"
 uwsgi = False
 
