@@ -55,10 +55,10 @@ function doSave(storage_id, filename){
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
-<!-- 這裡的畫布 id 為 brython_div -->
+<p><!-- 這裡的畫布 id 為 brython_div --></p>
 <div id="brython_div"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
-<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
 <script type="text/python3">// <![CDATA[
 from browser import document as doc
 import ace
@@ -96,7 +96,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
 // ]]></script>
-<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
 <p><!-- add 1 to 100 開始 -->
 <script type="text/python3">// <![CDATA[
 from browser import document as doc
@@ -163,7 +163,7 @@ bright = button2(bright_url)
 doc["bright"].bind('click', bright.do)
 ################################## bright end
 ################################# final1start 
-final1_url = "https://gist.githubusercontent.com/SHIUN129/6c1b083b3d3fb3b488dbd60d74919893/raw/52f018345d522d1a92a5b792e6f92f0f566beaad/final1"
+final1_url = "https://gist.githubusercontent.com/SHIUN129/6c1b083b3d3fb3b488dbd60d74919893/raw/94edca616f8586a7e92d2d687d5a6de2e4549293/final1"
 final1= button2(final1_url)
 doc["final1"].bind('click', final1.do)
 ################################## final1 end
@@ -173,9 +173,9 @@ final2= button2(final2_url)
 doc["final2"].bind('click', final2.do)
 ################################## final2 end
 ################################# final3start 
-final3_url = " "
+final3_url = "https://gist.githubusercontent.com/SHIUN129/27de44ced6a10ef81b346a97d8d6f837/raw/c5457e4890e1937003c4632cbd76c286cc46af5d/final3"
 final3= button2(final3_url)
-doc["final3"].bind('click', final2.do)
+doc["final3"].bind('click', final3.do)
 ################################## final3 end
 // ]]></script>
 </p>
