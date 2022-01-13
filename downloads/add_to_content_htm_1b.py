@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # ref: https://stackoverflow.com/questions/3845423/remove-empty-strings-from-a-list-of-strings
 
 # Global parameters setup
-repo_path = "Y:/tmp/cp2021_final"
+repo_path = "C:/123/cp2021_final"
 class_name = "1b"
 group_file = repo_path + "/downloads/" + class_name + "_grouping.txt"
 page_head = "h2"
