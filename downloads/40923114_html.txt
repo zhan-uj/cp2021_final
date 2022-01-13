@@ -1,9 +1,6 @@
 <h3>40923114</h3>
 <p>yt final video <a href="https://www.youtube.com/watch?v=8zrI9pglv38&amp;ab_channel=%E4%BA%A6%E5%BE%B7%E6%B1%9F">https://www.youtube.com/watch?v=8zrI9pglv38&amp;ab_channel=%E4%BA%A6%E5%BE%B7%E6%B1%9F</a></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<p>在做butter的時候出了點問題跑不出來，但後來發現是在使用button代號名稱裡不能有空格，不然跑不出來。</p>
 <p></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
@@ -56,7 +53,7 @@ def run():
         url = "https://gist.githubusercontent.com/40923114/5de9606edad7a4112443952cf0b941cc/raw/57cb3be5f006f8d50f177c9e97eb8ac4f1078872/final%25201"
     prog = open(url).read()
 
-    # 將程式載入編輯區
+    # 將程式載入在最剛開始的編輯區
     Ace.editor.setValue(prog)
     Ace.editor.scrollToRow(0)
     Ace.editor.gotoLine(0)
@@ -72,15 +69,52 @@ doc['kw_show_console'].bind('click', Ace.show_console)
 doc['kw_clear_console'].bind('click', Ace.clear_console)
 doc['clear_bd'].bind('click', clear_bd)
 # 呼叫函式執行
+
 run()
 // ]]></script>
 </p>
-<div id="brython_div"></div>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/40923114/206502688cdd6b2adab32e02cf2068c0/raw/a519ad0bec890469882ec1ff85a4c5b5a37e8872/snake%2520auto"
+src = open(url).read()
+snakeauto = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["snakeauto"].bind("click", snakeauto.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/40923114/dfb47d2d9e7072a335c6824efe61faee/raw/dad8a92c06436ef919495a901b28a281c0c9a8f2/1216"
+src = open(url).read()
+onetoten = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["onetoten"].bind("click",onetoten.prog)
+// ]]></script>
+</p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/40923114/5de9606edad7a4112443952cf0b941cc/raw/57cb3be5f006f8d50f177c9e97eb8ac4f1078872/final%25201"
+src = open(url).read()
+final2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final2"].bind("click",final2.prog)
+// ]]></script>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
-<p>!-- 存擋表單開始 --&gt;</p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form><!-- 執行與清除按鈕開始 -->
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<!-- 程式執行 ouput 區 -->
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 485px; height: 195px;"></textarea></div>
+<p><button id="onetoten">1to10</button><button id="snakeauto">snakeauto</button> <button id="final2">final2</button></p>
+<p></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<div id="brython_div"></div>
