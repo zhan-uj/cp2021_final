@@ -3,7 +3,8 @@
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;分別是自動手動方塊跟手動自動貪食蛇，程式雖然不好懂，了解之後，會發現其實蠻有趣，完成</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;時也都有成就感，感謝老師這學期的教導。&nbsp;&nbsp;</p>
 <p></p>
-<p>程式練習影片:<iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/lc6rctAdatc"></iframe></p>
+<p>程式練習影片:</p>
+<p><iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/lc6rctAdatc"></iframe></p>
 <p></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
@@ -96,6 +97,16 @@ hw1_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_s
 document["hw1_2"].bind("click", hw1_2.prog)
 // ]]></script>
 </p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/jason60714/3140695e30bc08f7180898169f9ded4b/raw/6c5b2e5b73b5c19987472a871d1ed0e187164c2b/W13"
+src = open(url).read()
+列出十個座標 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["列出十個座標"].bind("click", 列出十個座標.prog)
+// ]]></script>
+</p>
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
@@ -131,7 +142,7 @@ document["final1and2"].bind("click", final1and2.prog)
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="hw1_1">HW1-1</button><button id="hw1_2">HW1-2</button><button id="hw3_1">HW3-1</button><button id="hw3_2">HW3-2</button><button id="final1and2">final1and2</button></p>
+<p><button id="hw1_1">HW1-1</button><button id="hw1_2">HW1-2</button><button id="列出十個座標">列出十個座標</button><button id="hw3_1">HW3-1</button><button id="hw3_2">HW3-2</button><button id="final1and2">final1and2</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
