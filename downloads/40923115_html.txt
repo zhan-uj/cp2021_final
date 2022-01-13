@@ -1,5 +1,10 @@
 <h3>40923115</h3>
-<p>final</p>
+<p>心得 : 這學期學了多工具跟程式，有錄影製作小影片的wink，截圖的share，程式學習了製作h1.2.3</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;分別是自動手動方塊跟手動自動貪食蛇，程式雖然不好懂，了解之後，會發現其實蠻有趣，完成</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;時也都有成就感，感謝老師這學期的教導。&nbsp;&nbsp;</p>
+<p></p>
+<p>程式練習影片:<iframe width="560" height="314" allowfullscreen="allowfullscreen" src="//www.youtube.com/embed/lc6rctAdatc"></iframe></p>
+<p></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -66,36 +71,84 @@ doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
 doc['kw_clear_console'].bind('click', Ace.clear_console)
 doc['clear_bd'].bind('click', clear_bd)
+
 # 呼叫函式執行
 run()
 // ]]></script>
 </p>
-<div id="brython_div"></div>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/jason60714/8d8732335db66a2a43267956fdc4d861/raw/58f78ffe0cfe0c93c8ce6a6eef61ff0435c1fcd5/hw-1"
+src = open(url).read()
+hw1_1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw1_1"].bind("click", hw1_1.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/jason60714/f2f9c02a305a15b689a1b81380c2a934/raw/dfb890ee512ca70cd9b54137977a3280dc5f0366/hw-1-2"
+src = open(url).read()
+hw1_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw1_2"].bind("click", hw1_2.prog)
+// ]]></script>
+</p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/jason60714/6b52ab42a662a85b0e6fda6512612974/raw/d8d8c515112c28f5898c622e4938327712d2ab1b/snake"
+src = open(url).read()
+hw3_1 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw3_1"].bind("click", hw3_1.prog)
+// ]]></script>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/jason60714/5172a8745763adbb88af94c635fa956b/raw/c9e8a6b08f2fc80f0bba8e0939c582705fc8cc8a/snake%2520abc"
+src = open(url).read()
+hw3_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw3_2"].bind("click", hw3_2.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/jason60714/cbe9220a02b265113a6b75cd60310246/raw/18413b6a430c85ecc67ee8999669c2ccc223d7d7/final2"
+src = open(url).read()
+final1and2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final1and2"].bind("click", final1and2.prog)
+// ]]></script>
+</p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
-<p>!-- 存擋表單開始 --&gt;</p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form><!-- 存擋表單結束 -->
-<p></p>
-<!-- 執行與清除按鈕開始 -->
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form>
+<p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<!-- 執行與清除按鈕結束 -->
+<p><button id="hw1_1">HW1-1</button><button id="hw1_2">HW1-2</button><button id="hw3_1">HW3-1</button><button id="hw3_2">HW3-2</button><button id="final1and2">final1and2</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
-<!-- 程式執行 ouput 區 -->
+<p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 485px; height: 195px;"></textarea></div>
 <div style="width: 100%; height: 100%;"></div>
-<div style="width: 100%; height: 100%;">1.HW1-1自動方塊<a href="https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html">https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html</a></div>
-<div style="width: 100%; height: 100%;">2.HW1-2手動方塊</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html">https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E6%96%B9%E5%A1%8A.html</a></div>
-<div style="width: 100%; height: 100%;">3.HW2倉儲</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/HW2.html">https://jason60714.github.io/cp2021_hw/content/HW2.html</a></div>
-<div style="width: 100%; height: 100%;">4.HW3-1手動貪食蛇</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/%E6%89%8B%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html">https://jason60714.github.io/cp2021_hw/content/%E6%89%8B%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html</a></div>
-<div style="width: 100%; height: 100%;">5.HW3-2自動貪食蛇</div>
-<div style="width: 100%; height: 100%;"><a href="https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html">https://jason60714.github.io/cp2021_hw/content/%E8%87%AA%E5%8B%95%E8%B2%AA%E9%A3%9F%E8%9B%87.html</a></div>
 <div style="width: 100%; height: 100%;"></div>
-<div style="width: 100%; height: 100%;">心得:這學期學了多工具跟程式，有錄影製作小影片的wink，截圖的share，程式學習了製作h1.2.3
-<p>&nbsp; &nbsp; &nbsp; &nbsp;分別是自動手動方塊跟手動自動貪食蛇，程式雖然不好懂，了解之後，會發現其實蠻有趣，完成</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;時也都有成就感，感謝老師這學期的教導。&nbsp;</p>
-</div>
-<div style="width: 100%; height: 100%;"></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<div id="brython_div"></div>
+<p></p>
+<p>HW2</p>
+<p><span>網站連結：</span><a href="https://jason60714.github.io/cp2021_hw/content/index.html" rel="nofollow">https://jason60714.github.io/cp2021_hw/content/index.html</a><br><span>倉儲連結：</span><a href="https://github.com/jason60714/cp2021_hw">https://github.com/jason60714/cp2021_hw</a></p>
+<p>1.首先要進到老師的作業倉儲&nbsp;<a href="https://github.com/mdecourse/cp2021_hw">https://github.com/mdecourse/cp2021_hw</a>&nbsp;</p>
+<p>2.然後點 Use this template ,並在<span>Repository name欄位輸入cp2021_hw</span></p>
+<p><span>3.有了遠端的倉儲模板,然後就要把它弄到近端來</span></p>
+<p>&nbsp; 先用 cd tmp&nbsp;然後用這段指令:git clone --recurse-submodules (你的倉儲網址+.git)/</p>
+<p>(也可以在倉儲Code按鈕下複製)</p>
+<p>4.還要<span>pip install pyopenssl直接打在黑框裡就好</span></p>
+<p><span>5.最後用cd cp2021_hw 到你的倉儲目錄下 打 cms 開啟動態網站</span></p>
+<p></p>
+<p></p>
