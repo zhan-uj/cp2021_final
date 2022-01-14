@@ -126,6 +126,45 @@ def final2_inp(ev):
 # id 為 "final2" 的按鈕點按時, 執行 final2_inp 方法
 doc["final2"].bind('click', final2_inp)
 
+manualsnake_qwe_url = "https://gist.githubusercontent.com/41023118/c03fe85f58a94d116e880b42f939618b/raw/327da7463c41b968aec92ce9b7495a64b0b34942/%25E6%2589%258B%25E5%258B%2595%25E8%25B2%25AA%25E5%2590%2583%25E8%259B%2587"
+ # 從 gist 取得程式碼
+manualsnake_wq = open(manualsnake_qwe_url).read()
+
+def manualsnake_inp(ev):
+     Ace.editor.setValue(manualsnake_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "手動貪吃蛇" 的按鈕點按時, 執行 manualsnake_inp 方法
+doc["手動貪吃蛇"].bind('click',manualsnake_inp)
+
+autosnake_qwe_url = "https://gist.githubusercontent.com/41023118/a0f7ed9d28550a069446d4220d2f1c79/raw/5adc167fe72cb054ab5d74305ad033b70d49a6e0/%25E8%2587%25AA%25E5%258B%2595%25E8%25B2%25AA%25E5%2590%2583%25E8%259B%2587"
+ # 從 gist 取得程式碼
+autosnake_wq = open(autosnake_qwe_url).read()
+
+final3_qwe_url = "https://gist.githubusercontent.com/41023118/e5e1c7c093517026815e24f53c859887/raw/e2b70cbd0196e55d93c31377b851dbde651dcea1/final3"
+ # 從 gist 取得程式碼
+final3_wq = open(final3_qwe_url).read()
+
+def final3_inp(ev):
+     Ace.editor.setValue(final3_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "final3" 的按鈕點按時, 執行 final3_inp 方法
+doc["final3"].bind('click', final3_inp)
+
+def autosnake_inp(ev):
+     Ace.editor.setValue(autosnake_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "自動貪吃蛇" 的按鈕點按時, 執行 autosnake_inp 方法
+doc["自動貪吃蛇"].bind('click', autosnake_inp)
+
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -142,7 +181,8 @@ run()
 <p></p>
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="hw1-1">hw1-1</button> <button id="hw1-2">hw1-2</button> <button id="w13">w13</button> <button id="final1">final1</button> <button id="final2">final2</button></p>
+<p><button id="hw1-1">hw1-1</button> <button id="hw1-2">hw1-2</button> <button id="手動貪吃蛇">手動貪吃蛇</button> <button id="自動貪吃蛇">自動貪吃蛇</button> <button id="w13">w13</button> <button id="final1">final1</button> <button id="final2">final2</button></p>
+<p><button id="final3">final3</button></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
