@@ -204,7 +204,7 @@ document["final24"].bind("click",final24.prog)
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023125/f4da7999c3e65c67b905ef4f3b0c01d9/raw/9610871205a4ebfe0296d56235c0c3be4f1711e1/final3-3"
+url = "https://gist.githubusercontent.com/41023125/f4da7999c3e65c67b905ef4f3b0c01d9/raw/77f2286ea6aa7571eafd6da0db5979a40b3add45/final3-3"
 src = open(url).read()
 final33 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final33"].bind("click",final33.prog)
@@ -214,7 +214,7 @@ document["final33"].bind("click",final33.prog)
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023125/f4da7999c3e65c67b905ef4f3b0c01d9/raw/c7cc8910878120682ae7f8d85d6eb9021d09b4ef/final3-4"
+url = "https://gist.githubusercontent.com/41023125/f4da7999c3e65c67b905ef4f3b0c01d9/raw/77f2286ea6aa7571eafd6da0db5979a40b3add45/final3-4"
 src = open(url).read()
 final34 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final34"].bind("click",final34.prog)
