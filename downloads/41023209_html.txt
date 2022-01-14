@@ -1,4 +1,4 @@
-<h3>41023241</h3>
+<h3>41023209</h3>
 <p><a href="/downloads/w12.txt"></a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
@@ -38,7 +38,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 10</button><button id="p261">亂數中文</button><button id="rocflag">亂數</button><button id="red">red</button><button id="red2">red2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
+<p><button id="add1to100">add 1 to 10</button><button id="p261">p261</button><button id="rocflag">rocflag</button><button id="red">red</button><button id="red2">red2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button><button id="snake">snake</button><button id="random">random</button><button id="random2">random2</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -124,12 +124,12 @@ add1to100_url = "https://gist.githubusercontent.com/shui1019/aa3dc0c5d5ac155ab06
 add1to100 = button2(add1to100_url)
 doc["add1to100"].bind('click', add1to100.do)
 ################################# p261 start 
-p261_url = "https://gist.githubusercontent.com/shui1019/185359fc043082a70b9e22dc21362c64/raw/55cbf536089226e806a0c1c0425e67c1014bc66f/w13-2"
+p261_url = "https://gist.githubusercontent.com/shui1019/fd86f6da54495fc736fb09497a5df4de/raw/a5d13bc5135f0db03b52ba4b0faf6177581ed918/p261.py"
 p261 = button2(p261_url)
 doc["p261"].bind('click', p261.do)
 ################################## p261 end
 ################################## rocflag start
-rocflag_url = "https://gist.githubusercontent.com/shui1019/26c3fb13fd41d58852b7794cfc7c3ef9/raw/f43af06cb985a4539f7f4f5d369173860db5887b/random.py"
+rocflag_url = "https://gist.githubusercontent.com/shui1019/1afe3f144373945098c51ecc3b0406b0/raw/e1be261870ab9fcb49867f5e6f7842a0e450ee19/rocflag.py"
 rocflag = button2(rocflag_url)
 doc["rocflag"].bind("click", rocflag.do)
 ################################## rocflag end
@@ -158,5 +158,20 @@ final3_url = "https://gist.githubusercontent.com/shui1019/5f4f383601d2ef8078ee13
 final3 = button2(final3_url)
 doc["final3"].bind("click",final3.do)
 ################################## final3 end
+################################## snake start
+snake_url = "https://gist.githubusercontent.com/shui1019/f7061c51bf4752d8e3189f5e91a0da17/raw/c7baad22416ad8330112a932d43d7bd68e6dd2b9/snake.py"
+snake = button2(snake_url)
+doc["snake"].bind("click",snake.do)
+################################## snake end
+################################## random start
+random_url = "https://gist.githubusercontent.com/shui1019/26c3fb13fd41d58852b7794cfc7c3ef9/raw/f43af06cb985a4539f7f4f5d369173860db5887b/random.py"
+random = button2(random_url)
+doc["random"].bind("click",random.do)
+################################## random end
+################################## random2 start
+random2_url = "https://gist.githubusercontent.com/shui1019/185359fc043082a70b9e22dc21362c64/raw/6379a73692e10e28c189d25d6ca3c9615ba7f8a4/random2.py"
+random2 = button2(random2_url)
+doc["random2"].bind("click",random2.do)
+################################## random2 end
 // ]]></script>
 </p>
