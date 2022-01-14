@@ -101,7 +101,7 @@ def final_inp(ev):
      Ace.run()
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
 doc["final"].bind('click', final_inp)
-final3_qwe_url = "https://gist.githubusercontent.com/41023126/abc9ff33278e574f12a01968051e8f56/raw/fb5124685951150447ff7776f42c2716e66cc751/final1"
+final3_qwe_url = "https://gist.githubusercontent.com/41023126/abc9ff33278e574f12a01968051e8f56/raw/e8d9938232782b3469da9075a14cc02aebae9f90/final1"
  # 從 gist 取得程式碼
 final3_wq = open(final3_qwe_url).read()
 
@@ -112,6 +112,17 @@ def final3_inp(ev):
      Ace.run()
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
 doc["final3"].bind('click', final3_inp)
+
+final10_qwe_url = "https://gist.githubusercontent.com/41023126/255c10b90bb7a6795cf8446e2dcf306f/raw/6717aff614b4f024240c87400a660fd8f5590f0a/final3"
+ # 從 gist 取得程式碼
+final10_wq = open(final10_qwe_url).read()
+def final10_inp(ev):
+     Ace.editor.setValue(final10_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+# id 為 "final10" 的按鈕點按時, 執行 chec_inp 方法
+doc["final10"].bind('click', final10_inp)
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -129,6 +140,7 @@ run()
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="asd">列出10個座標</button><button id="snake">snake</button> <button id="final">final2</button> <button id="final3">final1</button></p>
+<p><button id="final10">final3</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
