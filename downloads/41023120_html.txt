@@ -1,5 +1,5 @@
 <h3>41023120</h3>
-<p><button id="asd">列出十個座標</button><button id="snake">snake</button><button id="rad">HW1-1</button><button id="autosnake">autosnake</button> <button id="HW">HW1-2</button> <button id="test">Final1</button> <button id="test2">Final2</button> <!-- 導入 brython 程式庫 --></p>
+<p><button id="asd">列出十個座標</button><button id="snake">snake</button><button id="rad">HW1-1</button><button id="autosnake">autosnake</button> <button id="HW">HW1-2</button> <button id="test">Final1</button> <button id="test2">Final2</button><button id="test3">Final3</button> <!-- 導入 brython 程式庫 --></p>
 <p>
 <script src="/static/brython.js">// <![CDATA[
 
@@ -147,6 +147,16 @@ def test2_inp(ev):
 # id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
 doc["test2"].bind('click', test2_inp)
 
+test3_qwe_url = "https://gist.githubusercontent.com/41023120/98055c5da7fb2efd7e7799864465ed59/raw/5910120956ee8a7b7738e47b85b1f0e48237913c/final"
+# 從 gist 取得程式碼
+test3_wq = open(test3_qwe_url).read()
+def test3_inp(ev):
+     Ace.editor.setValue(test3_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+# id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
+doc["test3"].bind('click', test3_inp)
 
 # 呼叫函式執行
 run()
@@ -175,7 +185,7 @@ run()
 <div>Final1:<span><a href="https://stream.new/v/02oKn8RG1UttpJCSjFDAnjr3tm9ca5fLC5dpeL89KCjA">https://stream.new/v/02oKn8RG1UttpJCSjFDAnjr3tm9ca5fLC5dpeL89KCjA</a></span></div>
 <div>Final2:<span><a href="https://stream.new/v/L8hnF9hv01Vzk7WNq37KTm00l01ZfH011Cnl2wXIyG4bkVM">https://stream.new/v/L8hnF9hv01Vzk7WNq37KTm00l01ZfH011Cnl2wXIyG4bkVM</a></span></div>
 <div><span></span></div>
-<div></div>
+<div>期末心得:從一開始接觸到現在,前面很多的程式都看不懂,建倉儲到建立學習網站都是看著影片一步一步做的,從第一個程式紅點只能看懂大概,到現在有了邏輯但是有些指令的用法還很生疏。</div>
 <p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 --></p>
 <p>
 <script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
