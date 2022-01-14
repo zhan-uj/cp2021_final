@@ -185,7 +185,7 @@ run()
 <div>Final1:<span><a href="https://stream.new/v/02oKn8RG1UttpJCSjFDAnjr3tm9ca5fLC5dpeL89KCjA">https://stream.new/v/02oKn8RG1UttpJCSjFDAnjr3tm9ca5fLC5dpeL89KCjA</a></span></div>
 <div>Final2:<span><a href="https://stream.new/v/L8hnF9hv01Vzk7WNq37KTm00l01ZfH011Cnl2wXIyG4bkVM">https://stream.new/v/L8hnF9hv01Vzk7WNq37KTm00l01ZfH011Cnl2wXIyG4bkVM</a></span></div>
 <div><span></span></div>
-<div></div>
+<div>期末心得:從一開始接觸到現在,前面很多的程式都看不懂,建倉儲到建立學習網站都是看著影片一步一步做的,從第一個程式紅點只能看懂大概,到現在有了邏輯但是有些指令的用法還很生疏。</div>
 <p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 --></p>
 <p>
 <script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
