@@ -103,6 +103,16 @@ document["hw1_2"].bind("click", hw1_2.prog)
 <script type="text/python3">// <![CDATA[
 import beditor
 from browser import document
+url = "https://gist.githubusercontent.com/40923129/38180e1a4ccd6a4411d0d5ab6b752b72/raw/79dfd2c42bc7bec090216c934750065e0af9845a/final%2520end"
+src = open(url).read()
+final3 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final3"].bind("click", final3.prog)
+// ]]></script>
+</p>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
 url = "https://gist.githubusercontent.com/40923129/5c5483c0812d64de82fb29373616a265/raw/0b8e78608ae86a6c8ce6ae8d3a2986d847d648e0/snake2"
 src = open(url).read()
 snake = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
@@ -136,7 +146,7 @@ document["final"].bind("click",final.prog)
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="hw1_1">hw1-1</button><button id="hw1_2">hw1-2</button><button id="exam">1add10</button><button id="snake">snake</button> <button id="final">final1and2</button></p>
+<p><button id="hw1_1">hw1-1</button><button id="hw1_2">hw1-2</button><button id="exam">1add10</button><button id="snake">snake</button> <button id="final">final1and2</button><button id="final3">final3</button></p>
 <p></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
