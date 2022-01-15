@@ -189,4 +189,12 @@ src = open(url).read()
 w13_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["w13_2"].bind("click", w13_2.prog)
 // ]]></script>
-<p><button id="w13">Final2</button><button id="w13_2">final1</button></p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023134/8199145031a104d66656ef5e0716b1ac/raw/fc9df35b2c0cff08b969978baf0c18061e8c672f/3"
+src = open(url).read()
+w130 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w130"].bind("click", w130.prog)
+// ]]></script>
+<p><button id="w13">Final2</button><button id="w13_2">final1</button><button id="w130">Final3</button></p>
