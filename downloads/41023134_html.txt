@@ -1,0 +1,192 @@
+<h3>41023134</h3>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- for ggame -->
+<p>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script src="/static/jquery-ui.1.12.1.min.js"></script>
+<script src="/static/pixi-3.0.5.min.js"></script>
+<script src="/static/buzz-1.2.1.js"></script>
+<script src="/static/bs.js"></script>
+<script src="/downloads/brython_modules.js"></script>
+</p>
+<!-- Cango 程式庫 -->
+<p>
+<script src="/static/Cango-24v03-min.js"></script>
+<script src="/static/CangoAxes-6v01-min.js"></script>
+<script src="/static/gearUtils-09.js"></script>
+<script src="/static/SVGpathUtils-6v03-min.js"></script>
+</p>
+<!-- for Konva 程式庫 -->
+<p>
+<script src="/static/konva.min.js"></script>
+<script>// <![CDATA[
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+// ]]></script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script type="text/javascript" src="/static/ace/FileSaver.min.js"></script>
+<script type="text/javascript" src="/static/ace/filereader.js"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script type="text/javascript" src="/static/ace/ace.js"></script>
+<script type="text/javascript" src="/static/ace/ext-language_tools.js"></script>
+<script type="text/javascript" src="/static/ace/mode-python3.js"></script>
+<script type="text/javascript" src="/static/ace/snippets/python.js"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">// <![CDATA[
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+// ]]></script>
+</p>
+<p><!-- 印出版次與關鍵字程式 --></p>
+<p>
+<script type="text/python3">// <![CDATA[
+from browser import document as doc
+from browser import html
+import ace
+# 清除畫布
+def clear_bd(ev):
+    bd = doc["brython_div"]
+    bd.clear()
+# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
+Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
+Ace.editor.setValue("""# 從 Brython 程式庫中的 browser 模組導入 document 類別, 並以簡寫設定為 doc
+from browser import document as doc
+# 從 browser 模組導入 html 類別, 主要用於建立 CANVAS 標註物件, 並插入頁面中
+# 用於定時執行特定函式
+import browser.timer
+# 使用者可以透過 window 當作介面使用其他 Javascript 功能
+from browser import html, window
+
+canvas = html.CANVAS(width = 750, height = 750)
+# 將 canvas 標註的 id 設為 "canvas"
+canvas.id = "canvas"
+# 將 document 中 id 為 "brython_div" 的標註 
+# 設為與 brython_div 變數對應
+brython_div = doc["brython_div"]
+# 將 canvas 標註放入 brython_div 所在位置
+# 頁面中原本就已經放入 <div id="brython_div"></div> 標註
+brython_div <= canvas
+#https://github.com/41023125/cp2021_hw
+# 將頁面中 id 為 canvas 的 CANVAS 設為與 canvas 變數對應
+canvas = doc["canvas"]
+# 將 canvas 的 2d 繪圖 context 命名為 ctx
+ctx = canvas.getContext("2d")
+def eat(px, py, retur):
+    global xv, yv
+    if retur == 0 : #去程
+        if py != 15 and  px == 1 : #向上
+            xv = 0 
+            yv = 1  
+            
+        elif py == 15 and px != 15 : #向右
+            xv = 1 
+            yv = 0
+        elif py != 1 and px == 15 : #向下
+            xv = 0 
+            yv = -1
+    if retur == 1 : #回程
+        if py != 1 and  px == 1 : #向下
+            xv =  0 
+            yv = -1  
+            
+        elif py == 15 and px != 1 : #向左
+            xv = -1 
+            yv = 0
+        elif py != 15 and px == 15 : #向上
+            xv = 0 
+            yv = 1        
+def asd():
+ global px, py, retur
+ px += xv 
+ py += yv 
+ ctx.fillStyle = "#FFFFFF"
+    # 畫布填入白色
+ ctx.fillRect(0, 0, 800, 800)
+ ctx.lineWidth = 1#線粗
+ ctx.strokeStyle = 'black'
+ #格子設為黑色
+ for a in range(0,16): #利用for迴圈畫線
+    ctx.moveTo(a*50, 0)
+    ctx.lineTo(a*50, 750)
+    ctx.moveTo(0, a*50)
+    ctx.lineTo(750,a*50 )
+    ctx.stroke(); 
+ eat(px, py, retur) #啟動eat
+ ctx.fillStyle = "lime"
+    # 畫布填入綠色
+ ctx.fillRect(px*50-47.5, py*50-47.5, 45, 45)
+ if px == 15 and py == 1 : #檢測
+    retur = 1
+ if px == 1 and py == 1 : #檢測
+    retur = 0
+ 
+px = 1
+py = 1
+xv = yv = 0
+retur =0 
+#asd()
+browser.timer.set_interval(asd, 10) #10毫秒一次
+""")
+Ace.editor.scrollToRow(0)
+Ace.editor.gotoLine(0)
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run'].bind('click', Ace.run)
+doc['kw_show_console'].bind('click', Ace.show_console)
+doc['kw_clear_console'].bind('click', Ace.clear_console)
+doc['clear_bd'].bind('click', clear_bd)
+// ]]></script>
+</p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form>
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<div id="brython_div"></div>
+<div class="col-md-0" height="1" id="graphics-column" width="1"></div>
+<p><!-- ****************************** keyword start -->
+<script type="text/python3">// <![CDATA[
+from browser import document as doc
+# 導入位於 static 目錄下的 beditor.py 
+import beditor
+# 利用 beditor.py 中的 editor 類別建立案例, 對應到 kw1
+kw1 = beditor.editor("""# 導入 sys 模組
+import sys
+# 導入 keyword 模組
+import keyword
+# 利用 sys 模組中的 version_info 印出 Python 版次
+print("Python version: ", sys.version_info)
+# 利用 keyword 模組中的 kwlist 印出關鍵字
+print("Python keywords: ", keyword.kwlist)
+""", "kw_editor", "kw_console", "kw__container", "kw_py_src")
+# id 為 "keyword" 的按鈕點按時, 執行 kw1 物件中的 prog 方法
+// ]]></script>
+</p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023134/5f132cbe95a54037053452ee6a8f0254/raw/8e4052bbf8f0b6e8bb45bfbd252e02ed23748377/Final2"
+src = open(url).read()
+w13 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w13"].bind("click", w13.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://https://gist.githubusercontent.com/41023134/ee6afa886f8225ff019174a53aa57e87/raw/704037da91b6aba6a95a3ebb6ed2930da8704b51/final1"
+src = open(url).read()
+w13_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w13_2"].bind("click", w13_2.prog)
+// ]]></script>
+<p><button id="w13">Final2</button><button id="w13_2">final1</button></p>
