@@ -60,7 +60,7 @@ function doSave(storage_id, filename){
 <div></div>
 <div></div>
 <div><a href="https://youtu.be/cJxHC0z8Kd0">Final1方格</a></div>
-<div><a href="https://youtu.be/m5bxQrbt2so">Final2U移動方塊</a></div>
+<div><a href="https://www.youtube.com/watch?v=iHHeYLfBh44&amp;ab_channel=%E6%9E%97%E5%BB%BA%E4%B8%89">Final2U移動方塊</a></div>
 <div>=============================================================================</div>
 <div>照片:</div>
 <div></div>
@@ -88,6 +88,9 @@ function doSave(storage_id, filename){
 <p><span></span></p>
 <p>GAME心得</p>
 <p><span>一開始搜尋了很多種遊戲，想說能不能做點不太一樣的遊戲，剛好看到網路上有在教人如何做出猜數字遊戲，我就照著做看看了，做完之後發現它只能在網路版的python編譯器才能使用，所以就自己稍微做了一些調整讓他可以在自己的run使用，做完之後發現洪偉陞同學也做了猜數字遊戲，而且比我的方式更聰明，所以也將他的版本借來參考然後做成自己的，他真的很厲害，很多作業上遇到的瓶頸我也很常會請教他。</span></p>
+<p><span>==============================================================================</span></p>
+<p><span>期末心得</span></p>
+<p><span>這個學期讓我感受到跟高中有很大的不一樣，以前是老師鞭策著我們學習，現在需要的是自主學習自己查資料的能力學一些很陌生完全沒有碰過的東西，我正在學習這些能力，以後也會，用同樣的精神面對接下來的學業和生活上的困難。</span></p>
 </div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
 <p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
