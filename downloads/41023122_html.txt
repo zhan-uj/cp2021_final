@@ -164,13 +164,42 @@ def b2_inp(ev):
 doc["b2"].bind('click', b2_inp)
 
 #0000000000000000000000000000000000000000000000000000000000000
+b3_qwe_url = "https://gist.githubusercontent.com/41023122/5ba0b8bf3fbe6097f21c266d3d78be63/raw/b2bfc848097b513ecdd3b58c7de48dfff290d6dc/gistfile1.txt"
+# 從 gist 取得程式碼
+b3_wq = open(b3_qwe_url).read()
+
+def b3_inp(ev):
+     Ace.editor.setValue(b3_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
+doc["b3"].bind('click', b3_inp)
+
+#0000000000000000000000000000000000000000000000000000000000000
+b4_qwe_url = "https://gist.githubusercontent.com/41023122/a45f08606b122e6e08b19c936b37e469/raw/4d5b038b184320bdd32a05e0e4432db8a2339fe8/gistfile1.txt"
+# 從 gist 取得程式碼
+b4_wq = open(b4_qwe_url).read()
+
+def b4_inp(ev):
+     Ace.editor.setValue(b4_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     #Ace.run()
+
+# id 為 "asd" 的按鈕點按時, 執行 chec_inp 方法
+doc["b4"].bind('click', b4_inp)
+
+#0000000000000000000000000000000000000000000000000000000000000
 # 呼叫函式執行
 run()
 #1111111111111111111111111111111111111111111111111111
 // ]]></script>
 上課內容有<button id="aaa">紅點</button> ,<button id="bbb">座標&nbsp;</button> , <button id="ccc">snake</button></p>
-<p>期末考:<button id="a1">final1</button> <button id="a2">final2</button> 而<button id="b1">失敗1</button> <button id="b2">失敗2</button></p>
-<p>是剛開始的想法 1.是希望設定隱形的點讓蛇追 2.是利用位移來跑,但背景都被吃掉了</p>
+<p>期末考:<button id="a1">final1</button> <button id="a2">final2</button> <button id="b3">final3</button>&nbsp;</p>
+<p>而<button id="b1">失敗1</button> <button id="b2">失敗2</button> <button id="b4">失敗3</button></p>
+<p>是剛開始的想法 1.是希望設定隱形的點讓蛇追 2.是利用位移來跑,但背景都被吃掉了 3.電腦快跑不動了</p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
