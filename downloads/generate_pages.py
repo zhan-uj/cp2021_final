@@ -1,35 +1,11 @@
 import os
 import re
-import hashlib
 from bs4 import BeautifulSoup
-from html import escape as html_escape
-from flask import request
 
 repo_path = "./../"
 config_dir = repo_path + "/config/"
-uwsgi = False
-
 class Init(object):
-    # uwsgi as static class variable, can be accessed by Init.uwsgi
-    uwsgi = False
     site_title = "Final Project"
-    ip = "127.0.0.1"
-    dynamic_port = 9443
-    static_port = 8443
-    def __init__(self):
-        # hope to create downloads and images directories　
-        if not os.path.isdir(_curdir + "/downloads"):
-            try:
-                os.makedirs(_curdir + "/downloads")
-            except:
-                print("mkdir error")
-        if not os.path.isdir(_curdir + "/images"):
-            try:
-                os.makedirs(_curdir + "/images")
-            except:
-                print("mkdir error")
-
-
 def file_get_contents(filename):
     
     """Return filename content
@@ -163,31 +139,11 @@ def parse_content():
     return head_list, level_list, page_list
 
 
-def parse_config():
-    
-    """Parse config
-    """
-    
-    if not os.path.isfile(config_dir+"config"):
-        # create config file if there is no config file
-        # default password is admin
-        password="admin"
-        hashed_password = hashlib.sha512(password.encode('utf-8')).hexdigest()
-        with open(config_dir + "config", "w", encoding="utf-8") as f:
-            f.write("siteTitle:CMSimfly \npassword:"+hashed_password)
-    config = file_get_contents(config_dir + "config")
-    config_data = config.split("\n")
-    site_title = config_data[0].split(":")[1]
-    password = config_data[1].split(":")[1]
-    return site_title, password
-
-
 def render_menu2(head, level, page, sitemap=0):
     
     """Render menu for static site
     """
-    
-    site_title, password = parse_config()
+
     directory = '''
     <div class="site-wrap">
 
@@ -203,14 +159,14 @@ def render_menu2(head, level, page, sitemap=0):
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>''' + site_title + '''</h1>
+                <h1>''' + Init.site_title + '''</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">''' + site_title + '''</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">''' + Init.site_title + '''</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -491,66 +447,6 @@ img.add_border {
 '''
 
 
-def set_admin_css():
-    
-    """Set css for admin
-    """
-    
-    outstring = '''<!doctype html>
-<html><head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>''' + Init.site_title + '''</title> \
-<link rel="stylesheet" type="text/css" href="/static/cmsimply.css">
-''' + syntaxhighlight()
-
-    outstring += '''
-<script src="/static/jquery.js"></script>
-<script type="text/javascript">
-$(function(){
-    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
-    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
-});
-</script>
-'''
-    # SSL for uwsgi operation
-    if uwsgi:
-        outstring += '''
-<script type="text/javascript">
-if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -1)) \
-window.location= 'https://' + location.host + location.pathname + location.search;
-</script>
-'''
-    site_title, password = parse_config()
-    outstring += '''
-</head><header><h1>''' + site_title + '''</h1> \
-<confmenu>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/sitemap">SiteMap</a></li>
-<li><a href="/edit_page">Edit All</a></li>
-<li><a href="''' + str(request.url) + '''/1">Edit</a></li>
-<li><a href="/edit_config">Config</a></li>
-<li><a href="/search_form">Search</a></li>
-<li><a href="/imageuploadform">Image Upload</a></li>
-<li><a href="/image_list">Image List</a></li>
-<li><a href="/fileuploadform">File Upload</a></li>
-<li><a href="/download_list">File List</a></li>
-<li><a href="/logout">Logout</a></li>
-<li><a href="/generate_pages">generate_pages</a></li>
-'''
-    # under uwsgi mode no start_static and static_port anchor links
-    if uwsgi != True:
-        outstring += '''
-<li><a href="/start_static">start_static</a></li>
-<li><a href="https://localhost:''' + str(static_port) +'''">''' + str(static_port) + '''</a></li>
-'''
-    outstring += '''
-</ul>
-</confmenu></header>
-'''
-    return outstring
-
-
 def set_css2():
     
     """Set css for static site
@@ -614,16 +510,7 @@ def set_css2():
         </script>
         ''' + syntaxhighlight2()
 
-    site_title, password = parse_config()
-    if uwsgi:
-        outstring += '''
-<script type="text/javascript">
-if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -1)) \
-window.location= 'https://' + location.host + location.pathname + location.search;
-</script></head><body>
-'''
-    else:
-        outstring += '''
+    outstring += '''
 </head>
 <body>
 '''
@@ -698,7 +585,6 @@ def get_page2(heading, head, edit, get_page_content = None):
                                       heading + "</h1>" + page_content_list[i] + \
                                       "<br />" + last_page + " "+ next_page + "<br /><hr>"
             pagedata_duplicate = "<h"+level[page_order] + ">" + heading + "</h" + level[page_order]+">"+page_content_list[i]
-            #outstring_list.append(last_page + " " + next_page + "<br />" + tinymce_editor(directory, html_escape(pagedata_duplicate), page_order))
         else:
             return_content += last_page + " " + next_page + "<br /><h1>" + \
                                       heading + "</h1>" + page_content_list[i] + \
@@ -706,8 +592,6 @@ def get_page2(heading, head, edit, get_page_content = None):
 
         pagedata += "<h" + level[page_order] + ">" + heading + \
                           "</h" + level[page_order] + ">" + page_content_list[i]
-        # 利用 html_escape() 將 specialchar 轉成只能顯示的格式
-        #outstring += last_page + " " + next_page + "<br />" + tinymce_editor(directory, html_escape(pagedata), page_order)
     
     # edit=0 for viewpage
     if edit == 0:
