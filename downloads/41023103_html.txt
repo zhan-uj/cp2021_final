@@ -1,15 +1,20 @@
 <h3>41023103</h3>
 <p><span>第一題請利用 Brython 在個人期末報告頁面中新增一個按鈕, 標題為 final1, 點擊後可以執行個人 gist 中的程式, 並且在頁面下方的 x 與 y 方向, 畫出 15 x 15 條方格線, 且線寬 1 pixel, 每一方格長寬分別為 50 Pixels.&nbsp;</span></p>
 <p><span>第二題為延伸第一個題目, 額外新增另一個按鈕, 標題為 final2, 請在上述方格中, 加入一個大小為 45 x 45 pixels 的綠色方塊, 可以沿著格線區最外圍, 從 (1, 1) 方格座標區開始, 重複進行 U 字形運動, 即該方塊由上往下運動至最下方後, 右轉至最右方後, 往上移動至上方後反轉, 並且重複進行相同運動.</span></p>
+<p><span>在同一個 15 x 15 格的畫面中, 以座標 (1, 1) 處作為起點, 擺放綠色方塊代表單一身軀之 snake, 並以隨機亂數方式產生 5 個位於方格座標中的紅色方塊, 代表食物.<br><span>當綠色方塊與紅色方塊定位後, 請在 15 x 15 方格下方設置標題為"啟動"的按鈕, 讓使用者點擊後開始動畫模式, 綠色方塊便開始往距離最近的紅色方塊移動, 抵達紅色目標方塊位置後, 該紅色方塊即刻消失, 且位於"啟動"按鈕上方的計分板從 0 分, 增量為 1 分, 之後再逐一往其他方塊座標移動, 直到"吃"完所有隨機產生的紅色方塊為止.但是綠色方塊, 在開始個別移動至隨機產生的五個紅色方塊位置之前, 必須先繞 15x15 方格邊境外圍移動.</span><br><span>單數-以逆時鐘方向, 讓綠色方塊向下移動至底部, 然後右轉至最右方邊界, 然後再往上至最上方, 最後向左轉至原始起點後, 才開始分別移動至五個紅色方塊位置.</span></span></p>
 <!-- 導入 brython 程式庫 -->
+<p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
+</p>
 <!-- 啟動 Brython -->
+<p>
 <script>// <![CDATA[
 window.onload=function(){
 brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
 // ]]></script>
+</p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
 <script type="text/javascript" src="/static/ace/FileSaver.min.js"></script>
@@ -39,7 +44,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13">W13</button><button id="BSnake">BSnake</button><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13">W13</button><button id="BSnake">BSnake</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -59,6 +64,7 @@ function doSave(storage_id, filename){
 <div id="brython_div"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
 <!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<p>
 <script type="text/python3">// <![CDATA[
 from browser import document as doc
 import ace
@@ -96,6 +102,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
 // ]]></script>
+</p>
 <!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
 <p><!-- add 1 to 100 開始 -->
 <script type="text/python3">// <![CDATA[
@@ -154,5 +161,10 @@ final2_url = "https://gist.githubusercontent.com/ro731/3cf0d816720fc5ff5b3e198a2
 final2 = button2(final2_url)
 doc["final2"].bind('click', final2.do)
 ################################## final2 end
+################################# final3 start 
+final3_url = "https://gist.githubusercontent.com/ro731/3cf0d816720fc5ff5b3e198a296706e4/raw/82ec569b521206d28287f5496d4be0ad37508c23/gistfile6.txt"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 // ]]></script>
 </p>
