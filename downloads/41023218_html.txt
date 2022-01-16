@@ -38,7 +38,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="Final1">Final1</button><button id="Final2">Final2</button></p>
+<p><button id="Final1">Final1</button><button id="Final2">Final2</button><button id="Final3">Final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -129,6 +129,11 @@ doc["Final1"].bind('click', Final1.do)
 Final2_url =  "https://gist.githubusercontent.com/snowfall-killer/74a609a2e1de840f149cf938e01aff59/raw/9739436e88d8d524b51244a04cc88542282ec265/final%25202"
 Final2 = button2(Final2_url)
 doc["Final2"].bind('click', Final2.do)
+################################# Final 2 end
+################################# Final 2 start
+Final3_url = "https://gist.githubusercontent.com/snowfall-killer/74d7b19465d635e350935306cf6e2146/raw/ab1ca16a65a492e8ec749e7182c3810bcd4735a4/final%25203"
+Final3 = button2(Final3_url)
+doc["Final3"].bind('click', Final3.do)
 ################################# Final 2 end
 // ]]></script>
 </p>
