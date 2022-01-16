@@ -101,6 +101,17 @@ src = open(url).read()
 final2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final2"].bind("click",final2.prog)
 // ]]></script>
+<p>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/40923114/9dc75c7f94323efe1575720626d459a1/raw/c94964550cf48f833bc08aaf4c6c85c6478ec2d1/final3"
+src = open(url).read()
+final3 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final3"].bind("click",final3.prog)
+// ]]></script>
+</p>
+<div id="brython_div"></div>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -111,10 +122,11 @@ document["final2"].bind("click",final2.prog)
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="onetoten">1to10</button><button id="snakeauto">snakeauto</button> <button id="final2">final2</button></p>
+<p><button id="final3">final3</button></p>
 <p></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 485px; height: 195px;"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <div id="brython_div"></div>
