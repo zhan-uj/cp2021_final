@@ -6,11 +6,13 @@
 <p>3.python教科書習題</p>
 <p><button id="w13">1~100</button><button id="w11">2.6_1</button><button id="w11_0">2.6_2</button><button id="w11_2">2.6_3</button></p>
 <p>4.作業三貪食蛇</p>
-<p><button id="snake">勤勞蛇</button><button id="snake2">蛇2</button></p>
+<p><button id="snake">勤勞蛇</button></p>
 <p>5.第十二週習題</p>
 <p><button id="w12">台灣國旗</button><button id="w12_2">日本國旗</button></p>
 <p>6.期末小測試</p>
 <p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
+<p>7.期末最終測驗</p>
+<p><button id="final_3">final_3</button></p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 <!-- for ggame -->
@@ -94,15 +96,15 @@ doc['clear_bd'].bind('click', clear_bd)
 // ]]></script>
 </p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
-<div id="kw_editor" style="width: 600px; height: 300px;"><a href="https://youtu.be/vNYhVI9YJMQ">final_1影片</a>、<a href="https://youtu.be/5lODbwLdRi8">final_2影片</a></div>
+<div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text">.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"></form>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
 <div id="brython_div"></div>
-<div>======================================</div>
-<div>在這學期的計算機課程中,我學到了很多以前國高中接觸不到的課程,一開始甚至有點無法適應,後來在同學的仔細說明以及努力理解後,才終於有稍微知道自己在做甚麼的感覺,甚至還有了一絲成就感,特別是在找出自己的程式哪裡有問題的時候。</div>
-<div class="col-md-0" height="1" id="graphics-column" width="1"></div>
+<div>=============================================</div>
+<div>Final_1、Final_2心得:在這次考試的第一題中可以利用之前做過的隨機選擇10格下去改,做完後甚至還感到了一絲的喜悅,特別是在找出自己的程式哪裡有問題的時候,第二題則是用與之前練習的貪食蛇類似的邏輯去做使用,但還是花了較多時間才將其完成。</div>
+<div class="col-md-0" height="1" id="graphics-column" width="1"><a href="https://youtu.be/vNYhVI9YJMQ">final_1影片</a><span>、</span><a href="https://youtu.be/5lODbwLdRi8">final_2影片</a></div>
 <p><!-- ****************************** keyword start -->
 <script type="text/python3">// <![CDATA[
 from browser import document as doc
@@ -228,5 +230,13 @@ url = "https://gist.githubusercontent.com/Xiang0502/8b87eb5b998291a29c4430591860
 src = open(url).read()
 final_2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final_2"].bind("click", final_2.prog)
+// ]]></script>
+<script type="text/python3">// <![CDATA[
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/Xiang0502/0cac705345f2e5292f5d09a11a09df1b/raw/741577d65548ee46451c09d1be5bd4330f68669d/final_3"
+src = open(url).read()
+final_3 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_3"].bind("click", final_3.prog)
 // ]]></script>
 </p>

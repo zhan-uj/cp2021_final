@@ -2,8 +2,10 @@
 <h4>期末作業</h4>
 <p><span style="background-color: #ffff00;">按鈕</span>生成心得:我發現只需要在原有的地方在多加一個Button,下面加一個驅動程式即可。</p>
 <p><strong></strong><span style="background-color: #ffff00;">Final1</span>心得:我從老師cp2021的網站發現建立座位表這個run經過層層修改終於做了出來了</p>
-<p><span style="background-color: #ffff00;">Final2</span>心得:跟組員討論得出的結果。</p>
+<p><span style="background-color: #ffff00;">Final2</span>心得:有參考其他組員的程式並討論得出的結果。</p>
 <p><span style="background-color: #ffff00;">w13</span>心得:有參考其他同學的程式，並且有跟其他組組員討論</p>
+<p><span style="background-color: #ffff00;">期末3</span>心得:多加了一個if使得綠色方塊能回到原點</p>
+<p><span><span style="background-color: #ffff00;">Final3</span>心得:Final2的延伸，有參考同學的，也有參考老師寫的，我發現其實就是把snake的程式拆成好幾段來寫，只能看得懂大概，一直卡在方塊移動的地方‧</span></p>
 <p><a href="/downloads/w12demo.txt"></a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
@@ -43,7 +45,12 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="Final1">Final1</button><button id="w13">w13</button><button id="HW1">HW1</button><button id="run1">run1</button><button id="Final2">Final2</button><button id="snake">snake</button></p>
+<p><span style="color: #ff00ff;">w12 網頁內容</span></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC fla</button></p>
+<p><span style="color: #ff00ff;">作業內容</span></p>
+<p><button id="Final1">Final1</button><button id="w13">w13</button><button id="HW1">HW1</button><button id="run1">run1</button><button id="Final2">Final2</button><button id="snake">snake</button></p>
+<p><span style="color: #ff00ff;">期末測驗</span></p>
+<p><button id="期末3">期末3</button><button id="Final3">Final3</button><button id="合併">合併</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -59,10 +66,10 @@ function doSave(storage_id, filename){
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
-<!-- 這裡的畫布 id 為 brython_div -->
+<p><!-- 這裡的畫布 id 為 brython_div --></p>
 <div id="brython_div"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
-<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
 <script type="text/python3">// <![CDATA[
 from browser import document as doc
 import ace
@@ -100,7 +107,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
 // ]]></script>
-<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
 <p><!-- add 1 to 100 開始 -->
 <script type="text/python3">// <![CDATA[
 from browser import document as doc
@@ -139,7 +146,7 @@ rocflag = button2(rocflag_url)
 doc["rocflag"].bind("click", rocflag.do)
 ################################## rocflag end
 ################################## Final1 start
-Final1_url = "https://gist.githubusercontent.com/KEHUEISIN/b18f29d3badf8831f72beddf540019f3/raw/bd708c7377152b657c2ae58d33e342da8f2647e7/Final_1.py"
+Final1_url = "https://gist.githubusercontent.com/KEHUEISIN/b18f29d3badf8831f72beddf540019f3/raw/603a158eaba7bc0074b6b740be655cc5a1753989/Final_1.py"
 Final1 = button2(Final1_url)
 doc["Final1"].bind('click', Final1.do)
 ################################## Final1 end
@@ -154,7 +161,7 @@ HW1 = button2(HW1_url)
 doc["HW1"].bind('click', HW1.do)
 ################################## HW1 end
 ################################## run1 start
-run1_url = "https://gist.githubusercontent.com/KEHUEISIN/90e123fd5e41b43775b050c8e2467872/raw/f8cb6a9451d30f72b7bd88549a6e5044bfcfee4b/run1.py"
+run1_url = "https://gist.githubusercontent.com/KEHUEISIN/90e123fd5e41b43775b050c8e2467872/raw/b14a8bb8f4772d6f15e948ecd0ad296082d09966/run1.py"
 run1 = button2(run1_url)
 doc["run1"].bind('click', run1.do)
 ################################## run1 end
@@ -168,5 +175,20 @@ Final2_url = "https://gist.githubusercontent.com/KEHUEISIN/d3563a806e52645a03438
 Final2 = button2(Final2_url)
 doc["Final2"].bind('click', Final2.do)
 ################################## Final2 end
+################################## 期末3 start
+期末3_url = "https://gist.githubusercontent.com/KEHUEISIN/5a752a8b3bc9b0e28aaef3b86ccf3922/raw/f19c794cb65d1c814013065bcb1ff6ff679a1f33/Final3.py"
+期末3 = button2(期末3_url)
+doc["期末3"].bind('click', 期末3.do)
+################################## 期末3 end
+################################## Final3 start
+Final3_url = "https://gist.githubusercontent.com/KEHUEISIN/40062b612148ac444dcc4f8b87e6a168/raw/8725b7845a697c0de8c7f7b694de6c4d077423a8/Final3-1"
+Final3 = button2(Final3_url)
+doc["Final3"].bind('click', Final3.do)
+################################## Final3 end
+################################## 合併 start
+合併_url = "https://gist.githubusercontent.com/KEHUEISIN/bfb2b4b5ecb2db7c9210d4c078526ac0/raw/f5741e2863f4e7b10fd3018dcb29a2db8219ec70/36"
+合併 = button2(合併_url)
+doc["合併"].bind('click', 合併.do)
+################################## 合併 end
 // ]]></script>
 </p>
