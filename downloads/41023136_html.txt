@@ -38,7 +38,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">hw</button><button id="p261">hw1-1</button><button id="rocflag">exam(1加到10)</button><button id="add1to10">列出10個座標</button><button id="snake">貪食蛇</button><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="add1to100">hw</button><button id="p261">hw1-1</button><button id="rocflag">exam(1加到10)</button><button id="add1to10">列出10個座標</button><button id="snake">貪食蛇</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -53,6 +53,8 @@ function doSave(storage_id, filename){
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<div style="width: 100%; height: 100%;"></div>
+<p></p>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <!-- 這裡的畫布 id 為 brython_div -->
 <div id="brython_div"></div>
@@ -153,5 +155,10 @@ final2_url = "https://gist.githubusercontent.com/41023136/1adba704f6319368d1fbff
 final2 = button2(final2_url)
 doc["final2"].bind('click', final2.do)
 ################################## final2 end
+################################## final3 start
+final3_url = "https://gist.githubusercontent.com/41023136/53bd5ac906135696004232ca338e7235/raw/86013b4f8b58860eda4399d0a80d285557f2022e/FINAL3"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 // ]]></script>
 </p>
