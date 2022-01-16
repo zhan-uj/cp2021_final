@@ -1,4 +1,4 @@
-<h3>41023114</h3> 
+<h3>41023114</h3>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -88,32 +88,45 @@ def snake_inp(ev):
      Ace.editor.gotoLine(0)
      Ace.run()
 
-# id 為 "final1" 的按鈕點按時, 執行 chec_inp 方法
-doc["snake"].bind('click', snake_inp)
-final6_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/145481220e3d3c705c79e9d8508083e5b70c2d32/%25E6%25A0%25BC%25E5%25AD%2590"
- # 從 gist 取得程式碼
-final6_wq = open(final6_qwe_url).read()
-
-def final6_inp(ev):
-     Ace.editor.setValue(final6_wq)
-     Ace.editor.scrollToRow(0)
-     Ace.editor.gotoLine(0)
-     Ace.run()
-
-# id 為 "final6" 的按鈕點按時, 執行 final6_inp 方法
-doc["final6"].bind('click', final6_inp)
-final_qwe_url = "https://gist.githubusercontent.com/41023114/52f9fee4b504a07c0fc15d628f0e0f5d/raw/297e505cd9c925892aedd7d3cbba3906b84a651d/U"
- # 從 gist 取得程式碼
-final_wq = open(final_qwe_url).read()
-
-def final_inp(ev):
-     Ace.editor.setValue(final_wq)
-     Ace.editor.scrollToRow(0)
-     Ace.editor.gotoLine(0)
-     Ace.run()
-
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
-doc["final"].bind('click', final_inp)
+doc["snake"].bind('click', snake_inp)
+
+final1_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/145481220e3d3c705c79e9d8508083e5b70c2d32/%25E6%25A0%25BC%25E5%25AD%2590"
+ # 從 gist 取得程式碼
+final1_wq = open(final1_qwe_url).read()
+
+def final1_inp(ev):
+     Ace.editor.setValue(final1_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final1" 的按鈕點按時, 執行 final1_inp 方法
+doc["final1"].bind('click', final1_inp)
+final2_qwe_url = "https://gist.githubusercontent.com/41023114/a10851d8ff111d78de714cf87a34f4e6/raw/fbd1861e06fa678557b480ae7623d70c38efcba4/U%25E5%25AD%2597"
+ # 從 gist 取得程式碼
+final2_wq = open(final2_qwe_url).read()
+
+def final2_inp(ev):
+     Ace.editor.setValue(final2_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final2" 的按鈕點按時, 執行 final2_inp 方法
+doc["final2"].bind('click', final2_inp)
+final3_qwe_url = "https://gist.githubusercontent.com/41023114/66b1636d1d26947601b16f1cb138db7a/raw/750987f0e67c21540b8300e99bcb34855a04434e/%25E9%25A0%2586%25E6%2599%2582%25E9%2590%2598%25E5%2590%2583%25E9%25BB%259E"
+ # 從 gist 取得程式碼
+final3_wq = open(final3_qwe_url).read()
+
+def final3_inp(ev):
+     Ace.editor.setValue(final3_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final3" 的按鈕點按時, 執行 final3_inp 方法
+doc["final3"].bind('click', final3_inp)
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -131,8 +144,9 @@ run()
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="asd">列出10個座標</button><button id="snake">snake</button></p>
-<p><button id="final">final2</button></p>
-<p><button id="final6">final1</button></p>
+<p><button id="final2">final2</button></p>
+<p><button id="final1">final1</button></p>
+<p><button id="final3">final3</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
