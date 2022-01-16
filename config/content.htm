@@ -1169,6 +1169,8 @@ document["w17_6"].bind("click", w17_6.prog)
 <p><button id="g1">game1</button></p>
 <p>6.期末考試</p>
 <p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
+<p>7.期末最終測試</p>
+<p><button id="final_3">final_3</button></p>
 <p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -1278,6 +1280,7 @@ print("Python keywords: ", keyword.kwlist)
 # id 為 "keyword" 的按鈕點按時, 執行 kw1 物件中的 prog 方法
 </script>
 </p>
+<p></p>
 <p>
 <script type="text/python3">
 import beditor
@@ -1407,8 +1410,23 @@ src = open(url).read()
 final_2= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final_2"].bind("click",final_2.prog)
 </script>
-</p>
-<h3>41023113</h3>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/shih1717/a0223dff4fb1e6f818309d7e450c78fd/raw/8a25d20877d4bebdda6f74c857f40678254a2b9c/final_1"
+src = open(url).read()
+final_1= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_1"].bind("click",final_1.prog)
+</script>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/shih1717/8ee5d100cce1cc178b3f5bc0bc90fe0f/raw/914429d17018ca05b07e77c6f22a352baf38c9b2/final_3"
+src = open(url).read()
+final_3= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_3"].bind("click",final_3.prog)
+</script>
+</p><h3>41023113</h3>
 <p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details"></a></p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
@@ -14261,7 +14279,7 @@ doc["final_3"].bind('click', final_3.do)
 <p>final_2</p>
 <p><img alt="" height="278" src="/images/螢幕擷取畫面 2022-01-06 163238.jpg" width="600"/></p>
 <p><iframe allowfullscreen="allowfullscreen" height="336" src="//www.youtube.com/embed/tslQzuySDJc" width="600"></iframe></p>
-<h3>41023237 </h3>
+<h3>41023237</h3>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>

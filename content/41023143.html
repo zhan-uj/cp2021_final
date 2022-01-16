@@ -108,14 +108,14 @@ img.add_border {
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>Final Project</h1>
+                <h1>計算機程式課程期末評分網站</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Final Project</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">計算機程式課程期末評分網站</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -152,6 +152,8 @@ img.add_border {
 <p><button id="g1">game1</button></p>
 <p>6.期末考試</p>
 <p><button id="final_1">final_1</button><button id="final_2">final_2</button></p>
+<p>7.期末最終測試</p>
+<p><button id="final_3">final_3</button></p>
 <p>
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -261,6 +263,7 @@ print("Python keywords: ", keyword.kwlist)
 # id 為 "keyword" 的按鈕點按時, 執行 kw1 物件中的 prog 方法
 </script>
 </p>
+<p></p>
 <p>
 <script type="text/python3">
 import beditor
@@ -390,8 +393,23 @@ src = open(url).read()
 final_2= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final_2"].bind("click",final_2.prog)
 </script>
-</p>
-<br />41023146 << <a href='41023146.html'>Previous</a> <a href='41023113.html'>Next</a> >> 41023113</div>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/shih1717/a0223dff4fb1e6f818309d7e450c78fd/raw/8a25d20877d4bebdda6f74c857f40678254a2b9c/final_1"
+src = open(url).read()
+final_1= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_1"].bind("click",final_1.prog)
+</script>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/shih1717/8ee5d100cce1cc178b3f5bc0bc90fe0f/raw/914429d17018ca05b07e77c6f22a352baf38c9b2/final_3"
+src = open(url).read()
+final_3= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final_3"].bind("click",final_3.prog)
+</script>
+</p><br />41023146 << <a href='41023146.html'>Previous</a> <a href='41023113.html'>Next</a> >> 41023113</div>
         
     <!-- footer -->
       <div class="container">
