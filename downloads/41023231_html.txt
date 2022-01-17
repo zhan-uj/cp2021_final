@@ -156,5 +156,15 @@ final1_url = "https://gist.githubusercontent.com/zhan-uj/f4b3d893cbc243d911ef01b
 final1 = button2(final1_url)
 doc["final1"].bind('click', final1.do)
 ################################## final1 end
+################################# final2 start 
+final2_url = "https://gist.githubusercontent.com/zhan-uj/407015d9c5f322d2c6a75c851e2ed9c5/raw/8c49efeece0bf1f897e92f38a9d212d9483bafdc/final-2"
+final2 = button2(final2_url)
+doc["final2"].bind('click', final2.do)
+################################## final2 end
+################################# final3 start 
+final3_url = "https://gist.githubusercontent.com/zhan-uj/34b84be58844bfcfabfc79a9c95e568c/raw/6d91f67e6e2724bec1e83126e95be48dc261456a/final-3"
+final3 = button3(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 // ]]></script>
 </p>
