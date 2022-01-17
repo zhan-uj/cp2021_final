@@ -11705,7 +11705,6 @@ function doSave(storage_id, filename){
 <script type="text/python3">
 from browser import document as doc
 import ace
-
 # 清除畫布
 def clear_bd1(ev):
     # 注意這裡清除的畫布 id 為 brython_div
@@ -11720,7 +11719,6 @@ def run1():
     except:
         url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
     prog = open(url).read()
-
     # 將程式載入編輯區
     Ace1.editor.setValue(prog)
     Ace1.editor.scrollToRow(0)
@@ -11730,7 +11728,6 @@ def run1():
     #exec(prog, ns)
     # 按下 run 按鈕
     Ace1.run()
-
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run1'].bind('click', Ace1.run)
 doc['kw_show_console1'].bind('click', Ace1.show_console)
@@ -11744,19 +11741,15 @@ run1()
 <script type="text/python3">
 from browser import document as doc
 import ace
-
 # 清除畫布
 def clear_bd1(ev):
     bd = doc["brython_div1"]
     bd.clear()
-
 # 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
 Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
-
 class button2:
     def __init__(self, url):
         self.url = url
-
     # 記得加入 event 輸入變數
     def do(self,ev):
         Ace2.editor.setValue(open(self.url).read())
@@ -11773,11 +11766,11 @@ Final2_url =  "https://gist.githubusercontent.com/snowfall-killer/74a609a2e1de84
 Final2 = button2(Final2_url)
 doc["Final2"].bind('click', Final2.do)
 ################################# Final 2 end
-################################# Final 2 start
+################################# Final 3 start
 Final3_url = "https://gist.githubusercontent.com/snowfall-killer/74d7b19465d635e350935306cf6e2146/raw/ab1ca16a65a492e8ec749e7182c3810bcd4735a4/final%25203"
 Final3 = button2(Final3_url)
 doc["Final3"].bind('click', Final3.do)
-################################# Final 2 end
+################################# Final 3 end
 </script>
 </p>
 <h3>41023217</h3>
