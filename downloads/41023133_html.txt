@@ -37,7 +37,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="final1">final1</button><button id="final2">final2</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="add1to100">add1to100</button><button id="exam">exam</button><button id="延伸作業1">延伸作業1</button><button id="延伸作業2">延伸作業2</button><button id="延伸作業3">延伸作業3</button><button id="red">red</button><button id="redbutton">redbutton</button><button id="GAME">GAME</button><button id="GAME正式版">GAME正式版</button><button id="AISNAKE">AISNAKE</button><button id="RUNSNAKE">RUNSNAKE</button></p>
+<p><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="add1to100">add1to100</button><button id="exam">exam</button><button id="延伸作業1">延伸作業1</button><button id="延伸作業2">延伸作業2</button><button id="延伸作業3">延伸作業3</button><button id="red">red</button><button id="redbutton">redbutton</button><button id="GAME">GAME</button><button id="GAME正式版">GAME正式版</button><button id="AISNAKE">AISNAKE</button><button id="RUNSNAKE">RUNSNAKE</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -165,6 +165,11 @@ final2_url = "https://gist.githubusercontent.com/JIAN3-LIN/d10550fd48d8531ffc134
 final2 = button2(final2_url)
 doc["final2"].bind('click', final2.do)
 ################################# final2 end
+################################# final3 start
+final3_url = "https://gist.githubusercontent.com/JIAN3-LIN/89d9408e09b6413772f2f9cc38d2e76d/raw/e57e8e668122cd856c9b49320e8fb633d47c50c2/final3"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################# final3 end
 ################################# p261 start 
 p261_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dbaef376a5b4ca4/raw/980606effcd29635307d6474718cd4a7ef016747/p261.py"
 p261 = button2(p261_url)
