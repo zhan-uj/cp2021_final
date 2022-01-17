@@ -1597,6 +1597,7 @@ doc["final2"].bind("click", final2.do)
 </script>
 &lt;/p</p>
 <h2>1ag2</h2><h3>41023104</h3>
+<p>1.作業一紅色方塊</p>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
@@ -1635,7 +1636,17 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="w13">w13</button><button id="BSnake">BSnake</button><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="紅色方塊">紅色方塊</button><button id="紅色方塊暫停">紅色方塊暫停</button></p>
+<p>2.python教科書題目練習</p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button></p>
+<p>3.W13測驗</p>
+<p><button id="random_system">random_system</button></p>
+<p>4.作業三貪食蛇</p>
+<p><button id="AI_SnakeRun">AI_SnakeRun</button><button id="SnakeRun">SnakeRun</button></p>
+<p>5.期末測驗1</p>
+<p><button id="final1">final1</button><button id="final2">final2</button></p>
+<p>6.期末測驗2</p>
+<p><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -1644,15 +1655,15 @@ function doSave(storage_id, filename){
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
 <p><!-- 存擋表單結束 --></p>
 <p><!-- 執行與清除按鈕開始 --></p>
-<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><button id="kw_run1">Run</button><button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
-<!-- 這裡的畫布 id 為 brython_div -->
+<p><!-- 這裡的畫布 id 為 brython_div --></p>
 <div id="brython_div"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
-<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
 <script type="text/python3">
 from browser import document as doc
 import ace
@@ -1690,7 +1701,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
 </script>
-<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 --></p>
 <p><!-- add 1 to 100 開始 -->
 <script type="text/python3">
 from browser import document as doc
@@ -1715,6 +1726,15 @@ class button2:
         Ace2.editor.gotoLine(0)
         Ace2.run()
 
+################################# 紅色方塊 start 
+紅色方塊_url = "https://gist.githubusercontent.com/CHIA-ROU/2f12f4fd1e0ed31b728959243670d01c/raw/be8e0a297728d061c9363a526bbb8545acfe799c/HW_1%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A"
+紅色方塊 = button2(紅色方塊_url)
+doc["紅色方塊"].bind('click', 紅色方塊.do)
+################################## 紅色方塊 end################################# 紅色方塊暫停 start 
+紅色方塊暫停_url = "https://gist.githubusercontent.com/CHIA-ROU/96097c1f3586770c83e8bb9df16c6f78/raw/c5fdb23d835bc3b3667f67dcf0820001e626ec50/HW_1%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A%25E7%25B9%25BC%25E7%25BA%258C_%25E6%259A%25AB%25E5%2581%259C"
+紅色方塊暫停 = button2(紅色方塊暫停_url)
+doc["紅色方塊暫停"].bind('click', 紅色方塊暫停.do)
+################################## 紅色方塊暫停 end
 add1to100_url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c48e37714f055c3a0027cbfef59e442a6ef659b9/from_1_add_to_100_1.py"
 add1to100 = button2(add1to100_url)
 doc["add1to100"].bind('click', add1to100.do)
@@ -1728,16 +1748,21 @@ rocflag_url = "https://gist.githubusercontent.com/mdecourse/2f56974a40da7a218dba
 rocflag = button2(rocflag_url)
 doc["rocflag"].bind("click", rocflag.do)
 ################################## rocflag end
-################################# w13 start
-w13_url = "https://gist.githubusercontent.com/CHIA-ROU/11b2ba032bd450c7e65104c1e04407b1/raw/778fbe96ede5a3c7300ffda23d03664891d10d1d/gistfile2.txt"
-w13 = button2(w13_url)
-doc["w13"].bind('click', w13.do)
-################################## w13 end
-################################# BSnake start
-BSnake_url = "https://gist.githubusercontent.com/CHIA-ROU/11b2ba032bd450c7e65104c1e04407b1/raw/be29db08f8143a8289dc28bad92a19450421ec70/BSnake"
-BSnake = button2(BSnake_url)
-doc["BSnake"].bind('click', BSnake.do)
-################################## BSnake end
+################################# random system start
+random_system_url = "https://gist.githubusercontent.com/CHIA-ROU/11b2ba032bd450c7e65104c1e04407b1/raw/778fbe96ede5a3c7300ffda23d03664891d10d1d/gistfile2.txt"
+random_system = button2(random_system_url)
+doc["random_system"].bind('click', random_system.do)
+################################## random system end
+################################# AI_SnakeRun start
+AI_SnakeRun_url = "https://gist.githubusercontent.com/CHIA-ROU/11b2ba032bd450c7e65104c1e04407b1/raw/be29db08f8143a8289dc28bad92a19450421ec70/BSnake"
+AI_SnakeRun = button2(AI_SnakeRun_url)
+doc["AI_SnakeRun"].bind('click', AI_SnakeRun.do)
+################################## AI_SnakeRun end
+################################# SnakeRun start
+SnakeRun_url = "https://gist.githubusercontent.com/CHIA-ROU/18600be3cc52543e747bab7cbd03e583/raw/a40c1bf90b99887f48d7fd0928061ecd38323f08/BSnake%25E6%2589%258B%25E5%258B%2595%25E5%259F%25B7%25E8%25A1%258C"
+SnakeRun = button2(SnakeRun_url)
+doc["SnakeRun"].bind('click', SnakeRun.do)
+################################## SnakeRun end
 ################################# final1 start
 final1_url = "https://gist.githubusercontent.com/CHIA-ROU/093b4172d86b22a6c0e6e93cd7950cb2/raw/615d004f659647d76ea902bd75933405c888aa62/Final_1"
 final1 = button2(final1_url)
@@ -1748,20 +1773,30 @@ final2_url = "https://gist.githubusercontent.com/CHIA-ROU/feaac6bfc0b5cb645ff5cd
 final2 = button2(final2_url)
 doc["final2"].bind('click', final2.do)
 ################################## final2 end
+################################# final3 start
+final3_url = "https://gist.githubusercontent.com/CHIA-ROU/debed635f00f8c4ba0af9279ae3baeeb/raw/7bf8514a9398b25d43921d807751a65dc89260f0/%25E6%259C%259F%25E6%259C%25AB%25E8%2580%2583%25E8%25A9%25A6-%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587%25E5%2590%2583%25E7%25B4%2585%25E8%2589%25B2%25E6%2596%25B9%25E5%25A1%258A"
+final3= button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 </script>
 </p>
 <h3>41023103</h3>
 <p><span>第一題請利用 Brython 在個人期末報告頁面中新增一個按鈕, 標題為 final1, 點擊後可以執行個人 gist 中的程式, 並且在頁面下方的 x 與 y 方向, 畫出 15 x 15 條方格線, 且線寬 1 pixel, 每一方格長寬分別為 50 Pixels. </span></p>
 <p><span>第二題為延伸第一個題目, 額外新增另一個按鈕, 標題為 final2, 請在上述方格中, 加入一個大小為 45 x 45 pixels 的綠色方塊, 可以沿著格線區最外圍, 從 (1, 1) 方格座標區開始, 重複進行 U 字形運動, 即該方塊由上往下運動至最下方後, 右轉至最右方後, 往上移動至上方後反轉, 並且重複進行相同運動.</span></p>
+<p><span>在同一個 15 x 15 格的畫面中, 以座標 (1, 1) 處作為起點, 擺放綠色方塊代表單一身軀之 snake, 並以隨機亂數方式產生 5 個位於方格座標中的紅色方塊, 代表食物.<br/><span>當綠色方塊與紅色方塊定位後, 請在 15 x 15 方格下方設置標題為"啟動"的按鈕, 讓使用者點擊後開始動畫模式, 綠色方塊便開始往距離最近的紅色方塊移動, 抵達紅色目標方塊位置後, 該紅色方塊即刻消失, 且位於"啟動"按鈕上方的計分板從 0 分, 增量為 1 分, 之後再逐一往其他方塊座標移動, 直到"吃"完所有隨機產生的紅色方塊為止.但是綠色方塊, 在開始個別移動至隨機產生的五個紅色方塊位置之前, 必須先繞 15x15 方格邊境外圍移動.</span><br/><span>單數-以逆時鐘方向, 讓綠色方塊向下移動至底部, 然後右轉至最右方邊界, 然後再往上至最上方, 最後向左轉至原始起點後, 才開始分別移動至五個紅色方塊位置.</span></span></p>
 <!-- 導入 brython 程式庫 -->
+<p>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
+</p>
 <!-- 啟動 Brython -->
+<p>
 <script>
 window.onload=function(){
 brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 }
 </script>
+</p>
 <p><!-- 導入 FileSaver 與 filereader --></p>
 <p>
 <script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
@@ -1791,7 +1826,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13">W13</button><button id="BSnake">BSnake</button><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="W13">W13</button><button id="BSnake">BSnake</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -1809,6 +1844,7 @@ function doSave(storage_id, filename){
 <div id="brython_div"></div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
 <!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<p>
 <script type="text/python3">
 from browser import document as doc
 import ace
@@ -1846,6 +1882,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 # 呼叫函式執行
 run1()
 </script>
+</p>
 <!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
 <p><!-- add 1 to 100 開始 -->
 <script type="text/python3">
@@ -1904,6 +1941,11 @@ final2_url = "https://gist.githubusercontent.com/ro731/3cf0d816720fc5ff5b3e198a2
 final2 = button2(final2_url)
 doc["final2"].bind('click', final2.do)
 ################################## final2 end
+################################# final3 start 
+final3_url = "https://gist.githubusercontent.com/ro731/3cf0d816720fc5ff5b3e198a296706e4/raw/82ec569b521206d28287f5496d4be0ad37508c23/gistfile6.txt"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 </script>
 </p>
 <h2>1ag3</h2><h3>41023130</h3>
@@ -1981,7 +2023,7 @@ run()
 <script type="text/python3">
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023130/a9167d068e53f626da00e60718e7cf7f/raw/025a5d3ff9bb344d510795d284e929f5405beb8b/final2"
+url = "https://gist.githubusercontent.com/41023130/a9167d068e53f626da00e60718e7cf7f/raw/bc5cc75bc578b4ee9f56e5f7f58c2522fcad0f34/final2"
 src = open(url).read()
 final2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final2"].bind("click", final2.prog)
@@ -2011,10 +2053,50 @@ document["自動貪食蛇"].bind("click", 自動貪食蛇.prog)
 <script type="text/python3">
 import beditor
 from browser import document
-url = "https://gist.githubusercontent.com/41023130/37824cfa849b2475d4f02ee3b72037ca/raw/96d4310055bec2dc184cbf499eace0f170c15a76/w13%25E6%258C%2589%25E9%2588%2595"
+url = "https://gist.githubusercontent.com/41023130/5dce41080cc5fe9a0b1760c7447abb08/raw/36e0b8960dd10534384cb95347dc3fa8f025391b/%25E6%259C%259F%25E6%259C%25AB%25E4%25BD%259C%25E6%25A5%25AD"
 src = open(url).read()
-w13按鈕= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["w13按鈕"].bind("click", w13按鈕.prog)
+期末作業 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["期末作業"].bind("click", 期末作業.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023130/ee3107641c835199386c58e727fb674f/raw/5a0fedea0078b655d750772490da468404b99a38/hw-2"
+src = open(url).read()
+hw12 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw12"].bind("click", hw12.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023130/cd58fa5dd0968d1ebb0c5e79c614e09d/raw/234382d106e4f6b57f10286fb4470e10db45dccb/hw1-1"
+src = open(url).read()
+hw11= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["hw11"].bind("click", hw11.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023130/da1909365840fa46f0027f5770ac6d07/raw/dcedc205edda637b779b9358a8862203a4c3f51b/%25E6%2589%258B%25E5%258B%2595%25E8%25B2%25AA%25E5%2590%2583%25E8%259B%2587"
+src = open(url).read()
+手動貪吃蛇= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["手動貪吃蛇"].bind("click", 手動貪吃蛇.prog)
+</script>
+</p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/41023130/495ff71ad5954911d5995bee1cecc15a/raw/546dcfea45bfe5d3a6f351329fbaaa18561e399a/w13"
+src = open(url).read()
+w13= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["w13"].bind("click", w13.prog)
 </script>
 </p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
@@ -2023,9 +2105,7 @@ document["w13按鈕"].bind("click", w13按鈕.prog)
 <!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<p><button id="final1">final1</button><button id="final2">final2</button></p>
-<p><button id="自動貪食蛇">自動貪食蛇</button></p>
-<p><button id="w13按鈕">w13按鈕</button></p>
+<p><button id="w13">w13</button><button id="final1">final1</button><button id="final2">final2</button><button id="hw12">hw1-2</button><button id="hw11">hw1-1</button><button id="期末作業">期末作業</button><button id="自動貪食蛇">自動貪食蛇</button><button id="手動貪吃蛇">手動貪吃蛇</button></p>
 <!-- 執行與清除按鈕結束 -->
 <!-- 程式執行 ouput 區 -->
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
@@ -4482,6 +4562,17 @@ src = open(url).read()
 final2 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
 document["final2"].bind("click",final2.prog)
 </script>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/40923114/9dc75c7f94323efe1575720626d459a1/raw/c94964550cf48f833bc08aaf4c6c85c6478ec2d1/final3"
+src = open(url).read()
+final3 = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["final3"].bind("click",final3.prog)
+</script>
+</p>
+<div id="brython_div"></div>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
@@ -4491,9 +4582,10 @@ document["final2"].bind("click",final2.prog)
 <p><!-- 執行與清除按鈕開始 --></p>
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="onetoten">1to10</button><button id="snakeauto">snakeauto</button> <button id="final2">final2</button></p>
+<p><button id="final3">final3</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p><!-- 程式執行 ouput 區 --></p>
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console" style="margin: 0px; width: 485px; height: 195px;"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <div id="brython_div"></div>
 <h2>1ag5</h2><h3>41023126</h3>
@@ -4740,32 +4832,45 @@ def snake_inp(ev):
      Ace.editor.gotoLine(0)
      Ace.run()
 
-# id 為 "final1" 的按鈕點按時, 執行 chec_inp 方法
-doc["snake"].bind('click', snake_inp)
-final6_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/145481220e3d3c705c79e9d8508083e5b70c2d32/%25E6%25A0%25BC%25E5%25AD%2590"
- # 從 gist 取得程式碼
-final6_wq = open(final6_qwe_url).read()
-
-def final6_inp(ev):
-     Ace.editor.setValue(final6_wq)
-     Ace.editor.scrollToRow(0)
-     Ace.editor.gotoLine(0)
-     Ace.run()
-
-# id 為 "final6" 的按鈕點按時, 執行 final6_inp 方法
-doc["final6"].bind('click', final6_inp)
-final_qwe_url = "https://gist.githubusercontent.com/41023114/52f9fee4b504a07c0fc15d628f0e0f5d/raw/297e505cd9c925892aedd7d3cbba3906b84a651d/U"
- # 從 gist 取得程式碼
-final_wq = open(final_qwe_url).read()
-
-def final_inp(ev):
-     Ace.editor.setValue(final_wq)
-     Ace.editor.scrollToRow(0)
-     Ace.editor.gotoLine(0)
-     Ace.run()
-
 # id 為 "snake" 的按鈕點按時, 執行 chec_inp 方法
-doc["final"].bind('click', final_inp)
+doc["snake"].bind('click', snake_inp)
+
+final1_qwe_url = "https://gist.githubusercontent.com/41023114/16b90d8cc80d5251e834cecfd759349e/raw/145481220e3d3c705c79e9d8508083e5b70c2d32/%25E6%25A0%25BC%25E5%25AD%2590"
+ # 從 gist 取得程式碼
+final1_wq = open(final1_qwe_url).read()
+
+def final1_inp(ev):
+     Ace.editor.setValue(final1_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final1" 的按鈕點按時, 執行 final1_inp 方法
+doc["final1"].bind('click', final1_inp)
+final2_qwe_url = "https://gist.githubusercontent.com/41023114/a10851d8ff111d78de714cf87a34f4e6/raw/fbd1861e06fa678557b480ae7623d70c38efcba4/U%25E5%25AD%2597"
+ # 從 gist 取得程式碼
+final2_wq = open(final2_qwe_url).read()
+
+def final2_inp(ev):
+     Ace.editor.setValue(final2_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final2" 的按鈕點按時, 執行 final2_inp 方法
+doc["final2"].bind('click', final2_inp)
+final3_qwe_url = "https://gist.githubusercontent.com/41023114/66b1636d1d26947601b16f1cb138db7a/raw/750987f0e67c21540b8300e99bcb34855a04434e/%25E9%25A0%2586%25E6%2599%2582%25E9%2590%2598%25E5%2590%2583%25E9%25BB%259E"
+ # 從 gist 取得程式碼
+final3_wq = open(final3_qwe_url).read()
+
+def final3_inp(ev):
+     Ace.editor.setValue(final3_wq)
+     Ace.editor.scrollToRow(0)
+     Ace.editor.gotoLine(0)
+     Ace.run()
+
+# id 為 "final3" 的按鈕點按時, 執行 final3_inp 方法
+doc["final3"].bind('click', final3_inp)
 # 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
 doc['kw_run'].bind('click', Ace.run)
 doc['kw_show_console'].bind('click', Ace.show_console)
@@ -4782,8 +4887,9 @@ run()
 <!-- 執行與清除按鈕開始 -->
 <p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
 <p><button id="asd">列出10個座標</button><button id="snake">snake</button></p>
-<p><button id="final">final2</button></p>
-<p><button id="final6">final1</button></p>
+<p><button id="final2">final2</button></p>
+<p><button id="final1">final1</button></p>
+<p><button id="final3">final3</button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
@@ -4796,7 +4902,8 @@ run()
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<h1>期末作業</h1>
+<h3>41023110</h3>
+<h4>期末作業</h4>
 <p><a href="/downloads/w12demo.txt">w12demo.txt</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details">ROC 國旗規格</a>.</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%97%97#%E8%A7%84%E6%A0%BC">PROC 國旗規格</a> - 可以根據此規格定義, 新增 <button id="procflas">PROC flag</button> 按鈕.</p>
@@ -4840,9 +4947,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
 <p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="Final1">Final1</button><button id="Final2">Final2</button><button id="Final3">Final3</button><button id="run">run</button></p>
-<p><button id="w13">w13</button></p>
-<p><button id="hw1">hw1</button></p>
-<p><button id="Bnaske">Bnaske</button></p>
+<p><button id="w13">w13</button><button id="hw1">hw1</button><button id="Bnaske">Bnaske</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -6205,203 +6310,6 @@ doc["RUNSNAKE"].bind("click", RUNSNAKE.do)
 ################################## RUNSNAKE end
 </script>
 </p>
-<h3>41023121</h3>
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-<!-- for ggame -->
-<p>
-<script src="/static/jquery-3.3.1.min.js"></script>
-<script src="/static/jquery-ui.1.12.1.min.js"></script>
-<script src="/static/pixi-3.0.5.min.js"></script>
-<script src="/static/buzz-1.2.1.js"></script>
-<script src="/static/bs.js"></script>
-<script src="/downloads/brython_modules.js"></script>
-</p>
-<!-- Cango 程式庫 -->
-<p>
-<script src="/static/Cango-24v03-min.js"></script>
-<script src="/static/CangoAxes-6v01-min.js"></script>
-<script src="/static/gearUtils-09.js"></script>
-<script src="/static/SVGpathUtils-6v03-min.js"></script>
-</p>
-<!-- for Konva 程式庫 -->
-<p>
-<script src="/static/konva.min.js"></script>
-<script>
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
-}
-</script>
-</p>
-<p><!-- 導入 FileSaver 與 filereader --></p>
-<p>
-<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
-<script src="/static/ace/filereader.js" type="text/javascript"></script>
-</p>
-<p><!-- 導入 ace --></p>
-<p>
-<script src="/static/ace/ace.js" type="text/javascript"></script>
-<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
-<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
-<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
-</p>
-<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
-<p>
-<script type="text/javascript">
-function doSave(storage_id, filename){
-    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
-    filename = document.getElementById(filename).value
-    saveAs(blob, filename+".py");
-}
-</script>
-</p>
-<p><!-- 印出版次與關鍵字程式 --></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-from browser import html
-import ace
-# 清除畫布
-def clear_bd(ev):
-    bd = doc["brython_div"]
-    bd.clear()
-# Brython 3.3.4 內建的 container 名稱為  'container' 且 turtle 輸出為 svg 必須使用 div 訂定 id
-Ace = ace.Editor(editor_id="kw_editor", console_id="kw_console", container_id="kw__container", storage_id="kw_py_src" )
-Ace.editor.setValue("""import random
-n=10
-for i in range(1,n+1):
-    r=random.randint(1,18)
-    t=random.randint(1,18)
-    print("第"+str(i)+"個紅色方塊座標為("+str(r)+","+str(t)+")")
-""")
-Ace.editor.scrollToRow(0)
-Ace.editor.gotoLine(0)
-# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
-doc['kw_run'].bind('click', Ace.run)
-doc['kw_show_console'].bind('click', Ace.show_console)
-doc['kw_clear_console'].bind('click', Ace.clear_console)
-doc['clear_bd'].bind('click', clear_bd)
-</script>
-</p>
-<p><!-- 用來顯示程式碼的 editor 區域 --></p>
-<div id="kw_editor" style="width: 600px; height: 300px;"></div>
-<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form>
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
-<div id="brython_div"></div>
-<div class="col-md-0" height="1" id="graphics-column" width="1"></div>
-<p><!-- ****************************** keyword start --></p>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/8080347ef0632cda69ec6f6f6b001fb6/raw/6cd5929c28781a4f8d87d00a980b940f3f2af083/%25E8%25B2%25AA%25E9%25A3%259F%25E8%259B%2587"
-src = open(url).read()
-snake4= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake4"].bind("click", snake4.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/0c2fea57ad38dfe33be2c6e2ec79091c/raw/c3385bcb3452cc4b94f7d73aba9f9cd3e434d7c8/%25E7%25B0%25A1%25E6%2598%2593%25E8%25A8%2588%25E7%25AE%2597%25E6%25A9%259F"
-src = open(url).read()
-snake8= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake8"].bind("click", snake8.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/3ddda833c005f680d66d58038f961252/raw/ab8087df18ad73684dd2e3d31adfe45b94da08fb/%25E5%25AD%2597%25E5%2585%25B8"
-src = open(url).read()
-snake9= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake9"].bind("click", snake9.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/622e8ccbbd173b5cb5bb8863f9fe7c94/raw/f26b79e305126d31d28630d0e5fa57159f8a873a/while"
-src = open(url).read()
-snake2= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake2"].bind("click", snake2.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/b3e1aa6bf4956bb11aa247f76f497a66/raw/b4e3b9c8da4320ad0bdb006f394746a5e5eeaef9/%25E7%258C%259C%25E6%2595%25B8%25E5%25AD%25971%25E5%2588%25B05000"
-src = open(url).read()
-snake6= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake6"].bind("click", snake6.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/15228ebad976ab72b0e9bac477a0a782/raw/9c9efe7d0848483280087572e3b873a7f373a337/gistfile1.txt"
-src = open(url).read()
-snake3= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake3"].bind("click", snake3.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/6db8b35d467ecee51d3500e49b286f61/raw/7215f29f791ada40474a1d39048c76eb95a5ac5c/aii%2520sn"
-src = open(url).read()
-snake5= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake5"].bind("click", snake5.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/f4195e66b8b5ed2241e3914e2568aca8/raw/04a1f72aba9856b04df5d183e672a1a5650edac7/w13"
-src = open(url).read()
-snake= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake"].bind("click", snake.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/c01c8cf5151eb415ce16e5d3de197561/raw/7902f70d51a74285c6dd33842e21c469c58ae4c2/w13%25E5%25BB%25B6%25E4%25BC%25B8"
-src = open(url).read()
-snake1= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake1"].bind("click", snake1.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/229e53361d1f724f285a27eba6a9c773/raw/52c3650386e063c9c945f48933e961c0c82b982b/final1"
-src = open(url).read()
-snake13= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake13"].bind("click", snake13.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/490099de67a0b2a440562ecf068c6c7c/raw/e45f35a716b1ae365768c5d1d993c41eb0360db6/final2"
-src = open(url).read()
-snake14= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake14"].bind("click", snake14.prog)
-</script>
-<script type="text/python3">
-import beditor
-from browser import document
-url = "https://gist.githubusercontent.com/41023121/bbdd11ab5b1c8aa41bf5784582c67bae/raw/49979706bd8d1652f0e33ebc0c8e20b8c5829715/final3"
-src = open(url).read()
-snake199= beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
-document["snake199"].bind("click", snake199.prog)
-</script>
-<p>w13 test</p>
-<p><button id="snake">10個座標</button><button id="snake1">進階</button></p>
-<p>snake</p>
-<p><button id="snake4">snake</button><button id="snake5">ai snake</button></p>
-<p>應用小遊戲</p>
-<p><button id="snake8">計算機</button><button id="snake9">python字典</button><button id="snake6">數字遊戲</button></p>
-<p>基本用法</p>
-<p><button id="snake2">while用法</button><button id="snake3">for應用</button></p>
-<p>final</p>
-<p><button id="snake13">final1</button><button id="snake14">final2</button><button id="snake199">final3</button></p>
-<p>===================================</p>
-<p>這學期前面在學如何建立倉儲，讓我們大致上了解近端遠端動態靜態，其中時我才對程式更加的認識，眼前不再是看不懂的英文亂碼，而是開始有了分別，開始了解甚麼是迴圈，在剛開始學while的時候一直忘記設定如何脫離，又因為while是瞬間執行得導致網頁瞬間卡死，還有python沒有除錯也讓我吃了不少苦頭，因為對英文的不熟悉常常打錯幾個英文字母，都要一航航的測試才會知道自己到底錯在哪裡，之後就是在學snake老實說我真的看不太懂某些引用，所以我參考了41023146的snake他的想法是繞最外面一圈來增加蛇的長度，無視我將他的蛇改為會往上一格再回頭來增加蛇的長度，目前最多是來到了133分，之後是final1我是用之前的w13進接下去改的，因為原本就有畫格子所使十分輕鬆，但我之後還是有座迴圈版本的，final2就是加上方格去程其實簡單但回程真的蠻難寫的要新增一個變數來記錄自己前一個位置，在頭腦中要分得很清楚才有辦法寫出來，final3就是用final2+之前的ai snake的走法來寫要注意梅果不同而沒辦法直接連續執行，要先定義每個的鳴子不然會無法吃到全部的梅果之後再加上啟動案哪就完成啦。</p>
-<p>這學期學到很多東西，也了解到程式語言不是馬上就能全部學會的，重點是要理解害和知道自己所缺少甚麼再去查來解決眼下問題才是最重要的。</p>
-<p>final1.2影片:<a href="https://www.youtube.com/channel/UC0bBB4shoFeCt1FuQk6n_mw/videos">https://www.youtube.com/channel/UC0bBB4shoFeCt1FuQk6n_mw/videos</a> </p>
 <h2>1ag7</h2><h3>41023142</h3>
 <!-- 導入 brython 程式庫 -->
 <script src="/static/brython.js"></script>
@@ -6884,7 +6792,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">hw</button><button id="p261">hw1-1</button><button id="rocflag">exam(1加到10)</button><button id="add1to10">列出10個座標</button><button id="snake">貪食蛇</button><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="add1to100">hw</button><button id="p261">hw1-1</button><button id="rocflag">exam(1加到10)</button><button id="add1to10">列出10個座標</button><button id="snake">貪食蛇</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -6897,6 +6805,7 @@ function doSave(storage_id, filename){
 <p><!-- 執行與清除按鈕結束 --></p>
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<div style="width: 100%; height: 100%;"></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
 <!-- 這裡的畫布 id 為 brython_div -->
 <div id="brython_div"></div>
@@ -6997,6 +6906,11 @@ final2_url = "https://gist.githubusercontent.com/41023136/1adba704f6319368d1fbff
 final2 = button2(final2_url)
 doc["final2"].bind('click', final2.do)
 ################################## final2 end
+################################## final3 start
+final3_url = "https://gist.githubusercontent.com/41023136/53bd5ac906135696004232ca338e7235/raw/86013b4f8b58860eda4399d0a80d285557f2022e/FINAL3"
+final3 = button2(final3_url)
+doc["final3"].bind('click', final3.do)
+################################## final3 end
 </script>
 </p>
 <h3>41023128</h3>
@@ -11606,7 +11520,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="紅點1">紅點1</button><button id="紅點2">紅點2</button><button id="W131">W131</button><button id="W132">W132</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="紅點1">紅點1</button><button id="紅點2">紅點2</button><button id="W131">W131</button><button id="W132">W132</button><button id="final1">final1</button><button id="final2">final2</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -11719,6 +11633,16 @@ W132_url = "https://gist.githubusercontent.com/xiaomantou0411/08960620c568022dce
 W132 = button2(W132_url)
 doc["W132"].bind("click", W132.do)
 ################################## W132 end
+################################## final1 start
+final1_url = "https://gist.githubusercontent.com/xiaomantou0411/bb7f7ff46827e8a330de002b6aa7e570/raw/007b089a76649a93eebfc35ab30602a0155902b7/final1"
+final1 = button2(final1_url)
+doc["final1"].bind("click", final1.do)
+################################## final1 end
+################################## final2 start
+final2_url = "https://gist.githubusercontent.com/xiaomantou0411/7ebbc7c3ef4f5a21da1f6f9758f54b56/raw/5e226c99df53d03d828fb339e520e824f081dc94/final2"
+final2 = button2(final2_url)
+doc["final2"].bind("click", final2.do)
+################################## final2 end
 </script>
 </p>
 <h3>41023218</h3>
@@ -11760,7 +11684,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="Final1">Final1</button><button id="Final2">Final2</button></p>
+<p><button id="Final1">Final1</button><button id="Final2">Final2</button><button id="Final3">Final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -11848,6 +11772,11 @@ doc["Final1"].bind('click', Final1.do)
 Final2_url =  "https://gist.githubusercontent.com/snowfall-killer/74a609a2e1de840f149cf938e01aff59/raw/9739436e88d8d524b51244a04cc88542282ec265/final%25202"
 Final2 = button2(Final2_url)
 doc["Final2"].bind('click', Final2.do)
+################################# Final 2 end
+################################# Final 2 start
+Final3_url = "https://gist.githubusercontent.com/snowfall-killer/74d7b19465d635e350935306cf6e2146/raw/ab1ca16a65a492e8ec749e7182c3810bcd4735a4/final%25203"
+Final3 = button2(Final3_url)
+doc["Final3"].bind('click', Final3.do)
 ################################# Final 2 end
 </script>
 </p>
@@ -12386,7 +12315,7 @@ function doSave(storage_id, filename){
 <script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
 <script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
 </p>
-<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="移動方塊">移動方塊</button><button id="w13_1">w13_1</button><button id="w13_2">w13_2</button><button id="final1">final1</button><button id="final2">final2</button></p>
+<p><button id="add1to100">add 1 to 100</button><button id="p261">p261</button><button id="rocflag">ROC flag</button><button id="移動方塊">移動方塊</button><button id="w13_1">w13_1</button><button id="w13_2">w13_2</button><button id="final1">final1</button><button id="final2">final2</button><button id="final3">final3</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -12505,6 +12434,11 @@ final2_url = "https://gist.githubusercontent.com/yuwei0000/e3feb47cac68eb2d2d009
 final2 = button2(final2_url)
 doc["final2"].bind("click", final2.do)
 ################################## final2 end
+################################## final3 start
+final3_url = "https://gist.githubusercontent.com/yuwei0000/22ff92fe6dc762f6c1bf5813944d1acb/raw/a1c6350331af7090fde936dbb314ae12c38d11fe/fiina3"
+final3 = button2(final3_url)
+doc["final3"].bind("click", final3.do)
+################################## final3 end
 </script>
 </p>
 <h2>1bg6</h2><h3>41023250</h3>
@@ -13620,7 +13554,186 @@ doc["final3"].bind('click', final3.do)
 ################################## final3 end
 </script>
 </p>
-<h2>1bg7</h2><h3>40823239</h3>
+<h2>1bg7</h2><h3>41023252</h3>
+<p><a href="https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China#Construction_details"></a></p>
+<!-- 導入 brython 程式庫 -->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+</p>
+<p><button id="紅點">紅點</button> <button id="紅點_按鍵啟動">紅點_按鍵啟動</button> <button id="貪食蛇">貪食蛇</button> <button id="手動貪食蛇">手動貪食蛇</button> <button id="隨機序號_英">隨機序號_英</button> <button id="隨機序號_中">隨機序號_中</button> <button id="final1">final1</button> <button id="final2">final2</button> <button id="final3">final3</button></p>
+<p><!-- ######################  editor1 開始 ###################### --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 --></p>
+<!-- 這裡的畫布 id 為 brython_div -->
+<div id="brython_div"></div>
+<p><!-- ######################  editor1 結束 ###################### --></p>
+<!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    # 注意這裡清除的畫布 id 為 brython_div
+    bd = doc["brython_div"]
+    bd.clear()
+Ace1 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run1():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src"]
+    except:
+        url = "https://gist.githubusercontent.com/mdecourse/0229a8a017091476a79700b8a190f185/raw/c3a6deaf717f8f2739a4b1392a5ab10936e9693a/from_1_add_to_10_1.py"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace1.editor.setValue(prog)
+    Ace1.editor.scrollToRow(0)
+    Ace1.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace1.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run1'].bind('click', Ace1.run)
+doc['kw_show_console1'].bind('click', Ace1.show_console)
+doc['kw_clear_console1'].bind('click', Ace1.clear_console)
+doc['clear_bd1'].bind('click', clear_bd1)
+# 呼叫函式執行
+run1()
+</script>
+<!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
+<p><!-- add 1 to 100 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+紅點_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/bdbe9b7cf165153bf2985137e8edcff23b219768/HW1-1"
+紅點 = button2(紅點_url)
+doc["紅點"].bind('click', 紅點.do)
+################################# 紅點_按鍵啟動 start 
+紅點_按鍵啟動_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/bdbe9b7cf165153bf2985137e8edcff23b219768/HW1-2"
+紅點_按鍵啟動 = button2(紅點_按鍵啟動_url)
+doc["紅點_按鍵啟動"].bind('click', 紅點_按鍵啟動.do)
+################################## 紅點_按鍵啟動 end
+
+################################## 貪食蛇 start
+貪食蛇_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/bdbe9b7cf165153bf2985137e8edcff23b219768/snake"
+貪食蛇 = button2(貪食蛇_url)
+doc["貪食蛇"].bind("click", 貪食蛇.do)
+################################## 貪食蛇 end
+################################## 手動貪食蛇 start
+手動貪食蛇_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/bdbe9b7cf165153bf2985137e8edcff23b219768/%25E6%2589%258B%25E5%258B%2595"
+手動貪食蛇 = button2(手動貪食蛇_url)
+doc["手動貪食蛇"].bind("click", 手動貪食蛇.do)
+################################## 手動貪食蛇 end
+
+################################## 隨機序號_英 start
+隨機序號_英_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/bdbe9b7cf165153bf2985137e8edcff23b219768/W13%25E6%25B8%25AC%25E9%25A9%2597-1"
+隨機序號_英 = button2(隨機序號_英_url)
+doc["隨機序號_英"].bind("click", 隨機序號_英.do)
+################################## 隨機序號_英 end
+
+################################## 隨機序號_中 start
+隨機序號_中_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/bdbe9b7cf165153bf2985137e8edcff23b219768/W13%25E6%25B8%25AC%25E9%25A9%2597-2"
+隨機序號_中 = button2(隨機序號_中_url)
+doc["隨機序號_中"].bind("click", 隨機序號_中.do)
+################################## 隨機序號_中 end
+
+
+
+################################## final1 start
+final1_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/44dbecb7a6a65d2824d0fd9cec4611e7c5295d1f/final1"
+final1 = button2(final1_url)
+doc["final1"].bind("click", final1.do)
+################################## final1 end
+
+
+################################## final2 start
+final2_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/44dbecb7a6a65d2824d0fd9cec4611e7c5295d1f/final2"
+final2 = button2(final2_url)
+doc["final2"].bind("click", final2.do)
+################################## final2 end
+
+
+
+################################## final3 start
+final3_url = "https://gist.githubusercontent.com/ZYC0923/3250f2acaf77e80ebf8685b723c7f3b7/raw/44dbecb7a6a65d2824d0fd9cec4611e7c5295d1f/final3"
+final3 = button2(final3_url)
+doc["final3"].bind("click", final3.do)
+################################## final3 end
+</script>
+</p>
+<div id="gtx-trans" style="position: absolute; left: -7px; top: 39.125px;">
+<div class="gtx-trans-icon"></div>
+</div>
+<h3>40823239</h3>
 <h4>final project</h4>
 <p><span>期末心得:我覺得在寫得時候要去注意的事很多因為電腦是很準確的，有一點錯都可能導致程式整個沒用所以要更細心一點。</span></p>
 <!-- 導入 brython 程式庫 -->
