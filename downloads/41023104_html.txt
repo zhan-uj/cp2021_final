@@ -45,7 +45,7 @@ function doSave(storage_id, filename){
 <p><button id="random_system">random_system</button></p>
 <p>4.作業三貪食蛇</p>
 <p><button id="AI_SnakeRun">AI_SnakeRun</button><button id="SnakeRun">SnakeRun</button></p>
-<p>5.期末測驗1</p>
+<p>5.期末測驗1&nbsp;</p>
 <p><button id="final1">final1</button><button id="final2">final2</button></p>
 <p>6.期末測驗2</p>
 <p><button id="final3">final3</button></p>
@@ -64,8 +64,9 @@ function doSave(storage_id, filename){
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <div style="width: 100%; height: 100%;">----------------------------------------------------------------------------------</div>
-<div style="width: 100%; height: 100%;"><strong>學期心得</strong></div>
+<div style="width: 100%; height: 100%;"><span style="background-color: #ffcc99;"><strong>學期心得</strong></span></div>
 <div style="width: 100%; height: 100%;">到了學期的尾聲，回想剛開始建立倉儲時什麼都不會，花了好多時間研究，也想到成功時真的很開心也很有成就感。原來設計系是設計程式，與我一開始認為的不同，雖然需要時間適應，但是我並不排斥也覺得其實滿有趣的，就是邏輯真的很燒腦。上課有問題時我就會去問老師，從老師那了解到Github許多實用之處，老師也總是很耐心的引導我們發現問題；班上同學也都很熱心，許多問題請教他們也都用清晰地思維替我解惑，真的很了不起。覺得這學期收穫很多，希望下學期我可以更了解程式的邏輯，總有一天能夠獨當一面打出屬於自己思考模式的程式碼。</div>
+<div style="width: 100%; height: 100%;">Final1影片&nbsp;<a href="https://youtu.be/9qbyPzU0weM">https://youtu.be/9qbyPzU0weM</a>&nbsp;</div>
 <p><!-- ######################  editor1 結束 ###################### --></p>
 <p><!-- 以下可以開始利用 editor1 的設定編寫對應 Brython 程式 -->
 <script type="text/python3">// <![CDATA[
